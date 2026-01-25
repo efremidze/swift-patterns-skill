@@ -1,40 +1,73 @@
+---
+name: navigation
+description: Expert guidance for implementing modern navigation patterns in SwiftUI with NavigationStack, deep linking, and state management. Use when building navigation flows, managing state restoration, or implementing deep links.
+---
+
 # Navigation Skill
 
-Expert guidance for implementing modern navigation patterns in SwiftUI with NavigationStack, deep linking, and state management.
+## Overview
+Use this skill to implement modern SwiftUI navigation using NavigationStack, handle deep links properly, and manage complex navigation flows. This skill helps you build intuitive user experiences with proper state management and navigation patterns.
 
-## Rules
+## Workflow Decision Tree
 
-### 1. Use NavigationStack for Modern Apps (iOS 16+)
+### 1) Review existing navigation code
+- Verify NavigationStack is used instead of deprecated NavigationView
+- Check that navigation state is centralized in coordinators or route enums
+- Verify deep link handling with URL parsing and validation
+- Check for proper state restoration
+- Verify sheets and full-screen covers are managed correctly
+- Check for excessive navigation state variables
+
+### 2) Improve existing navigation code
+- Replace NavigationView with NavigationStack
+- Replace scattered navigation logic with centralized coordinator
+- Implement type-safe navigation with Codable routes
+- Add deep link support if missing
+- Simplify sheet management with enums instead of multiple @State bools
+- Implement state restoration for navigation paths
+
+### 3) Implement new navigation feature
+- Use NavigationStack for linear navigation flows
+- Create navigation coordinator for centralized routing
+- Define routes as Hashable enums for type safety
+- Implement deep link parsing for URL schemes
+- Use proper sheet/fullScreenCover management
+- Handle navigation state restoration
+- Test navigation flows and back navigation
+
+## Core Guidelines
+
+### Use NavigationStack for Modern Apps (iOS 16+)
 - Prefer `NavigationStack` over deprecated `NavigationView`
 - Use value-based navigation with `navigationDestination(for:)`
 - Leverage `NavigationPath` for dynamic navigation stacks
 - Use type-safe navigation with codable routes
 
-### 2. Centralize Navigation Logic
+### Centralize Navigation Logic
 - Create a navigation coordinator or router
 - Use enums to represent navigation destinations
 - Keep navigation state in a single source of truth
 - Avoid scattering navigation logic throughout views
 
-### 3. Handle Deep Links Properly
+### Handle Deep Links Properly
 - Parse URLs into navigation routes
 - Validate deep link parameters
 - Handle navigation state restoration
 - Support universal links and custom URL schemes
 
-### 4. Manage Navigation State
+### Manage Navigation State
 - Store navigation paths for state restoration
 - Handle back navigation correctly
 - Support programmatic navigation
 - Clear navigation stack when appropriate (e.g., logout)
 
-### 5. Handle Sheet and FullScreenCover Properly
+### Handle Sheet and FullScreenCover Properly
 - Use `@State` for simple sheet presentation
 - Use view model properties for complex state
 - Support dismissal from within sheets
 - Handle multiple presentation layers correctly
 
-### 6. Test Navigation Flows
+### Test Navigation Flows
 - Test deep link parsing
 - Verify navigation stack behavior
 - Test back navigation

@@ -1,40 +1,77 @@
+---
+name: performance
+description: Expert guidance for optimizing SwiftUI performance, memory management, and profiling iOS applications. Use when optimizing view rendering, managing memory, or improving application responsiveness.
+---
+
 # Performance Optimization Skill
 
-Expert guidance for optimizing SwiftUI performance, memory management, and profiling iOS applications.
+## Overview
+Use this skill to optimize SwiftUI applications for responsive performance, efficient memory usage, and smooth user interactions. This skill helps you profile applications, identify bottlenecks, and apply performance optimization patterns.
 
-## Rules
+## Workflow Decision Tree
 
-### 1. Minimize View Updates
+### 1) Review existing performance
+- Measure actual performance with Instruments (not perception)
+- Check for unnecessary view redraws and state updates
+- Verify async/background operations for heavy work
+- Check for memory leaks and retain cycles
+- Assess collection view rendering efficiency
+- Check image loading and caching strategies
+- Verify network request optimization
+
+### 2) Improve existing performance
+- Use LazyVStack/LazyHStack for long lists
+- Implement pagination for large datasets
+- Add image caching with async loading
+- Debounce/throttle frequent updates
+- Move heavy computations to background
+- Extract subviews to reduce view body complexity
+- Cache expensive computations
+- Use Equatable conformance for view updates
+
+### 3) Implement new performance-critical feature
+- Profile early with Instruments
+- Use LazyVStack for collections from the start
+- Implement pagination and lazy loading
+- Cache network responses appropriately
+- Use background queues for heavy work
+- Design for responsive main thread
+- Test on real devices with profiling
+- Monitor memory usage throughout development
+
+## Core Guidelines
+
+### Minimize View Updates
 - Use proper state management to avoid unnecessary redraws
 - Leverage `@State`, `@Binding`, and `@ObservedObject` correctly
 - Use `equatable` conformance to control view updates
 - Avoid expensive computations in view body
 
-### 2. Optimize SwiftUI View Body
+### Optimize SwiftUI View Body
 - Keep view body fast (< 16ms for 60fps)
 - Extract subviews to break up complex hierarchies
 - Use `@ViewBuilder` for conditional views
 - Avoid creating new objects in body
 
-### 3. Use Lazy Loading for Collections
+### Use Lazy Loading for Collections
 - Use `LazyVStack`/`LazyHStack` for long lists
 - Implement pagination for large datasets
 - Load images asynchronously
 - Cache expensive computations
 
-### 4. Manage Memory Effectively
+### Manage Memory Effectively
 - Avoid retain cycles with `[weak self]` or `[unowned self]`
 - Release large objects when no longer needed
 - Use value types (structs) where appropriate
 - Monitor memory usage with Instruments
 
-### 5. Profile Before Optimizing
+### Profile Before Optimizing
 - Use Instruments to identify bottlenecks
 - Measure actual performance, not perceived
 - Focus on user-impacting performance issues
 - Test on real devices, not just simulator
 
-### 6. Optimize Network and I/O
+### Optimize Network and I/O
 - Cache network responses appropriately
 - Use background queues for heavy work
 - Implement request deduplication

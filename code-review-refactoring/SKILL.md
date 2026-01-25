@@ -1,10 +1,47 @@
+---
+name: code-review-refactoring
+description: Expert guidance for identifying code smells, refactoring patterns, and conducting effective code reviews in Swift and SwiftUI projects. Use when reviewing code, refactoring legacy code, or improving code quality.
+---
+
 # Code Review & Refactoring Skill
 
-Expert guidance for identifying code smells, refactoring patterns, and conducting effective code reviews in Swift and SwiftUI projects.
+## Overview
+Use this skill to identify code smells, apply refactoring patterns, and conduct effective code reviews in Swift and SwiftUI projects. This skill helps you maintain clean, maintainable code and improve overall code quality.
 
-## Rules
+## Workflow Decision Tree
 
-### 1. Look for Code Smells
+### 1) Review existing code
+- Look for code smells: long methods, large classes, duplicate code, magic numbers, deep nesting, poor naming
+- Check for SOLID principle violations
+- Verify error handling and thread safety
+- Check for memory leaks and retain cycles
+- Assess maintainability and testability
+- Review naming conventions and consistency
+- Check for appropriate comments and documentation
+
+### 2) Improve existing code
+- Extract long methods into focused functions
+- Split large classes into smaller, single-responsibility classes
+- Extract duplicate code into shared functions
+- Replace magic numbers with named constants
+- Flatten deep nesting with early returns or guard statements
+- Replace unclear names with intention-revealing names
+- Replace concrete dependencies with abstractions
+- Add appropriate documentation for public APIs
+
+### 3) Refactor feature
+- Apply Extract Method pattern for complex logic
+- Use Replace Conditional with Polymorphism for type checking
+- Introduce Parameter Objects to simplify function signatures
+- Replace Nested Conditionals with Guard statements
+- Extract Protocols for dependency inversion
+- Improve testability through better design
+- Document rationale for design decisions
+- Verify tests still pass after refactoring
+
+## Core Guidelines
+
+### Look for Code Smells
 - **Long methods** - Break down functions over 20-30 lines
 - **Large classes** - Split classes with multiple responsibilities
 - **Duplicate code** - Extract common functionality
@@ -12,35 +49,35 @@ Expert guidance for identifying code smells, refactoring patterns, and conductin
 - **Deep nesting** - Flatten with early returns
 - **Poor naming** - Use descriptive, intention-revealing names
 
-### 2. Follow SOLID Principles
+### Follow SOLID Principles
 - **Single Responsibility** - Each class/function does one thing
 - **Open/Closed** - Open for extension, closed for modification
 - **Liskov Substitution** - Subtypes must be substitutable
 - **Interface Segregation** - Many specific interfaces over one general
 - **Dependency Inversion** - Depend on abstractions, not concretions
 
-### 3. Check for Common Issues
+### Check for Common Issues
 - **Force unwrapping** - Use optional binding or guard
 - **Retain cycles** - Check weak/unowned references
 - **Error handling** - Don't swallow errors silently
 - **Thread safety** - Verify concurrent access patterns
 - **Memory leaks** - Check with Instruments
 
-### 4. Review for Maintainability
+### Review for Maintainability
 - **Clear intent** - Code should read like prose
 - **Consistent style** - Follow project conventions
 - **Appropriate comments** - Explain why, not what
 - **Testability** - Can this code be tested?
 - **Documentation** - Public APIs should be documented
 
-### 5. Refactor Incrementally
+### Refactor Incrementally
 - Make one change at a time
 - Run tests after each change
 - Commit working code frequently
 - Don't mix refactoring with feature work
 - Keep refactorings small and focused
 
-### 6. Prioritize Readability
+### Prioritize Readability
 - Code is read more than written
 - Favor clarity over cleverness
 - Use Swift's expressive features appropriately

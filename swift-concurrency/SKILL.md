@@ -1,38 +1,75 @@
+---
+name: swift-concurrency
+description: Expert guidance for using async/await, Tasks, Actors, and structured concurrency in Swift. Use when implementing async operations, managing concurrent tasks, or migrating from closure-based APIs to modern Swift concurrency.
+---
+
 # Swift Concurrency Skill
 
-Expert guidance for using async/await, Tasks, Actors, and structured concurrency in Swift.
+## Overview
+Use this skill to implement, review, or improve Swift concurrency code following best practices for async/await, Tasks, Actors, and structured concurrency. This skill helps you write safe, efficient concurrent code and avoid common pitfalls.
 
-## Rules
+## Workflow Decision Tree
 
-### 1. Prefer Async/Await Over Closures
+### 1) Review existing concurrency code
+- Verify async/await is used instead of completion handlers
+- Check Task lifecycle management (cancellation, structured concurrency)
+- Verify actors are used for mutable shared state
+- Check MainActor is used for UI-related code
+- Verify no blocking operations on MainActor
+- Check for proper cancellation handling
+
+### 2) Improve existing concurrency code
+- Replace completion handlers with async/await using continuations
+- Replace dispatch queues and locks with actors
+- Add proper cancellation checks in long-running operations
+- Mark UI-related classes with @MainActor
+- Use structured concurrency (async let, TaskGroup) instead of unstructured tasks
+- Remove unnecessary weak self captures in tasks
+
+### 3) Implement new concurrent feature
+- Use async/await for sequential async operations
+- Use async let for fixed parallel operations
+- Use TaskGroup for dynamic parallel operations
+- Use actors to protect mutable shared state
+- Mark UI-related code with @MainActor
+- Use .task modifier in SwiftUI for automatic cancellation
+- Handle cancellation in long-running operations
+
+## Core Guidelines
+
+### Prefer Async/Await Over Closures
 - Use `async/await` instead of completion handlers for better readability and error handling
 - Convert existing closure-based APIs using continuations when needed
 - Always propagate errors with `throws` rather than Result types in async functions
 
-### 2. Use Structured Concurrency
+### Use Structured Concurrency
 - Prefer `async let` for parallel operations with known dependencies
 - Use `TaskGroup` for dynamic parallel operations
 - Ensure all child tasks complete before parent returns (automatic cancellation)
+- Avoid creating detached tasks unless truly independent
 
-### 3. Handle Cancellation Properly
+### Handle Cancellation Properly
 - Check `Task.isCancelled` in long-running operations
 - Use `Task.checkCancellation()` to throw if cancelled
 - Clean up resources in cancellation paths
+- Use `.task` view modifier in SwiftUI for automatic cancellation
 
-### 4. Use Actors for Mutable State
+### Use Actors for Mutable State
 - Protect mutable state with `actor` instead of locks/queues
 - Use `@MainActor` for UI-related properties and methods
 - Avoid `nonisolated` unless necessary for synchronous access
+- Never mix actors with DispatchQueue
 
-### 5. Avoid Blocking the Main Thread
+### Avoid Blocking the Main Thread
 - Never use `.wait()` or blocking synchronization on MainActor
 - Use `Task { @MainActor in }` to hop to main thread
 - Mark view models and UI controllers with `@MainActor`
 
-### 6. Task Lifecycle Management
+### Task Lifecycle Management
 - Store tasks in properties to cancel them later
 - Use `.task` view modifier in SwiftUI for automatic cancellation
 - Avoid creating detached tasks unless truly independent
+- Don't capture self weakly in structured concurrency (tasks are automatically cancelled)
 
 ## Tradeoffs
 
