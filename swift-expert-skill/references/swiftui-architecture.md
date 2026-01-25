@@ -1,42 +1,72 @@
+
 # SwiftUI Architecture & State Management Skill
 
-Expert guidance for managing state, data flow, and app architecture in SwiftUI.
+## Overview
+Use this skill to build, review, or improve SwiftUI architecture following best practices for state management, data flow, view composition, and testability. This skill helps you choose the right property wrappers, structure apps effectively, and maintain clean separation of concerns.
 
-## Rules
+## Workflow Decision Tree
 
-### 1. Choose the Right Property Wrapper
+### 1) Review existing SwiftUI architecture
+- Verify correct property wrapper usage (@State, @Binding, @StateObject, @ObservedObject)
+- Check unidirectional data flow (data down, events up)
+- Verify views are simple and declarative
+- Check side effects are properly managed (.task, .onChange)
+- Verify dependency injection is used for testability
+- Check for massive view models or god objects
+
+### 2) Improve existing SwiftUI architecture
+- Replace incorrect property wrapper usage
+- Extract complex view logic into view models
+- Split large views into smaller, reusable components
+- Move side effects out of view bodies
+- Add protocol-based dependency injection for testing
+- Consider migrating to @Observable for iOS 17+
+
+### 3) Implement new SwiftUI feature
+- Choose appropriate property wrappers based on ownership
+- Design unidirectional data flow
+- Keep views declarative (no logic in body)
+- Use .task for async work, .onChange for reactions
+- Inject dependencies through initializers
+- Create small, focused view models by feature
+
+## Core Guidelines
+
+### Choose the Right Property Wrapper
 - `@State`: For simple, view-local state (primitives, simple structs)
 - `@Binding`: To pass write access to state owned by a parent
 - `@StateObject`: To create and own a reference type (ObservableObject)
 - `@ObservedObject`: To observe a reference type owned elsewhere
 - `@EnvironmentObject`: For app-wide shared state
 - `@Environment`: For system values or custom environment keys
+- For iOS 17+: Use `@Observable` instead of `ObservableObject`
 
-### 2. Follow Unidirectional Data Flow
+### Follow Unidirectional Data Flow
 - Data flows down through view hierarchy
 - Events/actions flow up through callbacks or bindings
 - Never manipulate parent state directly from children
 - Use explicit bindings or callbacks for child-to-parent communication
 
-### 3. Keep Views Simple
+### Keep Views Simple
 - Views should be declarative, not imperative
 - Extract complex logic into view models or separate functions
 - Split large views into smaller, reusable components
 - Views should render state, not manage it
+- Never perform side effects in view body
 
-### 4. Manage Side Effects Properly
+### Manage Side Effects Properly
 - Use `.task` modifier for async work tied to view lifecycle
 - Use `.onChange` for reacting to state changes
 - Use `.onAppear` sparingly (prefer `.task`)
 - Never perform side effects in view body
 
-### 5. Structure for Testability
+### Structure for Testability
 - Inject dependencies through initializers
 - Use protocols for service abstractions
 - Keep business logic separate from views
 - Make view models testable with protocol-based dependencies
 
-### 6. Use ViewModifiers for Reusable Behavior
+### Use ViewModifiers for Reusable Behavior
 - Extract common styling into custom ViewModifiers
 - Create reusable view configurations
 - Avoid duplicating appearance code

@@ -1,41 +1,74 @@
+
 # Testing & Dependency Injection Skill
 
-Expert guidance for unit testing, dependency injection, and testing async code in Swift and SwiftUI.
+## Overview
+Use this skill to design code for testability, implement effective dependency injection, and write comprehensive unit tests for Swift and SwiftUI applications. This skill helps you build maintainable, testable code and ensure application reliability.
 
-## Rules
+## Workflow Decision Tree
 
-### 1. Design for Testability
+### 1) Review existing test and DI code
+- Verify code uses dependency injection instead of singletons
+- Check that protocols are used for abstractions
+- Verify tests use proper test doubles (mocks, stubs, fakes)
+- Check for proper async/await handling in tests
+- Verify Arrange-Act-Assert structure in tests
+- Check that tests avoid testing implementation details
+- Verify proper test isolation and setup/teardown
+
+### 2) Improve existing test and DI code
+- Replace singletons with dependency injection
+- Extract protocols from concrete classes
+- Implement constructor injection for dependencies
+- Replace manual test doubles with proper mocks/stubs
+- Convert callback-based tests to async/await
+- Add cancellation and race condition tests
+- Improve test coverage for edge cases
+- Extract common test setup into fixtures/builders
+
+### 3) Implement new testable feature
+- Design with dependency injection from the start
+- Use protocols for all external dependencies
+- Use constructor injection for required dependencies
+- Implement proper async error handling
+- Use Arrange-Act-Assert pattern in tests
+- Test both happy path and error cases
+- Test async operations with proper cancellation handling
+- Use test doubles to isolate code under test
+
+## Core Guidelines
+
+### Design for Testability
 - Use protocol abstractions for dependencies
 - Inject dependencies through initializers
 - Avoid singletons and global state
 - Separate business logic from UI
 - Keep functions small and focused
 
-### 2. Follow the Testing Pyramid
+### Follow the Testing Pyramid
 - Many unit tests (fast, isolated)
 - Some integration tests (moderate speed)
 - Few UI tests (slow, brittle)
 - Focus on business logic testing
 
-### 3. Test Behavior, Not Implementation
+### Test Behavior, Not Implementation
 - Test public interfaces, not private details
 - Focus on inputs and outputs
 - Avoid testing internal state
 - Test what the code does, not how it does it
 
-### 4. Use Proper Test Doubles
+### Use Proper Test Doubles
 - **Stub**: Returns predefined data (for queries)
 - **Mock**: Verifies interactions (for commands)
 - **Fake**: Working implementation (in-memory DB)
 - **Spy**: Records calls for verification
 
-### 5. Test Async Code Properly
+### Test Async Code Properly
 - Use `async`/`await` in tests
 - Test cancellation behavior
 - Use `expectation` for callback-based code
 - Test timing and race conditions
 
-### 6. Structure Tests with Arrange-Act-Assert
+### Structure Tests with Arrange-Act-Assert
 - **Arrange**: Set up test data and dependencies
 - **Act**: Execute the code under test
 - **Assert**: Verify expected outcomes
