@@ -1,7 +1,3 @@
----
-name: code-review-refactoring
-description: Expert guidance for identifying code smells, refactoring patterns, and conducting effective code reviews in Swift and SwiftUI projects. Use when reviewing code, refactoring legacy code, or improving code quality.
----
 
 # Code Review & Refactoring Skill
 

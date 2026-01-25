@@ -1,7 +1,3 @@
----
-name: testing-di
-description: Expert guidance for unit testing, dependency injection, and testing async code in Swift and SwiftUI. Use when designing testable code, writing unit tests, or implementing dependency injection patterns.
----
 
 # Testing & Dependency Injection Skill
 

@@ -1,7 +1,3 @@
----
-name: performance
-description: Expert guidance for optimizing SwiftUI performance, memory management, and profiling iOS applications. Use when optimizing view rendering, managing memory, or improving application responsiveness.
----
 
 # Performance Optimization Skill
 

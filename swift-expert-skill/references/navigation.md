@@ -1,7 +1,3 @@
----
-name: navigation
-description: Expert guidance for implementing modern navigation patterns in SwiftUI with NavigationStack, deep linking, and state management. Use when building navigation flows, managing state restoration, or implementing deep links.
----
 
 # Navigation Skill
 

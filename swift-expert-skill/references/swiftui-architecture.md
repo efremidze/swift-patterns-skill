@@ -1,7 +1,3 @@
----
-name: swiftui-architecture
-description: Expert guidance for managing state, data flow, and app architecture in SwiftUI. Use when building new SwiftUI features, choosing property wrappers, structuring views, or implementing dependency injection and state management patterns.
----
 
 # SwiftUI Architecture & State Management Skill
 

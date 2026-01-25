@@ -1,7 +1,3 @@
----
-name: swift-concurrency
-description: Expert guidance for using async/await, Tasks, Actors, and structured concurrency in Swift. Use when implementing async operations, managing concurrent tasks, or migrating from closure-based APIs to modern Swift concurrency.
----
 
 # Swift Concurrency Skill
 

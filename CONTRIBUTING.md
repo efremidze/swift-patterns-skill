@@ -2,16 +2,47 @@
 
 Thank you for your interest in contributing to Swift Skills! This repository follows the [Agent Skills open format](https://agentskills.io/home) to provide AI coding assistants with practical Swift guidance.
 
+## Repository Structure
+
+This repository contains a single comprehensive skill with multiple reference documents:
+
+```
+swift-expert-skill/
+├── SKILL.md          # Main workflow, decision trees, and quick reference
+└── references/       # Detailed documentation for each topic area
+    ├── swift-concurrency.md
+    ├── swiftui-architecture.md
+    ├── navigation.md
+    ├── testing-di.md
+    ├── performance.md
+    └── code-review-refactoring.md
+```
+
 ## How to Contribute
 
-### Improving Existing Skills
+### Improving the Main Skill (SKILL.md)
+
+The main `SKILL.md` file provides:
+- Overview and workflow decision trees
+- Core guidelines across all topics
+- Quick decision guide to find the right reference
+- Cross-topic usage examples
+
+When editing `SKILL.md`:
+1. Maintain the frontmatter with name and description
+2. Keep the Workflow Decision Tree focused on high-level decisions
+3. Add cross-references to appropriate reference files
+4. Keep Core Guidelines concise (details belong in references)
+
+### Improving Reference Documents
+
+Each reference file in `references/` covers a specific topic in depth:
 
 1. **Fork the repository** and create a new branch for your changes
-2. **Edit the SKILL.md file** in the appropriate skill directory
-3. **Maintain the structure**: 
-   - Frontmatter with name and description
-   - Overview section
-   - Workflow Decision Tree
+2. **Edit the reference file** in the `references/` directory
+3. **Maintain the structure**:
+   - Title and Overview section
+   - Workflow Decision Tree (Review/Improve/Implement)
    - Core Guidelines
    - Tradeoffs
    - Output Template with code examples
@@ -20,21 +51,18 @@ Thank you for your interest in contributing to Swift Skills! This repository fol
 4. **Test your changes** by using the skill with your AI assistant
 5. **Submit a pull request** with a clear description of your improvements
 
-### Adding New Skills
+### Adding New Reference Topics
 
-1. **Create a new directory** with a descriptive name (lowercase, hyphenated)
-2. **Add a SKILL.md file** following the standard format:
+To add a new reference topic:
+
+1. **Create a new file** in `references/` with a descriptive name (e.g., `networking-patterns.md`)
+2. **Follow the standard reference format**:
 
 ```markdown
----
-name: your-skill-name
-description: One-line description of when to use this skill
----
-
-# Your Skill Name
+# Topic Name
 
 ## Overview
-Brief explanation of the skill's purpose
+Brief explanation of the topic
 
 ## Workflow Decision Tree
 ### 1) Review existing code
@@ -51,10 +79,23 @@ When to use different approaches
 ```swift
 // Practical code examples
 ```
+
+## Common Patterns
+Established patterns for this topic
+
+## Anti-Patterns to Avoid
+Common mistakes and how to fix them
 ```
 
-3. **Update README.md** to include your new skill in the appropriate section
-4. **Submit a pull request** explaining the new skill and its use cases
+3. **Update SKILL.md** to reference your new topic:
+   - Add to Workflow Decision Tree
+   - Add to "When to Use Which Reference" section
+   - Add to Quick Decision Guide
+   - Add to Reference Files list
+
+4. **Update README.md** to mention the new reference topic
+
+5. **Submit a pull request** explaining the new topic and its use cases
 
 ## Quality Standards
 
@@ -72,14 +113,14 @@ When to use different approaches
 
 ### Skill Structure
 - Follow the Agent Skills open format
-- Include proper frontmatter metadata
+- Include proper frontmatter metadata in SKILL.md only
 - Organize content with clear sections
 - Make content scannable for AI assistants
 
 ## Pull Request Process
 
 1. **Ensure your changes** follow the structure and quality standards
-2. **Update documentation** if you're changing file locations or adding skills
+2. **Update documentation** if you're changing structure or adding topics
 3. **Describe your changes** clearly in the PR description
 4. **Be responsive** to feedback and requested changes
 5. **Wait for review** from maintainers before merging
@@ -95,7 +136,7 @@ When to use different approaches
 
 ### What to Avoid
 ❌ Highly opinionated architectural choices  
-❌ Framework-specific advice (unless that's the skill's focus)  
+❌ Framework-specific advice (unless part of the topic)  
 ❌ Deprecated APIs without migration guidance  
 ❌ Complex examples without explanation  
 ❌ Personal preferences without technical justification  
