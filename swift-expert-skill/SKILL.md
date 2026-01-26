@@ -37,6 +37,10 @@ All workflows below must follow the Constraints section to prevent drift.
 
 Use [references/decisions.md](references/decisions.md) as the authoritative routing guide for selecting review vs refactor workflows based on explicit intent cues. This routing gate avoids duplicating rules and keeps workflow selection consistent.
 
+After routing, use the workflow checklists:
+- [references/workflows-review.md](references/workflows-review.md)
+- [references/workflows-refactor.md](references/workflows-refactor.md)
+
 All workflows must follow the Constraints section above.
 
 ## Core Guidelines
@@ -136,6 +140,8 @@ All workflows must follow the Constraints section above.
 All detailed patterns, examples, and best practices are organized in the `references/` directory:
 
 - **decisions.md** - Review vs refactor routing gates and intent cues
+- **workflows-review.md** - Review checklist, findings taxonomy, and risk cues
+- **workflows-refactor.md** - Behavior-preserving refactor checklist and risk cues
 - **swiftui-architecture.md** - State management, property wrappers, data flow, architecture
 - **navigation.md** - NavigationStack, deep linking, routing, state restoration
 - **testing-di.md** - Unit testing, dependency injection, test doubles
