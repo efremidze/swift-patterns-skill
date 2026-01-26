@@ -19,17 +19,17 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### SwiftUI Guidance
 
-- [ ] **SWUI-01**: State ownership guidance covers `@State`, `@Binding`, `@Observable`, and `@Environment`
-- [ ] **SWUI-02**: Navigation guidance covers `NavigationStack`, destinations, and presentation patterns
-- [ ] **SWUI-03**: List/collection guidance covers stable identity, `ForEach` pitfalls, and lazy containers
-- [ ] **SWUI-04**: View composition guidance covers extraction and data flow between parent/child views
-- [ ] **SWUI-05**: Layout guidance covers stack usage, alignment, spacing, and adaptive layout patterns
-- [ ] **SWUI-06**: Scroll guidance covers `ScrollView` patterns and safe pagination triggers
+- [x] **SWUI-01**: State ownership guidance covers `@State`, `@Binding`, `@Observable`, and `@Environment`
+- [x] **SWUI-02**: Navigation guidance covers `NavigationStack`, destinations, and presentation patterns
+- [x] **SWUI-03**: List/collection guidance covers stable identity, `ForEach` pitfalls, and lazy containers
+- [x] **SWUI-04**: View composition guidance covers extraction and data flow between parent/child views
+- [x] **SWUI-05**: Layout guidance covers stack usage, alignment, spacing, and adaptive layout patterns
+- [x] **SWUI-06**: Scroll guidance covers `ScrollView` patterns and safe pagination triggers
 
 ### Swift Concurrency (Lightweight)
 
-- [ ] **CONC-01**: Async work guidance for SwiftUI uses `.task` and cancellation-aware patterns
-- [ ] **CONC-02**: UI update guidance clarifies `@MainActor` usage without deep concurrency dives
+- [x] **CONC-01**: Async work guidance for SwiftUI uses `.task` and cancellation-aware patterns
+- [x] **CONC-02**: UI update guidance clarifies `@MainActor` usage without deep concurrency dives
 
 ### Quality & Performance
 
@@ -39,8 +39,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Modernization & Decisioning
 
-- [ ] **MOD-01**: Modern API replacement catalog maps deprecated SwiftUI APIs to current equivalents
-- [ ] **MOD-02**: Decision trees guide selection of state wrappers based on ownership and sharing
+- [x] **MOD-01**: Modern API replacement catalog maps deprecated SwiftUI APIs to current equivalents
+- [x] **MOD-02**: Decision trees guide selection of state wrappers based on ownership and sharing
 
 ### Advanced Playbooks
 
@@ -89,19 +89,19 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CORE-05 | Phase 1 | Complete |
 | CORE-06 | Phase 1 | Complete |
 | CORE-07 | Phase 2 | Complete |
-| SWUI-01 | Phase 3 | Pending |
-| SWUI-02 | Phase 3 | Pending |
-| SWUI-03 | Phase 3 | Pending |
-| SWUI-04 | Phase 3 | Pending |
-| SWUI-05 | Phase 3 | Pending |
-| SWUI-06 | Phase 3 | Pending |
-| CONC-01 | Phase 3 | Pending |
-| CONC-02 | Phase 3 | Pending |
+| SWUI-01 | Phase 3 | Complete |
+| SWUI-02 | Phase 3 | Complete |
+| SWUI-03 | Phase 3 | Complete |
+| SWUI-04 | Phase 3 | Complete |
+| SWUI-05 | Phase 3 | Complete |
+| SWUI-06 | Phase 3 | Complete |
+| CONC-01 | Phase 3 | Complete |
+| CONC-02 | Phase 3 | Complete |
 | PERF-01 | Phase 4 | Pending |
 | PERF-02 | Phase 4 | Pending |
 | TEST-01 | Phase 4 | Pending |
-| MOD-01 | Phase 3 | Pending |
-| MOD-02 | Phase 3 | Pending |
+| MOD-01 | Phase 3 | Complete |
+| MOD-02 | Phase 3 | Complete |
 | PLAY-01 | Phase 4 | Pending |
 | COMP-01 | Phase 1 | Complete |
 | COMP-02 | Phase 1 | Complete |
@@ -113,4 +113,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-25*
-*Last updated: 2026-01-25 after scope adjustments*
+*Last updated: 2026-01-26 after Phase 3 completion*
