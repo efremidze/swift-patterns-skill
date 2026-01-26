@@ -47,8 +47,8 @@ coverage/
 # Claude Code
 .claude/
 .gsd/
-.worktrees/
 .opencode/
+.worktrees/
 
 # Secrets
 *.pem
