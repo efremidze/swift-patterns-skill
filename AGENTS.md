@@ -1,15 +1,14 @@
-# Agent Guidelines for Swift Skills
+# Agent Guidelines for Swift Patterns
 
 This document provides guidance for AI agents working with this skill to ensure consistency and avoid common pitfalls.
 
 ## Core Principles
 
-### 1. Swift Focus Only
-**This is a Swift skill.** Do not include:
-- Swift concurrency patterns (use `.task` for Swift-specific needs only)
-- General Swift language features unrelated to Swift
-- Backend or server-side Swift patterns
+### 1. Swift and SwiftUI Focus
+**This is a Swift and SwiftUI skill.** Do not include:
+- Server-side Swift patterns
 - UIKit patterns (except when bridging is necessary)
+- Deep Swift concurrency patterns (actors, Sendable, etc.) — use `.task` for SwiftUI async work when needed
 
 ### 2. No Code Formatting or Linting
 **Do not include formatting/linting rules.** Avoid:
