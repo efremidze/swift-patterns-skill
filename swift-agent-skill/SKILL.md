@@ -46,8 +46,8 @@ All workflows must follow the Constraints section above.
 ## Core Guidelines
 
 ### SwiftUI State Management
-- **Choose the right property wrapper** based on ownership (@State, @Binding, @StateObject, @ObservedObject)
-- **Prefer @Observable over ObservableObject** for iOS 17+ (less boilerplate, better performance)
+- **Choose the right property wrapper** based on ownership (@State, @Binding, @Environment, @Observable)
+- **Prefer @Observable over ObservableObject** for iOS 17+; use ObservableObject for earlier OS support
 - **Follow unidirectional data flow** (data down, events up)
 - **Keep views simple and declarative** (no logic in body, no side effects)
 - **Use .task for async work** and .onChange for reactions
@@ -126,6 +126,15 @@ All workflows must follow the Constraints section above.
 **Question: "How do I implement navigation to this screen?"**
 → See `references/navigation.md`
 
+**Question: "How do I build lists with stable identity?"**
+→ See `references/lists-collections.md`
+
+**Question: "How do I split this view into smaller pieces?"**
+→ See `references/view-composition.md`
+
+**Question: "What replaces this legacy SwiftUI API?"**
+→ See `references/modern-swiftui-apis.md`
+
 **Question: "How do I make this testable?"**
 → See `references/testing-di.md`
 
@@ -142,8 +151,11 @@ All detailed patterns, examples, and best practices are organized in the `refere
 - **decisions.md** - Review vs refactor routing gates and intent cues
 - **workflows-review.md** - Review checklist, findings taxonomy, and risk cues
 - **workflows-refactor.md** - Behavior-preserving refactor checklist and risk cues
-- **state.md** - State management, property wrappers, data flow, architecture
+- **state.md** - State management, property wrappers, ownership guidance
+- **view-composition.md** - View extraction, data flow, and invariants
 - **navigation.md** - NavigationStack, deep linking, routing, state restoration
+- **lists-collections.md** - Stable identity, lazy containers, list composition
+- **modern-swiftui-apis.md** - Replacement catalog for legacy SwiftUI APIs
 - **testing-di.md** - Unit testing, dependency injection, test doubles
 - **performance.md** - SwiftUI optimization, memory management, profiling, caching
 - **code-review-refactoring.md** - Code smells and refactoring patterns
