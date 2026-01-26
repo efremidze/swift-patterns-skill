@@ -16,6 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Decisioned Workflows + Safety** - Review/refactor routing and risk-aware checklists are in place.
 - [x] **Phase 3: SwiftUI Guidance Core** - Core SwiftUI and lightweight concurrency guidance is available.
 - [x] **Phase 4: Quality + Playbooks** - Quality guidance and refactor playbooks complete v1.
+- [ ] **Phase 5: Constraints Alignment for Code Review Reference** - Align code review reference with constraints and remove disallowed content.
 
 ## Phase Details
 
@@ -82,10 +83,23 @@ Plans:
 - [x] 04-01-PLAN.md — Publish performance baseline and testing/DI seams guidance
 - [x] 04-02-PLAN.md — Add goal-based refactor playbooks and workflow wiring
 
+### Phase 5: Constraints Alignment for Code Review Reference
+**Goal**: Code review/refactor reference content complies with constraints and keeps Quick Decision Guide flows safe.
+**Depends on**: Phase 4
+**Requirements**: (gap closure)
+**Success Criteria** (what must be TRUE):
+  1. Quick Decision Guide links to a code review/refactor reference that enforces constraints.
+  2. Tool-specific steps, formatting rules, and UIKit examples are removed from that reference.
+  3. The reference links back to the Constraints section for scope enforcement.
+**Plans**: 1 plan
+
+Plans:
+- [ ] 05-01-PLAN.md — Align code review reference with constraints
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
+Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -93,3 +107,4 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 | 2. Decisioned Workflows + Safety | 2/2 | Complete | 2026-01-26 |
 | 3. SwiftUI Guidance Core | 2/2 | Complete | 2026-01-26 |
 | 4. Modernization + Quality Playbooks | 2/2 | Complete | 2026-01-26 |
+| 5. Constraints Alignment for Code Review Reference | 0/1 | Not started | - |
