@@ -64,7 +64,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Draft SwiftUI state, navigation, lists, composition, layout guidance, and API replacements
+- [x] 03-01-PLAN.md — Draft SwiftUI state, navigation, lists, composition, layout guidance, and API replacements
 - [ ] 03-02-PLAN.md — Add scroll and lightweight concurrency guidance with decision trees
 
 ### Phase 4: Quality + Playbooks
@@ -91,5 +91,5 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 |-------|----------------|--------|-----------|
 | 1. Compliance + Output Foundations | 2/2 | Complete | 2026-01-26 |
 | 2. Decisioned Workflows + Safety | 2/2 | Complete | 2026-01-26 |
-| 3. SwiftUI Guidance Core | 0/2 | Not started | - |
+| 3. SwiftUI Guidance Core | 1/2 | In progress | - |
 | 4. Modernization + Quality Playbooks | 0/2 | Not started | - |
