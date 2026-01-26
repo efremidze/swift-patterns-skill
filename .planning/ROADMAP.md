@@ -79,8 +79,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: Publish modernization catalog and quality/testing guidance
-- [ ] 04-02: Add goal-based refactor playbooks
+- [ ] 04-01-PLAN.md — Publish performance baseline and testing/DI seams guidance
+- [ ] 04-02-PLAN.md — Add goal-based refactor playbooks and workflow wiring
 
 ## Progress
 
