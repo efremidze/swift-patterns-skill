@@ -3,7 +3,7 @@ name: swift-patterns
 description: Expert guidance for modern Swift and SwiftUI development. Use when Claude needs to: (1) review SwiftUI code for issues, (2) refactor Swift/SwiftUI views safely, (3) fix state management or property wrapper problems, (4) migrate navigation to NavigationStack, (5) improve list performance or fix identity issues, (6) audit code for SwiftUI anti-patterns, or (7) extract views while preserving behavior.
 ---
 
-# Swift Expert Skill
+# swift-patterns
 
 ## Overview
 Use this skill to build, review, or improve Swift and SwiftUI code with correct patterns for state management, navigation, testing, performance optimization, and maintainable code. This skill provides practical guidance for modern Swift development following Apple's recommended patterns and iOS best practices.
