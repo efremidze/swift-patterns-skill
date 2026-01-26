@@ -6,6 +6,16 @@ Use this workflow when the user asks to change code while preserving existing be
 - **Constraints (mandatory):** See [SKILL.md Constraints](../SKILL.md#constraints).
 - **Invariants (mandatory):** See [Invariants reference](invariants.md).
 
+## Playbooks
+
+Use the playbooks when you need step-by-step guidance for behavior-preserving refactors:
+
+- View extraction (preserve state ownership, stable identity, data flow)
+- Navigation migration to `NavigationStack` with a single source of truth
+- State hoisting without breaking bindings or async work
+
+See [Refactor playbooks](refactor-playbooks.md).
+
 ## Behavior-Preserving Refactor Checklist
 
 ### Pre-checks

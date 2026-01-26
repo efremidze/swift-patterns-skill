@@ -135,6 +135,9 @@ All workflows must follow the Constraints section above.
 **Question: "How do I split this view into smaller pieces?"**
 → See `references/view-composition.md`
 
+**Question: "How do I refactor safely (view extraction, navigation migration, state hoisting)?"**
+→ See `references/refactor-playbooks.md`
+
 **Question: "What replaces this legacy SwiftUI API?"**
 → See `references/modern-swiftui-apis.md`
 
@@ -157,6 +160,7 @@ All detailed patterns, examples, and best practices are organized in the `refere
 - **decisions.md** - Review vs refactor routing gates and intent cues
 - **workflows-review.md** - Review checklist, findings taxonomy, and risk cues
 - **workflows-refactor.md** - Behavior-preserving refactor checklist and risk cues
+- **refactor-playbooks.md** - Goal-based refactor playbooks for common migrations
 - **state.md** - State management, property wrappers, ownership guidance
 - **view-composition.md** - View extraction, data flow, and invariants
 - **navigation.md** - NavigationStack, deep linking, routing, state restoration
