@@ -129,6 +129,9 @@ All workflows must follow the Constraints section above.
 **Question: "How do I build lists with stable identity?"**
 → See `references/lists-collections.md`
 
+**Question: "How do I paginate or handle scrolling safely?"**
+→ See `references/scrolling.md`
+
 **Question: "How do I split this view into smaller pieces?"**
 → See `references/view-composition.md`
 
@@ -140,6 +143,9 @@ All workflows must follow the Constraints section above.
 
 **Question: "Why is this view/list so slow?"**
 → See `references/performance.md`
+
+**Question: "How do I run async work in SwiftUI safely?"**
+→ See `references/concurrency.md`
 
 **Question: "Is this code well-structured?"**
 → See `references/code-review-refactoring.md`
@@ -155,7 +161,9 @@ All detailed patterns, examples, and best practices are organized in the `refere
 - **view-composition.md** - View extraction, data flow, and invariants
 - **navigation.md** - NavigationStack, deep linking, routing, state restoration
 - **lists-collections.md** - Stable identity, lazy containers, list composition
+- **scrolling.md** - ScrollView, pagination triggers, safe loading
 - **modern-swiftui-apis.md** - Replacement catalog for legacy SwiftUI APIs
+- **concurrency.md** - SwiftUI lifecycle-aware async work and @MainActor updates
 - **testing-di.md** - Unit testing, dependency injection, test doubles
 - **performance.md** - SwiftUI optimization, memory management, profiling, caching
 - **code-review-refactoring.md** - Code smells and refactoring patterns
