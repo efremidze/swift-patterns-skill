@@ -81,33 +81,33 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CORE-01 | Phase [N] | Pending |
-| CORE-02 | Phase [N] | Pending |
-| CORE-03 | Phase [N] | Pending |
-| CORE-04 | Phase [N] | Pending |
-| CORE-05 | Phase [N] | Pending |
-| CORE-06 | Phase [N] | Pending |
-| SWUI-01 | Phase [N] | Pending |
-| SWUI-02 | Phase [N] | Pending |
-| SWUI-03 | Phase [N] | Pending |
-| SWUI-04 | Phase [N] | Pending |
-| SWUI-05 | Phase [N] | Pending |
-| SWUI-06 | Phase [N] | Pending |
-| CONC-01 | Phase [N] | Pending |
-| CONC-02 | Phase [N] | Pending |
-| PERF-01 | Phase [N] | Pending |
-| PERF-02 | Phase [N] | Pending |
-| TEST-01 | Phase [N] | Pending |
-| MOD-01 | Phase [N] | Pending |
-| MOD-02 | Phase [N] | Pending |
-| PLAY-01 | Phase [N] | Pending |
-| COMP-01 | Phase [N] | Pending |
-| COMP-02 | Phase [N] | Pending |
+| CORE-01 | Phase 2 | Pending |
+| CORE-02 | Phase 2 | Pending |
+| CORE-03 | Phase 2 | Pending |
+| CORE-04 | Phase 2 | Pending |
+| CORE-05 | Phase 1 | Pending |
+| CORE-06 | Phase 2 | Pending |
+| SWUI-01 | Phase 3 | Pending |
+| SWUI-02 | Phase 3 | Pending |
+| SWUI-03 | Phase 3 | Pending |
+| SWUI-04 | Phase 3 | Pending |
+| SWUI-05 | Phase 3 | Pending |
+| SWUI-06 | Phase 3 | Pending |
+| CONC-01 | Phase 3 | Pending |
+| CONC-02 | Phase 3 | Pending |
+| PERF-01 | Phase 4 | Pending |
+| PERF-02 | Phase 4 | Pending |
+| TEST-01 | Phase 4 | Pending |
+| MOD-01 | Phase 4 | Pending |
+| MOD-02 | Phase 3 | Pending |
+| PLAY-01 | Phase 4 | Pending |
+| COMP-01 | Phase 1 | Pending |
+| COMP-02 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 21 total
-- Mapped to phases: 0
-- Unmapped: 21 ⚠️
+- Mapped to phases: 21
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-01-25*
