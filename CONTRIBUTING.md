@@ -20,6 +20,12 @@ swift-agent-skill/
 
 ## How to Contribute
 
+## Recommended Workflow (Skill Creator)
+If you use the `skill-creator` skill, you can:
+- Propose changes in plain language
+- Have the skill generate or refine `SKILL.md` and reference content
+- Review for SwiftUI accuracy and consistency
+
 ### Improving the Main Skill (SKILL.md)
 
 The main `SKILL.md` file provides:
