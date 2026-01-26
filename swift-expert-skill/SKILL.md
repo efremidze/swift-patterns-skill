@@ -33,28 +33,11 @@ All workflows below must follow the Constraints section to prevent drift.
 5) Constraints + citation allowlist check (confirm alignment with Constraints and `references/sources.md`)
 6) Next steps (what to fix first or verify)
 
-## Workflow Decision Tree
+## Workflow Routing
 
-### 1) Review existing Swift/SwiftUI code
-- Verify SwiftUI property wrapper usage and state management (see `references/swiftui-architecture.md`)
-- Review navigation patterns and deep linking (see `references/navigation.md`)
-- Check testing patterns and dependency injection (see `references/testing-di.md`)
-- Verify performance optimizations are applied (see `references/performance.md`)
-- Review code for smells and refactoring opportunities (see `references/code-review-refactoring.md`)
+Use [references/decisions.md](references/decisions.md) as the authoritative routing guide for selecting review vs refactor workflows based on explicit intent cues. This routing gate avoids duplicating rules and keeps workflow selection consistent.
 
-### 2) Improve existing Swift/SwiftUI code
-- Replace incorrect property wrappers and improve state management (see `references/swiftui-architecture.md`)
-- Modernize navigation to use NavigationStack and type-safe routing (see `references/navigation.md`)
-- Add protocol-based dependency injection for testability (see `references/testing-di.md`)
-- Apply performance optimizations for lists, views, and memory (see `references/performance.md`)
-- Refactor code smells using established patterns (see `references/code-review-refactoring.md`)
-
-### 3) Implement new Swift/SwiftUI feature
-- Choose appropriate property wrappers for state ownership (see `references/swiftui-architecture.md`)
-- Implement navigation with centralized routing (see `references/navigation.md`)
-- Structure code with testable dependency injection (see `references/testing-di.md`)
-- Build performant views with proper optimizations (see `references/performance.md`)
-- Apply maintainable refactoring patterns (see `references/code-review-refactoring.md`)
+All workflows must follow the Constraints section above.
 
 ## Core Guidelines
 
@@ -152,6 +135,7 @@ All workflows below must follow the Constraints section to prevent drift.
 
 All detailed patterns, examples, and best practices are organized in the `references/` directory:
 
+- **decisions.md** - Review vs refactor routing gates and intent cues
 - **swiftui-architecture.md** - State management, property wrappers, data flow, architecture
 - **navigation.md** - NavigationStack, deep linking, routing, state restoration
 - **testing-di.md** - Unit testing, dependency injection, test doubles
@@ -160,7 +144,7 @@ All detailed patterns, examples, and best practices are organized in the `refere
 
 ## Usage Tips
 
-- Start with the Workflow Decision Tree to determine your task type (review/improve/implement)
+- Start with Workflow Routing to select review vs refactor intent
 - Use the Quick Decision Guide to find the right reference quickly
 - Reference documents contain detailed guidelines, tradeoffs, code examples, and anti-patterns
 - Each reference is self-contained but cross-references related topics
