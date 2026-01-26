@@ -47,8 +47,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: Build workflow routing and shared constraints section
-- [ ] 02-02: Add refactor/review checklists with risk cues and invariants
+- [ ] 02-01-PLAN.md — Build workflow routing and shared constraints section
+- [ ] 02-02-PLAN.md — Add refactor/review checklists with risk cues and invariants
 
 ### Phase 3: SwiftUI Guidance Core
 **Goal**: Users can apply core SwiftUI guidance for state, navigation, lists, composition, layout, scrolling, and lightweight concurrency.
