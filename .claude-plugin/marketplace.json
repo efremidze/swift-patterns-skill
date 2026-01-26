@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/marketplace/marketplace.schema.json",
+  "name": "swift-patterns-skill",
+  "version": "1.0.0",
+  "owner": {
+    "name": "efremidze",
+    "email": "efremidzel@hotmail.com"
+  },
+  "metadata": {
+    "description": "Expert guidance for modern Swift and SwiftUI development including state management, navigation, testing, performance, and code quality."
+  },
+  "plugins": [
+    {
+      "name": "swift-expert",
+      "description": "Expert Swift and SwiftUI guidance for state management, navigation, testing, dependency injection, performance optimization, and code quality patterns.",
+      "repository": "https://github.com/efremidze/swift-patterns-skill",
+      "version": "1.0.0",
+      "author": {
+        "name": "efremidze",
+        "email": "efremidzel@hotmail.com"
+      },
+      "license": "MIT",
+      "category": "development",
+      "keywords": [
+        "swift",
+        "swiftui",
+        "ios",
+        "apple",
+        "state-management",
+        "navigation",
+        "testing",
+        "dependency-injection",
+        "performance"
+      ],
+      "tags": [
+        "swift",
+        "swiftui",
+        "ios",
+        "apple",
+        "state-management",
+        "navigation",
+        "testing",
+        "dependency-injection",
+        "performance"
+      ],
+      "source": "./",
+      "skills": [
+        "./swift-patterns"
+      ],
+      "strict": false
+    }
+  ]
+}
