@@ -47,7 +47,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Build workflow routing and shared constraints section
+- [x] 02-01-PLAN.md — Build workflow routing and shared constraints section
 - [ ] 02-02-PLAN.md — Add refactor/review checklists with risk cues and invariants
 
 ### Phase 3: SwiftUI Guidance Core
@@ -90,6 +90,6 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Compliance + Output Foundations | 2/2 | Complete | 2026-01-26 |
-| 2. Decisioned Workflows + Safety | 0/2 | Not started | - |
+| 2. Decisioned Workflows + Safety | 1/2 | In progress | - |
 | 3. SwiftUI Guidance Core | 0/2 | Not started | - |
 | 4. Modernization + Quality Playbooks | 0/2 | Not started | - |
