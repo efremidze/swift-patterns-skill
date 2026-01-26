@@ -31,8 +31,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: Define skill metadata, constraints, and citation rules
-- [ ] 01-02: Establish standardized response templates
+- [ ] 01-01-PLAN.md — Define skill metadata, constraints, and citation rules
+- [ ] 01-02-PLAN.md — Establish standardized response templates
 
 ### Phase 2: Decisioned Workflows + Safety
 **Goal**: Users can route requests into refactor vs review workflows with consistent, risk-aware checklists and a shared constraints section.
