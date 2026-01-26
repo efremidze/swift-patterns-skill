@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Decisioned Workflows + Safety** - Review/refactor routing and risk-aware checklists are in place.
 - [x] **Phase 3: SwiftUI Guidance Core** - Core SwiftUI and lightweight concurrency guidance is available.
 - [x] **Phase 4: Quality + Playbooks** - Quality guidance and refactor playbooks complete v1.
-- [ ] **Phase 5: Constraints Alignment for Code Review Reference** - Align code review reference with constraints and remove disallowed content.
+- [x] **Phase 5: Constraints Alignment for Code Review Reference** - Align code review reference with constraints and remove disallowed content.
 
 ## Phase Details
 
@@ -107,4 +107,4 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4 → 5
 | 2. Decisioned Workflows + Safety | 2/2 | Complete | 2026-01-26 |
 | 3. SwiftUI Guidance Core | 2/2 | Complete | 2026-01-26 |
 | 4. Modernization + Quality Playbooks | 2/2 | Complete | 2026-01-26 |
-| 5. Constraints Alignment for Code Review Reference | 0/1 | Not started | - |
+| 5. Constraints Alignment for Code Review Reference | 1/1 | Complete | 2026-01-26 |
