@@ -18,9 +18,9 @@ score: 3/3 must-haves verified
 
 | # | Truth | Status | Evidence |
 | --- | --- | --- | --- |
-| 1 | Code review/refactor reference enforces constraints via a required link | ✓ VERIFIED | `swift-agent-skill/references/code-review-refactoring.md:4` includes required Constraints link to `../SKILL.md#constraints`. |
-| 2 | Reference contains no tool-specific steps, formatting or linting rules, or UIKit examples | ✓ VERIFIED | Pattern scan for `Instruments|Xcode|UIKit|UIViewController|ViewController|formatting|lint` returned no matches in `swift-agent-skill/references/code-review-refactoring.md`. |
-| 3 | Quick Decision Guide still points to the compliant code review/refactor reference | ✓ VERIFIED | `swift-agent-skill/SKILL.md:154` points to `references/code-review-refactoring.md`. |
+| 1 | Code review/refactor reference enforces constraints via a required link | ✓ VERIFIED | `swift-patterns-skill/references/code-review-refactoring.md:4` includes required Constraints link to `../SKILL.md#constraints`. |
+| 2 | Reference contains no tool-specific steps, formatting or linting rules, or UIKit examples | ✓ VERIFIED | Pattern scan for `Instruments|Xcode|UIKit|UIViewController|ViewController|formatting|lint` returned no matches in `swift-patterns-skill/references/code-review-refactoring.md`. |
+| 3 | Quick Decision Guide still points to the compliant code review/refactor reference | ✓ VERIFIED | `swift-patterns-skill/SKILL.md:154` points to `references/code-review-refactoring.md`. |
 
 **Score:** 3/3 truths verified
 
@@ -28,15 +28,15 @@ score: 3/3 must-haves verified
 
 | Artifact | Expected | Status | Details |
 | --- | --- | --- | --- |
-| `swift-agent-skill/references/code-review-refactoring.md` | Constraints-linked, SwiftUI-focused review/refactor guidance | ✓ VERIFIED | Exists (128 lines), includes required Constraints link, no disallowed tool/formatting/UIKit content detected. |
-| `swift-agent-skill/SKILL.md` | Quick Decision Guide link to code review/refactor reference | ✓ VERIFIED | Exists; Quick Decision Guide references `references/code-review-refactoring.md`. |
+| `swift-patterns-skill/references/code-review-refactoring.md` | Constraints-linked, SwiftUI-focused review/refactor guidance | ✓ VERIFIED | Exists (128 lines), includes required Constraints link, no disallowed tool/formatting/UIKit content detected. |
+| `swift-patterns-skill/SKILL.md` | Quick Decision Guide link to code review/refactor reference | ✓ VERIFIED | Exists; Quick Decision Guide references `references/code-review-refactoring.md`. |
 
 ### Key Link Verification
 
 | From | To | Via | Status | Details |
 | --- | --- | --- | --- | --- |
-| `swift-agent-skill/references/code-review-refactoring.md` | `swift-agent-skill/SKILL.md#constraints` | Required references block | WIRED | Link present at `swift-agent-skill/references/code-review-refactoring.md:4`. |
-| `swift-agent-skill/SKILL.md` | `swift-agent-skill/references/code-review-refactoring.md` | Quick Decision Guide entry | WIRED | Link present at `swift-agent-skill/SKILL.md:154`. |
+| `swift-patterns-skill/references/code-review-refactoring.md` | `swift-patterns-skill/SKILL.md#constraints` | Required references block | WIRED | Link present at `swift-patterns-skill/references/code-review-refactoring.md:4`. |
+| `swift-patterns-skill/SKILL.md` | `swift-patterns-skill/references/code-review-refactoring.md` | Quick Decision Guide entry | WIRED | Link present at `swift-patterns-skill/SKILL.md:154`. |
 
 ### Requirements Coverage
 

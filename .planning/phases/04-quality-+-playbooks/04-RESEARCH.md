@@ -47,7 +47,7 @@ The established libraries/tools for this domain:
 Optional content organization for SwiftUI guidance docs (not a required app structure):
 
 ```
-swift-agent-skill/
+swift-patterns-skill/
 ├── SKILL.md
 ├── references/
 │   ├── performance.md              # Performance baseline + safe optimizations
@@ -62,7 +62,7 @@ swift-agent-skill/
 **When to use:** Any performance guidance, especially before recommending changes.
 **Example:**
 ```swift
-// Source: swift-agent-skill/references/performance.md
+// Source: swift-patterns-skill/references/performance.md
 // Baseline checks
 // - Avoid expensive computations in body
 // - Use LazyVStack/LazyHStack for long lists
@@ -75,7 +75,7 @@ swift-agent-skill/
 **When to use:** Any dynamic list or view with heavy computation/formatting.
 **Example:**
 ```swift
-// Source: swift-agent-skill/references/performance.md
+// Source: swift-patterns-skill/references/performance.md
 // Bad: creates formatter every render
 var body: some View {
     let formatter = DateFormatter()
@@ -95,7 +95,7 @@ private let formatter: DateFormatter = {
 **When to use:** Refactors that touch dependencies or side effects.
 **Example:**
 ```swift
-// Source: swift-agent-skill/references/testing-di.md
+// Source: swift-patterns-skill/references/testing-di.md
 protocol UserServiceProtocol {
     func fetchUser(id: String) async throws -> User
 }
@@ -114,7 +114,7 @@ class UserViewModel {
 **When to use:** View extraction, navigation migration, or state hoisting.
 **Example:**
 ```swift
-// Source: swift-agent-skill/references/workflows-refactor.md
+// Source: swift-patterns-skill/references/workflows-refactor.md
 // Playbook steps (high level):
 // 1) Capture current behavior
 // 2) Preserve stable identity and state ownership
@@ -180,7 +180,7 @@ Verified patterns from internal references (needs validation against Apple docs)
 
 ### Stable Identity in Lists
 ```swift
-// Source: swift-agent-skill/references/invariants.md
+// Source: swift-patterns-skill/references/invariants.md
 struct Item: Identifiable {
     let id: UUID
     let title: String
@@ -193,7 +193,7 @@ List(items) { item in
 
 ### Avoid Expensive Work in `body`
 ```swift
-// Source: swift-agent-skill/references/performance.md
+// Source: swift-patterns-skill/references/performance.md
 private let formatter: DateFormatter = {
     let f = DateFormatter()
     f.dateStyle = .medium
@@ -207,7 +207,7 @@ var body: some View {
 
 ### Lightweight DI Seam
 ```swift
-// Source: swift-agent-skill/references/testing-di.md
+// Source: swift-patterns-skill/references/testing-di.md
 protocol NetworkManagerProtocol {
     func request() async throws -> Data
 }
@@ -253,10 +253,10 @@ class MyService {
 - None.
 
 ### Tertiary (LOW confidence)
-- swift-agent-skill/references/performance.md
-- swift-agent-skill/references/testing-di.md
-- swift-agent-skill/references/workflows-refactor.md
-- swift-agent-skill/references/invariants.md
+- swift-patterns-skill/references/performance.md
+- swift-patterns-skill/references/testing-di.md
+- swift-patterns-skill/references/workflows-refactor.md
+- swift-patterns-skill/references/invariants.md
 
 ## Metadata
 

@@ -1,4 +1,4 @@
-# Swift Patterns
+# Swift Patterns Skill
 
 A comprehensive Swift and SwiftUI knowledge base for AI coding tools, following the [Agent Skills standard](https://agentskills.io/home).
 
@@ -9,13 +9,13 @@ Includes patterns for concurrency, state management, navigation, testing, and pe
 Install with a single command:
 
 ```bash
-npx skills add https://github.com/efremidze/swift-patterns --skill swift-agent-skill
+npx skills add https://github.com/efremidze/swift-patterns --skill swift-patterns-skill
 ```
 
 Then use it in your AI assistant:
 > Use the Swift expert skill to review my async/await implementation
 
-[View on skills.sh →](https://skills.sh/efremidze/swift-patterns/swift-agent-skill)
+[View on skills.sh →](https://skills.sh/efremidze/swift-patterns/swift-patterns-skill)
 
 ## What You Get
 
@@ -33,7 +33,7 @@ This skill teaches your AI assistant about:
 ### Using skills.sh (Recommended)
 
 ```bash
-npx skills add https://github.com/efremidze/swift-patterns --skill swift-agent-skill
+npx skills add https://github.com/efremidze/swift-patterns --skill swift-patterns-skill
 ```
 
 ### Claude Code Plugin
@@ -42,7 +42,7 @@ Install for personal use:
 
 ```bash
 /plugin marketplace add efremidze/swift-patterns
-/plugin install swift-expert@swift-agent-skill
+/plugin install swift-expert@swift-patterns-skill
 ```
 
 Or configure for your team in `.claude/settings.json`:
@@ -50,10 +50,10 @@ Or configure for your team in `.claude/settings.json`:
 ```json
 {
   "enabledPlugins": {
-    "swift-expert@swift-agent-skill": true
+    "swift-expert@swift-patterns-skill": true
   },
   "extraKnownMarketplaces": {
-    "swift-agent-skill": {
+    "swift-patterns-skill": {
       "source": {
         "source": "github",
         "repo": "efremidze/swift-patterns"
@@ -66,7 +66,7 @@ Or configure for your team in `.claude/settings.json`:
 ### Manual Installation
 
 1. Clone this repository
-2. Copy or symlink the `swift-agent-skill/` folder to your AI tool's skills directory
+2. Copy or symlink the `swift-patterns-skill/` folder to your AI tool's skills directory
 3. Refer to your tool's documentation:
    - [Cursor](https://cursor.com/docs/context/skills#enabling-skills)
    - [Claude](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview#using-skills)
@@ -85,7 +85,7 @@ Or configure for your team in `.claude/settings.json`:
 ## Structure
 
 ```
-swift-agent-skill/
+swift-patterns-skill/
   SKILL.md                        # Main workflow and decision trees
   references/
     concurrency.md                # Async/await, tasks, actors

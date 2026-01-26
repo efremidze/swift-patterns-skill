@@ -22,7 +22,7 @@ tech-stack:
 
 key-files:
   created: []
-  modified: [swift-agent-skill/references/code-review-refactoring.md]
+  modified: [swift-patterns-skill/references/code-review-refactoring.md]
 
 key-decisions:
   - "None - followed plan as specified"
@@ -60,7 +60,7 @@ Each task was committed atomically:
 **Plan metadata:** pending
 
 ## Files Created/Modified
-- `swift-agent-skill/references/code-review-refactoring.md` - Constraints-linked SwiftUI review/refactor reference
+- `swift-patterns-skill/references/code-review-refactoring.md` - Constraints-linked SwiftUI review/refactor reference
 
 ## Decisions Made
 None - followed plan as specified.

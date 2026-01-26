@@ -20,8 +20,8 @@ tech-stack:
   patterns: [Decision-gated workflow routing, Shared constraints anchor]
 
 key-files:
-  created: [swift-agent-skill/references/decisions.md]
-  modified: [swift-agent-skill/SKILL.md]
+  created: [swift-patterns-skill/references/decisions.md]
+  modified: [swift-patterns-skill/SKILL.md]
 
 key-decisions:
   - "Centralized review vs refactor routing in decisions.md and linked from SKILL.md"
@@ -62,8 +62,8 @@ Each task was committed atomically:
 **Plan metadata:** (this commit)
 
 ## Files Created/Modified
-- `swift-agent-skill/references/decisions.md` - Review vs refactor routing gates and intent cues.
-- `swift-agent-skill/SKILL.md` - Workflow routing link and constraints anchor.
+- `swift-patterns-skill/references/decisions.md` - Review vs refactor routing gates and intent cues.
+- `swift-patterns-skill/SKILL.md` - Workflow routing link and constraints anchor.
 
 ## Decisions Made
 None - followed plan as specified.

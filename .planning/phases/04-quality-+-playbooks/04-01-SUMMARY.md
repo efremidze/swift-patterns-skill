@@ -21,8 +21,8 @@ tech-stack:
 key-files:
   created: []
   modified:
-    - swift-agent-skill/references/performance.md
-    - swift-agent-skill/references/testing-di.md
+    - swift-patterns-skill/references/performance.md
+    - swift-patterns-skill/references/testing-di.md
 
 key-decisions:
   - "None - followed plan as specified"
@@ -62,8 +62,8 @@ Each task was committed atomically:
 **Plan metadata:** Pending
 
 ## Files Created/Modified
-- `swift-agent-skill/references/performance.md` - Baseline checklist, safe optimizations, snippets, and risk cues.
-- `swift-agent-skill/references/testing-di.md` - Lightweight DI seams and test doubles quick guide.
+- `swift-patterns-skill/references/performance.md` - Baseline checklist, safe optimizations, snippets, and risk cues.
+- `swift-patterns-skill/references/testing-di.md` - Lightweight DI seams and test doubles quick guide.
 
 ## Decisions Made
 None - followed plan as specified.

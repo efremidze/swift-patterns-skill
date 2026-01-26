@@ -21,13 +21,13 @@ tech-stack:
 
 key-files:
   created:
-    - swift-agent-skill/references/state.md
-    - swift-agent-skill/references/view-composition.md
-    - swift-agent-skill/references/lists-collections.md
-    - swift-agent-skill/references/modern-swiftui-apis.md
+    - swift-patterns-skill/references/state.md
+    - swift-patterns-skill/references/view-composition.md
+    - swift-patterns-skill/references/lists-collections.md
+    - swift-patterns-skill/references/modern-swiftui-apis.md
   modified:
-    - swift-agent-skill/references/navigation.md
-    - swift-agent-skill/SKILL.md
+    - swift-patterns-skill/references/navigation.md
+    - swift-patterns-skill/SKILL.md
 
 key-decisions:
   - "None - followed plan as specified"
@@ -69,12 +69,12 @@ Each task was committed atomically:
 **Plan metadata:** docs commit for plan completion
 
 ## Files Created/Modified
-- `swift-agent-skill/references/state.md` - State ownership decision tree and layout guidance.
-- `swift-agent-skill/references/view-composition.md` - View extraction rules and data flow patterns.
-- `swift-agent-skill/references/navigation.md` - NavigationStack-based navigation patterns.
-- `swift-agent-skill/references/lists-collections.md` - List identity and lazy container guidance.
-- `swift-agent-skill/references/modern-swiftui-apis.md` - Modern SwiftUI replacement catalog.
-- `swift-agent-skill/SKILL.md` - Reference links and quick decision guide updates.
+- `swift-patterns-skill/references/state.md` - State ownership decision tree and layout guidance.
+- `swift-patterns-skill/references/view-composition.md` - View extraction rules and data flow patterns.
+- `swift-patterns-skill/references/navigation.md` - NavigationStack-based navigation patterns.
+- `swift-patterns-skill/references/lists-collections.md` - List identity and lazy container guidance.
+- `swift-patterns-skill/references/modern-swiftui-apis.md` - Modern SwiftUI replacement catalog.
+- `swift-patterns-skill/SKILL.md` - Reference links and quick decision guide updates.
 
 ## Decisions Made
 None - followed plan as specified.

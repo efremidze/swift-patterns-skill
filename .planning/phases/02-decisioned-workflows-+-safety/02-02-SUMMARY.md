@@ -21,11 +21,11 @@ tech-stack:
 
 key-files:
   created:
-    - swift-agent-skill/references/invariants.md
-    - swift-agent-skill/references/workflows-review.md
-    - swift-agent-skill/references/workflows-refactor.md
+    - swift-patterns-skill/references/invariants.md
+    - swift-patterns-skill/references/workflows-review.md
+    - swift-patterns-skill/references/workflows-refactor.md
   modified:
-    - swift-agent-skill/SKILL.md
+    - swift-patterns-skill/SKILL.md
 
 key-decisions:
   - "None - followed plan as specified"
@@ -65,10 +65,10 @@ Each task was committed atomically:
 **Plan metadata:** (docs commit after SUMMARY/STATE/ROADMAP update)
 
 ## Files Created/Modified
-- `swift-agent-skill/references/invariants.md` - Shared SwiftUI refactor invariants
-- `swift-agent-skill/references/workflows-review.md` - Review checklist with taxonomy and risk cues
-- `swift-agent-skill/references/workflows-refactor.md` - Refactor checklist with risk cues
-- `swift-agent-skill/SKILL.md` - Workflow routing and reference links
+- `swift-patterns-skill/references/invariants.md` - Shared SwiftUI refactor invariants
+- `swift-patterns-skill/references/workflows-review.md` - Review checklist with taxonomy and risk cues
+- `swift-patterns-skill/references/workflows-refactor.md` - Refactor checklist with risk cues
+- `swift-patterns-skill/SKILL.md` - Workflow routing and reference links
 
 ## Decisions Made
 None - followed plan as specified.

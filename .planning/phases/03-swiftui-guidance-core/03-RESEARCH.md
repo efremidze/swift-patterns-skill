@@ -46,7 +46,7 @@ The established libraries/tools for this domain:
 Optional content organization for SwiftUI guidance docs (not a required app structure):
 
 ```
-swift-agent-skill/
+swift-patterns-skill/
 ├── SKILL.md
 ├── references/
 │   ├── state.md                    # State wrappers + decision trees
@@ -335,7 +335,7 @@ struct DetailView: View {
 - None (JS-rendered docs were not fully retrievable with current tools)
 
 ### Tertiary (LOW confidence)
-- Internal SwiftUI guidance notes under `swift-agent-skill/references/` (non-authoritative, for synthesis only)
+- Internal SwiftUI guidance notes under `swift-patterns-skill/references/` (non-authoritative, for synthesis only)
 
 ## Metadata
 
