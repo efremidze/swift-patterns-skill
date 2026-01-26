@@ -94,7 +94,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 05-01-PLAN.md — Align code review reference with constraints
+- [x] 05-01-PLAN.md — Align code review reference with constraints
 
 ## Progress
 
