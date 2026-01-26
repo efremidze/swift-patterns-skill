@@ -82,13 +82,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CORE-01 | Phase 2 | Pending |
-| CORE-02 | Phase 2 | Pending |
-| CORE-03 | Phase 2 | Pending |
-| CORE-04 | Phase 2 | Pending |
+| CORE-01 | Phase 2 | Complete |
+| CORE-02 | Phase 2 | Complete |
+| CORE-03 | Phase 2 | Complete |
+| CORE-04 | Phase 2 | Complete |
 | CORE-05 | Phase 1 | Complete |
 | CORE-06 | Phase 1 | Complete |
-| CORE-07 | Phase 2 | Pending |
+| CORE-07 | Phase 2 | Complete |
 | SWUI-01 | Phase 3 | Pending |
 | SWUI-02 | Phase 3 | Pending |
 | SWUI-03 | Phase 3 | Pending |
