@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-01-25)
 
 **Core value:** AI agents can quickly apply consistent, modern Swift/SwiftUI guidance to refactor and review code without ambiguity.
-**Current focus:** Phase 5 - Constraints Alignment for Code Review Reference
+**Current focus:** Planning next milestone
 
 ## Current Position
 
-Phase: 5 of 5 (Constraints Alignment for Code Review Reference)
-Plan: 1 of 1 in current phase
-Status: Phase complete
-Last activity: 2026-01-26 - Completed 05-01-PLAN.md
+Phase: Not started
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-01-26 — v1.0 milestone complete
 
-Progress: [██████████] 100%
+Progress: [░░░░░░░░░░] 0%
 
 ## Performance Metrics
 
