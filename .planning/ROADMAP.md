@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Compliance + Output Foundations** - Skill packaging, constraints, and standardized response templates are usable.
 - [x] **Phase 2: Decisioned Workflows + Safety** - Review/refactor routing and risk-aware checklists are in place.
-- [ ] **Phase 3: SwiftUI Guidance Core** - Core SwiftUI and lightweight concurrency guidance is available.
+- [x] **Phase 3: SwiftUI Guidance Core** - Core SwiftUI and lightweight concurrency guidance is available.
 - [ ] **Phase 4: Quality + Playbooks** - Quality guidance and refactor playbooks complete v1.
 
 ## Phase Details
@@ -65,7 +65,7 @@ Plans:
 
 Plans:
 - [x] 03-01-PLAN.md — Draft SwiftUI state, navigation, lists, composition, layout guidance, and API replacements
-- [ ] 03-02-PLAN.md — Add scroll and lightweight concurrency guidance with decision trees
+- [x] 03-02-PLAN.md — Add scroll and lightweight concurrency guidance with decision trees
 
 ### Phase 4: Quality + Playbooks
 **Goal**: Users can apply quality, performance, and refactor playbooks safely.
@@ -91,5 +91,5 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 |-------|----------------|--------|-----------|
 | 1. Compliance + Output Foundations | 2/2 | Complete | 2026-01-26 |
 | 2. Decisioned Workflows + Safety | 2/2 | Complete | 2026-01-26 |
-| 3. SwiftUI Guidance Core | 1/2 | In progress | - |
+| 3. SwiftUI Guidance Core | 2/2 | Complete | 2026-01-26 |
 | 4. Modernization + Quality Playbooks | 0/2 | Not started | - |
