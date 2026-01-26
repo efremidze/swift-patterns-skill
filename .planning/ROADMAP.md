@@ -64,8 +64,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: Draft SwiftUI state, navigation, list, composition, layout guidance, and API replacements
-- [ ] 03-02: Add scroll and lightweight concurrency guidance with decision trees
+- [ ] 03-01-PLAN.md — Draft SwiftUI state, navigation, lists, composition, layout guidance, and API replacements
+- [ ] 03-02-PLAN.md — Add scroll and lightweight concurrency guidance with decision trees
 
 ### Phase 4: Quality + Playbooks
 **Goal**: Users can apply quality, performance, and refactor playbooks safely.
