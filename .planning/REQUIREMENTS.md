@@ -33,9 +33,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Quality & Performance
 
-- [ ] **PERF-01**: Performance baseline guidance covers common SwiftUI pitfalls and safe optimizations
-- [ ] **PERF-02**: Performance best-practice patterns cover view identity stability and expensive work avoidance
-- [ ] **TEST-01**: Testing/DI guidance shows lightweight seams for refactor safety without tool mandates
+- [x] **PERF-01**: Performance baseline guidance covers common SwiftUI pitfalls and safe optimizations
+- [x] **PERF-02**: Performance best-practice patterns cover view identity stability and expensive work avoidance
+- [x] **TEST-01**: Testing/DI guidance shows lightweight seams for refactor safety without tool mandates
 
 ### Modernization & Decisioning
 
@@ -44,7 +44,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Advanced Playbooks
 
-- [ ] **PLAY-01**: Goal-based refactor playbooks guide common migrations (view extraction, navigation, state hoisting)
+- [x] **PLAY-01**: Goal-based refactor playbooks guide common migrations (view extraction, navigation, state hoisting)
 
 ### Compliance & Packaging
 
@@ -97,12 +97,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SWUI-06 | Phase 3 | Complete |
 | CONC-01 | Phase 3 | Complete |
 | CONC-02 | Phase 3 | Complete |
-| PERF-01 | Phase 4 | Pending |
-| PERF-02 | Phase 4 | Pending |
-| TEST-01 | Phase 4 | Pending |
+| PERF-01 | Phase 4 | Complete |
+| PERF-02 | Phase 4 | Complete |
+| TEST-01 | Phase 4 | Complete |
 | MOD-01 | Phase 3 | Complete |
 | MOD-02 | Phase 3 | Complete |
-| PLAY-01 | Phase 4 | Pending |
+| PLAY-01 | Phase 4 | Complete |
 | COMP-01 | Phase 1 | Complete |
 | COMP-02 | Phase 1 | Complete |
 
@@ -113,4 +113,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-25*
-*Last updated: 2026-01-26 after Phase 3 completion*
+*Last updated: 2026-01-26 after Phase 4 completion*

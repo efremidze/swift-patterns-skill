@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Compliance + Output Foundations** - Skill packaging, constraints, and standardized response templates are usable.
 - [x] **Phase 2: Decisioned Workflows + Safety** - Review/refactor routing and risk-aware checklists are in place.
 - [x] **Phase 3: SwiftUI Guidance Core** - Core SwiftUI and lightweight concurrency guidance is available.
-- [ ] **Phase 4: Quality + Playbooks** - Quality guidance and refactor playbooks complete v1.
+- [x] **Phase 4: Quality + Playbooks** - Quality guidance and refactor playbooks complete v1.
 
 ## Phase Details
 
