@@ -1,6 +1,6 @@
 ---
 name: swift-agent-skill
-description: Expert guidance for modern Swift and SwiftUI review and refactor work with scoped constraints and reference-backed rules.
+description: Expert guidance for modern Swift and SwiftUI development. Use when Claude needs to: (1) review SwiftUI code for issues, (2) refactor Swift/SwiftUI views safely, (3) fix state management or property wrapper problems, (4) migrate navigation to NavigationStack, (5) improve list performance or fix identity issues, (6) audit code for SwiftUI anti-patterns, or (7) extract views while preserving behavior.
 ---
 
 # Swift Expert Skill
@@ -117,6 +117,42 @@ All workflows must follow the Constraints section above.
 - Planning refactoring work
 - Applying design patterns
 - Improving code maintainability
+
+### Choose `references/view-composition.md` when:
+- Extracting views into smaller components
+- Deciding where state should live
+- Fixing parent/child data flow issues
+- Applying layout patterns
+
+### Choose `references/lists-collections.md` when:
+- Building lists with stable identity
+- Using ForEach with dynamic data
+- Choosing between List and LazyVStack
+- Fixing selection or state loss in lists
+
+### Choose `references/scrolling.md` when:
+- Implementing pagination or infinite scroll
+- Handling scroll position and anchoring
+- Loading more content on scroll
+- Fixing scroll-related performance issues
+
+### Choose `references/concurrency.md` when:
+- Running async work in SwiftUI views
+- Choosing between .task, .onAppear, and .onChange
+- Handling cancellation and lifecycle
+- Updating UI from async contexts
+
+### Choose `references/modern-swiftui-apis.md` when:
+- Replacing deprecated SwiftUI APIs
+- Migrating from NavigationView to NavigationStack
+- Updating to modern property wrappers
+- Finding current replacements for legacy patterns
+
+### Choose `references/refactor-playbooks.md` when:
+- Extracting views while preserving behavior
+- Migrating navigation to NavigationStack
+- Hoisting state without breaking bindings
+- Following step-by-step refactor guides
 
 ## Quick Decision Guide
 
