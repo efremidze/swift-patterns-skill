@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Define skill metadata, constraints, and citation rules
+- [x] 01-01-PLAN.md — Define skill metadata, constraints, and citation rules
 - [ ] 01-02-PLAN.md — Establish standardized response templates
 
 ### Phase 2: Decisioned Workflows + Safety
@@ -89,7 +89,7 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Compliance + Output Foundations | 0/2 | Not started | - |
+| 1. Compliance + Output Foundations | 1/2 | In progress | - |
 | 2. Decisioned Workflows + Safety | 0/2 | Not started | - |
 | 3. SwiftUI Guidance Core | 0/2 | Not started | - |
 | 4. Modernization + Quality Playbooks | 0/2 | Not started | - |
