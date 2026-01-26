@@ -5,7 +5,7 @@
 ## Naming Patterns
 
 **Files:**
-- Markdown references: lowercase kebab-case (e.g. `concurrency.md` in `swift-patterns-skill/references/`)
+- Markdown references: lowercase kebab-case (e.g. `concurrency.md` in `swift-patterns/references/`)
 - Root docs: uppercase (e.g. `README.md`, `CONTRIBUTING.md`)
 - Hook scripts: kebab-case with `.js` (e.g. `.opencode/hooks/gsd-statusline.js`)
 

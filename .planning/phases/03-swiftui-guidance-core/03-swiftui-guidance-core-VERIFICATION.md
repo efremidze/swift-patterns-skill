@@ -18,14 +18,14 @@ score: 8/8 must-haves verified
 
 | # | Truth | Status | Evidence |
 | --- | --- | --- | --- |
-| 1 | User can choose the correct SwiftUI state wrapper using ownership guidance and decision trees. | ✓ VERIFIED | Decision tree and wrapper guidance in `swift-patterns-skill/references/state.md`. |
-| 2 | User can implement modern navigation with NavigationStack and navigationDestination patterns. | ✓ VERIFIED | NavigationStack patterns and examples in `swift-patterns-skill/references/navigation.md`. |
-| 3 | User can build lists and collections with stable identity and lazy containers. | ✓ VERIFIED | Stable identity rules and lazy container guidance in `swift-patterns-skill/references/lists-collections.md`. |
-| 4 | User can structure view composition and layout using alignment, spacing, and adaptive patterns. | ✓ VERIFIED | Composition guidance in `swift-patterns-skill/references/view-composition.md` and layout section in `swift-patterns-skill/references/state.md`. |
-| 5 | User can replace deprecated SwiftUI APIs using a modern replacement catalog. | ✓ VERIFIED | Replacement catalog in `swift-patterns-skill/references/modern-swiftui-apis.md`. |
-| 6 | User can apply ScrollView patterns with safe pagination triggers. | ✓ VERIFIED | Decision tree and pagination triggers in `swift-patterns-skill/references/scrolling.md`. |
-| 7 | User can tie async work to view lifecycle using .task and cancellation-aware patterns. | ✓ VERIFIED | Lifecycle-scoped `.task` guidance in `swift-patterns-skill/references/concurrency.md`. |
-| 8 | User can update UI state safely using @MainActor guidance without deep concurrency patterns. | ✓ VERIFIED | `@MainActor` UI update guidance in `swift-patterns-skill/references/concurrency.md`. |
+| 1 | User can choose the correct SwiftUI state wrapper using ownership guidance and decision trees. | ✓ VERIFIED | Decision tree and wrapper guidance in `swift-patterns/references/state.md`. |
+| 2 | User can implement modern navigation with NavigationStack and navigationDestination patterns. | ✓ VERIFIED | NavigationStack patterns and examples in `swift-patterns/references/navigation.md`. |
+| 3 | User can build lists and collections with stable identity and lazy containers. | ✓ VERIFIED | Stable identity rules and lazy container guidance in `swift-patterns/references/lists-collections.md`. |
+| 4 | User can structure view composition and layout using alignment, spacing, and adaptive patterns. | ✓ VERIFIED | Composition guidance in `swift-patterns/references/view-composition.md` and layout section in `swift-patterns/references/state.md`. |
+| 5 | User can replace deprecated SwiftUI APIs using a modern replacement catalog. | ✓ VERIFIED | Replacement catalog in `swift-patterns/references/modern-swiftui-apis.md`. |
+| 6 | User can apply ScrollView patterns with safe pagination triggers. | ✓ VERIFIED | Decision tree and pagination triggers in `swift-patterns/references/scrolling.md`. |
+| 7 | User can tie async work to view lifecycle using .task and cancellation-aware patterns. | ✓ VERIFIED | Lifecycle-scoped `.task` guidance in `swift-patterns/references/concurrency.md`. |
+| 8 | User can update UI state safely using @MainActor guidance without deep concurrency patterns. | ✓ VERIFIED | `@MainActor` UI update guidance in `swift-patterns/references/concurrency.md`. |
 
 **Score:** 8/8 truths verified
 
@@ -33,25 +33,25 @@ score: 8/8 must-haves verified
 
 | Artifact | Expected | Status | Details |
 | --- | --- | --- | --- |
-| `swift-patterns-skill/references/state.md` | State ownership decision tree + layout guidance | ✓ VERIFIED | Substantive state wrapper guidance and layout section present. |
-| `swift-patterns-skill/references/view-composition.md` | View extraction and parent/child data flow guidance | ✓ VERIFIED | Data flow rules, smells/fixes, invariants present. |
-| `swift-patterns-skill/references/navigation.md` | NavigationStack and destination patterns | ✓ VERIFIED | NavigationStack patterns and sheet guidance present. |
-| `swift-patterns-skill/references/lists-collections.md` | Stable identity and lazy container guidance | ✓ VERIFIED | Identity rules, List vs ScrollView guidance, pitfalls present. |
-| `swift-patterns-skill/references/modern-swiftui-apis.md` | Modern API replacement catalog | ✓ VERIFIED | Replacement table and notes present. |
-| `swift-patterns-skill/references/scrolling.md` | ScrollView and pagination guidance | ✓ VERIFIED | Decision tree and safe pagination triggers present. |
-| `swift-patterns-skill/references/concurrency.md` | Lightweight SwiftUI concurrency guidance | ✓ VERIFIED | `.task`, cancellation, `@MainActor` guidance present. |
-| `swift-patterns-skill/SKILL.md` | Links to new references | ✓ VERIFIED | Reference list and Quick Decision Guide include new docs. |
+| `swift-patterns/references/state.md` | State ownership decision tree + layout guidance | ✓ VERIFIED | Substantive state wrapper guidance and layout section present. |
+| `swift-patterns/references/view-composition.md` | View extraction and parent/child data flow guidance | ✓ VERIFIED | Data flow rules, smells/fixes, invariants present. |
+| `swift-patterns/references/navigation.md` | NavigationStack and destination patterns | ✓ VERIFIED | NavigationStack patterns and sheet guidance present. |
+| `swift-patterns/references/lists-collections.md` | Stable identity and lazy container guidance | ✓ VERIFIED | Identity rules, List vs ScrollView guidance, pitfalls present. |
+| `swift-patterns/references/modern-swiftui-apis.md` | Modern API replacement catalog | ✓ VERIFIED | Replacement table and notes present. |
+| `swift-patterns/references/scrolling.md` | ScrollView and pagination guidance | ✓ VERIFIED | Decision tree and safe pagination triggers present. |
+| `swift-patterns/references/concurrency.md` | Lightweight SwiftUI concurrency guidance | ✓ VERIFIED | `.task`, cancellation, `@MainActor` guidance present. |
+| `swift-patterns/SKILL.md` | Links to new references | ✓ VERIFIED | Reference list and Quick Decision Guide include new docs. |
 
 ### Key Link Verification
 
 | From | To | Via | Status | Details |
 | --- | --- | --- | --- | --- |
-| `swift-patterns-skill/SKILL.md` | `swift-patterns-skill/references/lists-collections.md` | Reference list | ✓ WIRED | Links present in Reference Files and Quick Decision Guide. |
-| `swift-patterns-skill/SKILL.md` | `swift-patterns-skill/references/modern-swiftui-apis.md` | Reference list | ✓ WIRED | Links present in Reference Files and Quick Decision Guide. |
-| `swift-patterns-skill/SKILL.md` | `swift-patterns-skill/references/view-composition.md` | Reference list | ✓ WIRED | Links present in Reference Files and Quick Decision Guide. |
-| `swift-patterns-skill/SKILL.md` | `swift-patterns-skill/references/scrolling.md` | Reference list | ✓ WIRED | Links present in Reference Files and Quick Decision Guide. |
-| `swift-patterns-skill/references/navigation.md` | `swift-patterns-skill/references/modern-swiftui-apis.md` | Modern replacements mention | ✓ WIRED | Explicit reference to modern replacements present. |
-| `swift-patterns-skill/references/scrolling.md` | `swift-patterns-skill/references/concurrency.md` | Async pagination guidance | ✓ WIRED | Explicit cross-reference to concurrency guidance present. |
+| `swift-patterns/SKILL.md` | `swift-patterns/references/lists-collections.md` | Reference list | ✓ WIRED | Links present in Reference Files and Quick Decision Guide. |
+| `swift-patterns/SKILL.md` | `swift-patterns/references/modern-swiftui-apis.md` | Reference list | ✓ WIRED | Links present in Reference Files and Quick Decision Guide. |
+| `swift-patterns/SKILL.md` | `swift-patterns/references/view-composition.md` | Reference list | ✓ WIRED | Links present in Reference Files and Quick Decision Guide. |
+| `swift-patterns/SKILL.md` | `swift-patterns/references/scrolling.md` | Reference list | ✓ WIRED | Links present in Reference Files and Quick Decision Guide. |
+| `swift-patterns/references/navigation.md` | `swift-patterns/references/modern-swiftui-apis.md` | Modern replacements mention | ✓ WIRED | Explicit reference to modern replacements present. |
+| `swift-patterns/references/scrolling.md` | `swift-patterns/references/concurrency.md` | Async pagination guidance | ✓ WIRED | Explicit cross-reference to concurrency guidance present. |
 
 ### Requirements Coverage
 

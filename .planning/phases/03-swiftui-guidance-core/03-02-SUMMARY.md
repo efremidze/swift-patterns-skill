@@ -21,10 +21,10 @@ tech-stack:
 
 key-files:
   created:
-    - swift-patterns-skill/references/scrolling.md
-    - swift-patterns-skill/references/concurrency.md
+    - swift-patterns/references/scrolling.md
+    - swift-patterns/references/concurrency.md
   modified:
-    - swift-patterns-skill/SKILL.md
+    - swift-patterns/SKILL.md
 
 key-decisions:
   - "None - followed plan as specified"
@@ -65,10 +65,10 @@ Each task was committed atomically:
 **Plan metadata:** docs commit for plan completion
 
 ## Files Created/Modified
-- `swift-patterns-skill/references/scrolling.md` - ScrollView decision tree and pagination trigger guidance.
-- `swift-patterns-skill/references/concurrency.md` - Lifecycle-scoped SwiftUI concurrency patterns.
-- `swift-patterns-skill/references/swift-concurrency.md` - Removed legacy deep concurrency guidance.
-- `swift-patterns-skill/SKILL.md` - Added scrolling and concurrency reference links.
+- `swift-patterns/references/scrolling.md` - ScrollView decision tree and pagination trigger guidance.
+- `swift-patterns/references/concurrency.md` - Lifecycle-scoped SwiftUI concurrency patterns.
+- `swift-patterns/references/swift-concurrency.md` - Removed legacy deep concurrency guidance.
+- `swift-patterns/SKILL.md` - Added scrolling and concurrency reference links.
 
 ## Decisions Made
 None - followed plan as specified.

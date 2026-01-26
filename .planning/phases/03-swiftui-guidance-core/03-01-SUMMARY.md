@@ -21,13 +21,13 @@ tech-stack:
 
 key-files:
   created:
-    - swift-patterns-skill/references/state.md
-    - swift-patterns-skill/references/view-composition.md
-    - swift-patterns-skill/references/lists-collections.md
-    - swift-patterns-skill/references/modern-swiftui-apis.md
+    - swift-patterns/references/state.md
+    - swift-patterns/references/view-composition.md
+    - swift-patterns/references/lists-collections.md
+    - swift-patterns/references/modern-swiftui-apis.md
   modified:
-    - swift-patterns-skill/references/navigation.md
-    - swift-patterns-skill/SKILL.md
+    - swift-patterns/references/navigation.md
+    - swift-patterns/SKILL.md
 
 key-decisions:
   - "None - followed plan as specified"
@@ -69,12 +69,12 @@ Each task was committed atomically:
 **Plan metadata:** docs commit for plan completion
 
 ## Files Created/Modified
-- `swift-patterns-skill/references/state.md` - State ownership decision tree and layout guidance.
-- `swift-patterns-skill/references/view-composition.md` - View extraction rules and data flow patterns.
-- `swift-patterns-skill/references/navigation.md` - NavigationStack-based navigation patterns.
-- `swift-patterns-skill/references/lists-collections.md` - List identity and lazy container guidance.
-- `swift-patterns-skill/references/modern-swiftui-apis.md` - Modern SwiftUI replacement catalog.
-- `swift-patterns-skill/SKILL.md` - Reference links and quick decision guide updates.
+- `swift-patterns/references/state.md` - State ownership decision tree and layout guidance.
+- `swift-patterns/references/view-composition.md` - View extraction rules and data flow patterns.
+- `swift-patterns/references/navigation.md` - NavigationStack-based navigation patterns.
+- `swift-patterns/references/lists-collections.md` - List identity and lazy container guidance.
+- `swift-patterns/references/modern-swiftui-apis.md` - Modern SwiftUI replacement catalog.
+- `swift-patterns/SKILL.md` - Reference links and quick decision guide updates.
 
 ## Decisions Made
 None - followed plan as specified.
