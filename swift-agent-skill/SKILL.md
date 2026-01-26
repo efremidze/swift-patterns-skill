@@ -154,6 +154,12 @@ All workflows must follow the Constraints section above.
 - Hoisting state without breaking bindings
 - Following step-by-step refactor guides
 
+### Choose `references/patterns.md` when:
+- Building container views for loading/error states
+- Creating reusable ViewModifiers for styling
+- Setting up environment-based dependency injection
+- Using PreferenceKeys for child-to-parent communication
+
 ## Quick Decision Guide
 
 **Question: "Which property wrapper should I use?"**
@@ -189,6 +195,9 @@ All workflows must follow the Constraints section above.
 **Question: "Is this code well-structured?"**
 → See `references/code-review-refactoring.md`
 
+**Question: "How do I build a reusable loading/error container?"**
+→ See `references/patterns.md`
+
 ## Reference Files
 
 All detailed patterns, examples, and best practices are organized in the `references/` directory:
@@ -207,6 +216,7 @@ All detailed patterns, examples, and best practices are organized in the `refere
 - **testing-di.md** - Unit testing, dependency injection, test doubles
 - **performance.md** - SwiftUI optimization, memory management, profiling, caching
 - **code-review-refactoring.md** - Code smells and refactoring patterns
+- **patterns.md** - Reusable SwiftUI patterns (containers, ViewModifiers, PreferenceKeys, Environment DI)
 
 ## Usage Tips
 
