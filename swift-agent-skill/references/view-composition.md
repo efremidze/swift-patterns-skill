@@ -74,3 +74,24 @@ struct Row: View {
 - State ownership stays with the correct view.
 - Navigation state remains the source of truth.
 - Async work remains cancellable and tied to view lifecycle.
+
+## Layout Guidance
+
+Keep layout rules simple and predictable. Let containers do the work.
+
+### Stacks and Spacing
+
+- Use `HStack`, `VStack`, and `ZStack` to express hierarchy.
+- Prefer `spacing` on stacks over per-view padding when you need consistent gaps.
+- Use `Spacer()` to distribute space and avoid hard-coded offsets.
+
+### Alignment
+
+- Use stack `alignment` for consistent edge alignment.
+- Prefer `alignmentGuide` only when you need custom alignment behavior.
+
+### Adaptive Layout
+
+- Use size classes or `ViewThatFits` to adapt layout without branching the entire view.
+- Keep layout resilient by avoiding fixed widths/heights when content can grow.
+- For complex custom layout, consider the `Layout` protocol to centralize measurement and placement.
