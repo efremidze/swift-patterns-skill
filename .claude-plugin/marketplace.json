@@ -7,7 +7,7 @@
     "email": "efremidzel@hotmail.com"
   },
   "metadata": {
-    "description": "Expert guidance for modern Swift and SwiftUI development including state management, navigation, testing, performance, and code quality."
+    "description": "Swift and SwiftUI best practices for modern iOS development. Use when writing, reviewing, or refactoring code."
   },
   "plugins": [
     {
