@@ -160,6 +160,15 @@ All workflows must follow the Constraints section above.
 - Setting up environment-based dependency injection
 - Using PreferenceKeys for child-to-parent communication
 
+### Choose `references/invariants.md` when:
+- Checking refactor correctness requirements
+- Verifying behavior preservation after changes
+- Ensuring stable identity, state ownership, or navigation rules hold
+
+### Choose `references/sources.md` when:
+- Adding citations to responses
+- Verifying allowed documentation URLs
+
 ## Quick Decision Guide
 
 **Question: "Which property wrapper should I use?"**
@@ -198,6 +207,12 @@ All workflows must follow the Constraints section above.
 **Question: "How do I build a reusable loading/error container?"**
 → See `references/patterns.md`
 
+**Question: "What invariants must hold after this refactor?"**
+→ See `references/invariants.md`
+
+**Question: "Which URLs can I cite?"**
+→ See `references/sources.md`
+
 ## Reference Files
 
 All detailed patterns, examples, and best practices are organized in the `references/` directory:
@@ -217,6 +232,8 @@ All detailed patterns, examples, and best practices are organized in the `refere
 - **performance.md** - SwiftUI optimization, memory management, profiling, caching
 - **code-review-refactoring.md** - Code smells and refactoring patterns
 - **patterns.md** - Reusable SwiftUI patterns (containers, ViewModifiers, PreferenceKeys, Environment DI)
+- **invariants.md** - Mandatory refactor invariants for behavior preservation
+- **sources.md** - Citation allowlist for documentation URLs
 
 ## Usage Tips
 
