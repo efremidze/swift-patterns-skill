@@ -94,6 +94,31 @@ ForEach(items, id: \ .id) { item in
 }
 ```
 
+## Example: Derived State Drift
+```swift
+// Before: derived state stored and updated manually
+struct CheckoutView: View {
+    let subtotal: Decimal
+    @State private var total: Decimal = 0
+
+    var body: some View {
+        Text("Total: \(total)")
+            .onAppear { total = subtotal * 1.08 }
+    }
+}
+
+// After: compute derived state directly
+struct CheckoutView: View {
+    let subtotal: Decimal
+
+    var total: Decimal { subtotal * 1.08 }
+
+    var body: some View {
+        Text("Total: \(total)")
+    }
+}
+```
+
 ## Anti-Patterns to Avoid
 - Global mutable state used by multiple views without ownership.
 - Mixed navigation sources (e.g., multiple stacks or competing paths).
