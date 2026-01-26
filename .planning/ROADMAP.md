@@ -12,7 +12,7 @@ This roadmap delivers a decision-gated Swift/SwiftUI skill that agents can use i
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Compliance + Output Foundations** - Skill packaging, constraints, and standardized response templates are usable.
+- [x] **Phase 1: Compliance + Output Foundations** - Skill packaging, constraints, and standardized response templates are usable.
 - [ ] **Phase 2: Decisioned Workflows + Safety** - Review/refactor routing and risk-aware checklists are in place.
 - [ ] **Phase 3: SwiftUI Guidance Core** - Core SwiftUI and lightweight concurrency guidance is available.
 - [ ] **Phase 4: Quality + Playbooks** - Quality guidance and refactor playbooks complete v1.
@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [x] 01-01-PLAN.md — Define skill metadata, constraints, and citation rules
-- [ ] 01-02-PLAN.md — Establish standardized response templates
+- [x] 01-02-PLAN.md — Establish standardized response templates
 
 ### Phase 2: Decisioned Workflows + Safety
 **Goal**: Users can route requests into refactor vs review workflows with consistent, risk-aware checklists and a shared constraints section.
@@ -89,7 +89,7 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Compliance + Output Foundations | 1/2 | In progress | - |
+| 1. Compliance + Output Foundations | 2/2 | Complete | 2026-01-26 |
 | 2. Decisioned Workflows + Safety | 0/2 | Not started | - |
 | 3. SwiftUI Guidance Core | 0/2 | Not started | - |
 | 4. Modernization + Quality Playbooks | 0/2 | Not started | - |
