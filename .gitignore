@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+
+# Build output
+build/
+dist/
+*.js
+*.js.map
+*.d.ts
+
+# Keep root files
+!src/**/*.js
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Testing
+coverage/
+.nyc_output/
+
+# Git keep files
+*.gitkeep
+
+# MCP
+.swift-patterns-mcp/
+
+# Claude Code
+.claude/
+.gsd/
+.opencode/
+.worktrees/
+
+# Secrets
+*.pem
+*.key
