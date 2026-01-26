@@ -80,7 +80,7 @@ Plans:
 
 Plans:
 - [x] 04-01-PLAN.md — Publish performance baseline and testing/DI seams guidance
-- [ ] 04-02-PLAN.md — Add goal-based refactor playbooks and workflow wiring
+- [x] 04-02-PLAN.md — Add goal-based refactor playbooks and workflow wiring
 
 ## Progress
 
@@ -92,4 +92,4 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 | 1. Compliance + Output Foundations | 2/2 | Complete | 2026-01-26 |
 | 2. Decisioned Workflows + Safety | 2/2 | Complete | 2026-01-26 |
 | 3. SwiftUI Guidance Core | 2/2 | Complete | 2026-01-26 |
-| 4. Modernization + Quality Playbooks | 1/2 | In progress | - |
+| 4. Modernization + Quality Playbooks | 2/2 | Complete | 2026-01-26 |
