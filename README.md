@@ -116,8 +116,8 @@ This skill gives your AI coding tool practical Swift guidance across all major a
 swift-expert-skill/
   SKILL.md                              # Main workflow and decision trees
   references/
-    swift-concurrency.md                # Async/await, Tasks, Actors, structured concurrency
-    swiftui-architecture.md             # State management, property wrappers, data flow
+    concurrency.md                # Async/await, Tasks, Actors, structured concurrency
+    state.md             # State management, property wrappers, data flow
     navigation.md                       # NavigationStack, deep linking, coordinators
     testing-di.md                       # Unit testing, dependency injection, test doubles
     performance.md                      # SwiftUI performance, memory, profiling

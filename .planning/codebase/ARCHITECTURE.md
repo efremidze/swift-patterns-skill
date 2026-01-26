@@ -59,7 +59,7 @@
 
 **Reference Document:**
 - Purpose: Deep-dive guidance on a specific topic
-- Examples: `swift-expert-skill/references/swift-concurrency.md`, `swift-expert-skill/references/performance.md`
+- Examples: `swift-expert-skill/references/concurrency.md`, `swift-expert-skill/references/performance.md`
 - Pattern: Markdown guides with sectioned content
 
 ## Entry Points

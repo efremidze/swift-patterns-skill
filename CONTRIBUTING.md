@@ -10,8 +10,8 @@ This repository contains a single comprehensive skill with multiple reference do
 swift-expert-skill/
 ├── SKILL.md          # Main workflow, decision trees, and quick reference
 └── references/       # Detailed documentation for each topic area
-    ├── swift-concurrency.md
-    ├── swiftui-architecture.md
+    ├── concurrency.md
+    ├── state.md
     ├── navigation.md
     ├── testing-di.md
     ├── performance.md

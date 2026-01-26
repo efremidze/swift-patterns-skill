@@ -84,7 +84,7 @@ All workflows must follow the Constraints section above.
 
 ## When to Use Which Reference
 
-### Choose `references/swiftui-architecture.md` when:
+### Choose `references/state.md` when:
 - Choosing property wrappers for state
 - Designing data flow in views
 - Structuring app architecture
@@ -121,7 +121,7 @@ All workflows must follow the Constraints section above.
 ## Quick Decision Guide
 
 **Question: "Which property wrapper should I use?"**
-→ See `references/swiftui-architecture.md`
+→ See `references/state.md`
 
 **Question: "How do I implement navigation to this screen?"**
 → See `references/navigation.md`
@@ -142,7 +142,7 @@ All detailed patterns, examples, and best practices are organized in the `refere
 - **decisions.md** - Review vs refactor routing gates and intent cues
 - **workflows-review.md** - Review checklist, findings taxonomy, and risk cues
 - **workflows-refactor.md** - Behavior-preserving refactor checklist and risk cues
-- **swiftui-architecture.md** - State management, property wrappers, data flow, architecture
+- **state.md** - State management, property wrappers, data flow, architecture
 - **navigation.md** - NavigationStack, deep linking, routing, state restoration
 - **testing-di.md** - Unit testing, dependency injection, test doubles
 - **performance.md** - SwiftUI optimization, memory management, profiling, caching
@@ -159,14 +159,14 @@ All detailed patterns, examples, and best practices are organized in the `refere
 ## Example Workflows
 
 ### Workflow 1: Building a new feature with data loading
-1. Review `references/swiftui-architecture.md` for state management
+1. Review `references/state.md` for state management
 2. Review `references/testing-di.md` for testable structure
 3. Review `references/performance.md` for data-loading optimizations
 4. Implement feature following all three references
 
 ### Workflow 2: Optimizing a slow list
 1. Review `references/performance.md` for list optimization
-2. Review `references/swiftui-architecture.md` for state management issues
+2. Review `references/state.md` for state management issues
 3. Measure improvements with your preferred tooling if needed
 4. Apply optimizations iteratively
 

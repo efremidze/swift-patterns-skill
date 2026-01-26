@@ -46,13 +46,18 @@ The established libraries/tools for this domain:
 Optional content organization for SwiftUI guidance docs (not a required app structure):
 
 ```
-swiftui-guidance/
-├── state/            # State wrappers + decision trees
-├── navigation/       # NavigationStack + presentation patterns
-├── lists/            # List identity + lazy containers
-├── layout/           # Stacks, alignment, adaptive layout
-├── scrolling/        # ScrollView + pagination triggers
-└── concurrency/      # .task + @MainActor UI updates
+swift-agent-skill/
+├── SKILL.md
+├── references/
+│   ├── state.md                    # State wrappers + decision trees
+│   ├── view-composition.md         # View composition
+│   ├── navigation.md               # NavigationStack + presentation patterns
+│   ├── lists-collections.md        # List identity + lazy containers
+│   ├── layout.md                   # Stacks, alignment, adaptive layout
+│   ├── scrolling.md                # ScrollView + pagination triggers
+│   └── concurrency.md              # .task + @MainActor UI updates
+│   ├── modern-swiftui-apis.md      # Deprecated + modern API catalog
+└── assets/        # optional
 ```
 
 ### Pattern 1: Ownership-Driven State Selection

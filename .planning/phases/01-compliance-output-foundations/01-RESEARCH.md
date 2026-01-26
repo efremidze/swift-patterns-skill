@@ -46,8 +46,8 @@ The established libraries/tools for this domain:
 swift-expert-skill/
 ├── SKILL.md                 # Required entry point and constraints/templates
 └── references/              # Allowlisted source documents
-    ├── swift-concurrency.md
-    ├── swiftui-architecture.md
+    ├── concurrency.md
+    ├── state.md
     └── ...
 ```
 
@@ -137,7 +137,7 @@ description: Expert guidance for Swift, SwiftUI, and iOS engineering.
 ### File Reference (One-Level Deep)
 ```markdown
 # Source: https://agentskills.io/specification.md
-See [the reference guide](references/swift-concurrency.md) for details.
+See [the reference guide](references/concurrency.md) for details.
 ```
 
 ## State of the Art

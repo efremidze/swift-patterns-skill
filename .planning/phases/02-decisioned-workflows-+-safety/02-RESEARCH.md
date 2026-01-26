@@ -138,7 +138,7 @@ Verified patterns from internal references:
 
 ### State Ownership via @State and @Binding
 ```swift
-// Source: swift-expert-skill/references/swiftui-architecture.md
+// Source: swift-expert-skill/references/state.md
 struct ParentView: View {
     @State private var count = 0
 
@@ -241,7 +241,7 @@ struct SearchView: View {
 
 ### Secondary (MEDIUM confidence)
 - .planning/research/FEATURES.md - Phase 2 feature expectations and risk cues
-- swift-expert-skill/references/swiftui-architecture.md - State ownership and data flow guidance
+- swift-expert-skill/references/state.md - State ownership and data flow guidance
 - swift-expert-skill/references/navigation.md - NavigationStack and routing patterns
 - swift-expert-skill/references/performance.md - Cancellable async work example
 - swift-expert-skill/references/code-review-refactoring.md - Review/refactor workflow cues

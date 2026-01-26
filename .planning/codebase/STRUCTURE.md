@@ -25,7 +25,7 @@
 **swift-expert-skill/**
 - Purpose: Core skill content
 - Contains: `SKILL.md`, `references/*.md`
-- Key files: `swift-expert-skill/SKILL.md`, `swift-expert-skill/references/swift-concurrency.md`
+- Key files: `swift-expert-skill/SKILL.md`, `swift-expert-skill/references/concurrency.md`
 
 **.opencode/**
 - Purpose: OpenCode automation assets
@@ -62,7 +62,7 @@
 ## Naming Conventions
 
 **Files:**
-- Markdown references use lowercase with hyphens, e.g. `swift-concurrency.md`
+- Markdown references use lowercase with hyphens, e.g. `concurrency.md`
 - Root docs use uppercase names, e.g. `README.md`, `CONTRIBUTING.md`
 
 **Directories:**
