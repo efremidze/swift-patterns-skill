@@ -15,6 +15,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **CORE-04**: Risk assessment cues indicate when to split refactors or add tests first
 - [ ] **CORE-05**: Output templates standardize refactor/review responses for agent usability
 - [ ] **CORE-06**: Single constraints section is referenced by all workflows to prevent scope drift
+- [ ] **CORE-07**: Identity and data flow invariants list what refactors must preserve (stable IDs, state ownership, navigation source of truth, cancellable async work)
 
 ### SwiftUI Guidance
 
@@ -86,7 +87,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CORE-03 | Phase 2 | Pending |
 | CORE-04 | Phase 2 | Pending |
 | CORE-05 | Phase 1 | Pending |
-| CORE-06 | Phase 2 | Pending |
+| CORE-06 | Phase 1 | Pending |
+| CORE-07 | Phase 2 | Pending |
 | SWUI-01 | Phase 3 | Pending |
 | SWUI-02 | Phase 3 | Pending |
 | SWUI-03 | Phase 3 | Pending |
@@ -98,17 +100,17 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PERF-01 | Phase 4 | Pending |
 | PERF-02 | Phase 4 | Pending |
 | TEST-01 | Phase 4 | Pending |
-| MOD-01 | Phase 4 | Pending |
+| MOD-01 | Phase 3 | Pending |
 | MOD-02 | Phase 3 | Pending |
 | PLAY-01 | Phase 4 | Pending |
 | COMP-01 | Phase 1 | Pending |
 | COMP-02 | Phase 1 | Pending |
 
 **Coverage:**
-- v1 requirements: 21 total
-- Mapped to phases: 21
+- v1 requirements: 22 total
+- Mapped to phases: 22
 - Unmapped: 0
 
 ---
 *Requirements defined: 2026-01-25*
-*Last updated: 2026-01-25 after initial definition*
+*Last updated: 2026-01-25 after scope adjustments*

@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-01-25)
 Phase: 1 of 4 (Compliance + Output Foundations)
 Plan: 0 of 2 in current phase
 Status: Ready to plan
-Last activity: 2026-01-25 — Roadmap and state initialized
+Last activity: 2026-01-25 — Roadmap adjusted (constraints earlier, API catalog moved, invariants added)
 
 Progress: [░░░░░░░░░░] 0%
 
