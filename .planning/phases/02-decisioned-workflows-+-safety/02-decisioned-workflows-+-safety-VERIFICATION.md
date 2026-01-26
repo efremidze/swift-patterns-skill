@@ -18,13 +18,13 @@ score: 7/7 must-haves verified
 
 | # | Truth | Status | Evidence |
 | --- | --- | --- | --- |
-| 1 | User can route a request to review or refactor using explicit intent cues. | ✓ VERIFIED | `swift-agent-skill/references/decisions.md` includes routing gates and intent examples. |
-| 2 | Workflow routing guidance points to the shared Constraints section to prevent drift. | ✓ VERIFIED | `swift-agent-skill/references/decisions.md` Shared Constraints note; `swift-agent-skill/SKILL.md` reiterates constraints for all workflows. |
-| 3 | The routing decision is documented in a dedicated reference file. | ✓ VERIFIED | Dedicated routing doc at `swift-agent-skill/references/decisions.md`. |
-| 4 | User can apply a SwiftUI refactor checklist that preserves behavior. | ✓ VERIFIED | `swift-agent-skill/references/workflows-refactor.md` includes a behavior-preserving checklist with verification steps. |
-| 5 | User can apply a SwiftUI review checklist with consistent findings. | ✓ VERIFIED | `swift-agent-skill/references/workflows-review.md` includes findings taxonomy and checklist. |
-| 6 | User can identify risk cues that require splitting refactors or adding tests first. | ✓ VERIFIED | Risk cues sections in `swift-agent-skill/references/workflows-refactor.md` and `swift-agent-skill/references/workflows-review.md`. |
-| 7 | User can follow an invariants list that protects identity and data flow during refactors. | ✓ VERIFIED | `swift-agent-skill/references/invariants.md` lists identity, state, navigation, async, and data flow invariants. |
+| 1 | User can route a request to review or refactor using explicit intent cues. | ✓ VERIFIED | `swift-patterns/references/decisions.md` includes routing gates and intent examples. |
+| 2 | Workflow routing guidance points to the shared Constraints section to prevent drift. | ✓ VERIFIED | `swift-patterns/references/decisions.md` Shared Constraints note; `swift-patterns/SKILL.md` reiterates constraints for all workflows. |
+| 3 | The routing decision is documented in a dedicated reference file. | ✓ VERIFIED | Dedicated routing doc at `swift-patterns/references/decisions.md`. |
+| 4 | User can apply a SwiftUI refactor checklist that preserves behavior. | ✓ VERIFIED | `swift-patterns/references/workflows-refactor.md` includes a behavior-preserving checklist with verification steps. |
+| 5 | User can apply a SwiftUI review checklist with consistent findings. | ✓ VERIFIED | `swift-patterns/references/workflows-review.md` includes findings taxonomy and checklist. |
+| 6 | User can identify risk cues that require splitting refactors or adding tests first. | ✓ VERIFIED | Risk cues sections in `swift-patterns/references/workflows-refactor.md` and `swift-patterns/references/workflows-review.md`. |
+| 7 | User can follow an invariants list that protects identity and data flow during refactors. | ✓ VERIFIED | `swift-patterns/references/invariants.md` lists identity, state, navigation, async, and data flow invariants. |
 
 **Score:** 7/7 truths verified
 
@@ -32,21 +32,21 @@ score: 7/7 must-haves verified
 
 | Artifact | Expected | Status | Details |
 | --- | --- | --- | --- |
-| `swift-agent-skill/references/decisions.md` | Review vs refactor decision cues and routing gates | ✓ VERIFIED | 32 lines; routing gates table, intent examples, constraints note. |
-| `swift-agent-skill/SKILL.md` | Workflow routing section linked to decisions reference | ✓ VERIFIED | 178 lines; includes Workflow Routing section and links to decisions/workflows. |
-| `swift-agent-skill/references/invariants.md` | Identity and data flow invariants for refactors | ✓ VERIFIED | 13 lines; invariants list plus constraints link. |
-| `swift-agent-skill/references/workflows-refactor.md` | Behavior-preserving refactor checklist with risk cues | ✓ VERIFIED | 42 lines; checklist, verification, and risk cues. |
-| `swift-agent-skill/references/workflows-review.md` | Review checklist with findings taxonomy | ✓ VERIFIED | 49 lines; taxonomy, checklist, and risk cues. |
+| `swift-patterns/references/decisions.md` | Review vs refactor decision cues and routing gates | ✓ VERIFIED | 32 lines; routing gates table, intent examples, constraints note. |
+| `swift-patterns/SKILL.md` | Workflow routing section linked to decisions reference | ✓ VERIFIED | 178 lines; includes Workflow Routing section and links to decisions/workflows. |
+| `swift-patterns/references/invariants.md` | Identity and data flow invariants for refactors | ✓ VERIFIED | 13 lines; invariants list plus constraints link. |
+| `swift-patterns/references/workflows-refactor.md` | Behavior-preserving refactor checklist with risk cues | ✓ VERIFIED | 42 lines; checklist, verification, and risk cues. |
+| `swift-patterns/references/workflows-review.md` | Review checklist with findings taxonomy | ✓ VERIFIED | 49 lines; taxonomy, checklist, and risk cues. |
 
 ### Key Link Verification
 
 | From | To | Via | Status | Details |
 | --- | --- | --- | --- | --- |
-| `swift-agent-skill/SKILL.md` | `swift-agent-skill/references/decisions.md` | Markdown link in Workflow Routing | ✓ WIRED | Link present in Workflow Routing section. |
-| `swift-agent-skill/SKILL.md` | `swift-agent-skill/references/workflows-refactor.md` | Reference list | ✓ WIRED | Listed in workflow links and Reference Files. |
-| `swift-agent-skill/SKILL.md` | `swift-agent-skill/references/workflows-review.md` | Reference list | ✓ WIRED | Listed in workflow links and Reference Files. |
-| `swift-agent-skill/references/workflows-refactor.md` | `swift-agent-skill/references/invariants.md` | Invariants reference | ✓ WIRED | Required references include invariants link. |
-| `swift-agent-skill/references/workflows-review.md` | `swift-agent-skill/references/invariants.md` | Invariants reference | ✓ WIRED | Required references include invariants link. |
+| `swift-patterns/SKILL.md` | `swift-patterns/references/decisions.md` | Markdown link in Workflow Routing | ✓ WIRED | Link present in Workflow Routing section. |
+| `swift-patterns/SKILL.md` | `swift-patterns/references/workflows-refactor.md` | Reference list | ✓ WIRED | Listed in workflow links and Reference Files. |
+| `swift-patterns/SKILL.md` | `swift-patterns/references/workflows-review.md` | Reference list | ✓ WIRED | Listed in workflow links and Reference Files. |
+| `swift-patterns/references/workflows-refactor.md` | `swift-patterns/references/invariants.md` | Invariants reference | ✓ WIRED | Required references include invariants link. |
+| `swift-patterns/references/workflows-review.md` | `swift-patterns/references/invariants.md` | Invariants reference | ✓ WIRED | Required references include invariants link. |
 
 ### Requirements Coverage
 

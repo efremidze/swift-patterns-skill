@@ -6,11 +6,11 @@
 
 ## Summary
 
-This phase is documentation-centric: the skill must conform to the Agent Skills spec, with a valid `SKILL.md` that includes required YAML frontmatter and clear procedural instructions. The official spec requires a `SKILL.md` at the skill root, YAML frontmatter with `name` and `description`, and recommends shallow, one-level file references for efficient context loading. This phase should ensure the existing `swift-agent-skill/SKILL.md` fully complies with those requirements and exposes the compliance and workflow outputs the planner will rely on.
+This phase is documentation-centric: the skill must conform to the Agent Skills spec, with a valid `SKILL.md` that includes required YAML frontmatter and clear procedural instructions. The official spec requires a `SKILL.md` at the skill root, YAML frontmatter with `name` and `description`, and recommends shallow, one-level file references for efficient context loading. This phase should ensure the existing `swift-patterns/SKILL.md` fully complies with those requirements and exposes the compliance and workflow outputs the planner will rely on.
 
 The phase also establishes two project-specific invariants: a single authoritative constraints section referenced by all workflows, and a citation allowlist rule that restricts references to sources listed in `/references/`. These are not in the upstream spec, so they must be encoded as explicit constraints and enforced by the response templates. Output templates for refactor and review should be standardized, concise, and include explicit constraints/citation checks.
 
-**Primary recommendation:** Make `swift-agent-skill/SKILL.md` the authoritative entry point with required YAML frontmatter, a single constraints section, and refactor/review response templates that explicitly enforce the citations allowlist in `swift-agent-skill/references/`.
+**Primary recommendation:** Make `swift-patterns/SKILL.md` the authoritative entry point with required YAML frontmatter, a single constraints section, and refactor/review response templates that explicitly enforce the citations allowlist in `swift-patterns/references/`.
 
 ## Standard Stack
 
@@ -43,7 +43,7 @@ The established libraries/tools for this domain:
 
 ### Recommended Project Structure
 ```
-swift-agent-skill/
+swift-patterns/
 ├── SKILL.md                 # Required entry point and constraints/templates
 └── references/              # Allowlisted source documents
     ├── concurrency.md
@@ -119,7 +119,7 @@ Problems that look simple but have existing solutions:
 **What goes wrong:** Outputs cite URLs not present in `/references/`, violating COMP-02.
 **Why it happens:** No explicit citation rule or template check.
 **How to avoid:** Add a citation rule and checklist in templates; keep allowlist in references.
-**Warning signs:** Citations to external URLs not found in `swift-agent-skill/references/`.
+**Warning signs:** Citations to external URLs not found in `swift-patterns/references/`.
 
 ## Code Examples
 
@@ -129,7 +129,7 @@ Verified patterns from official sources:
 ```yaml
 # Source: https://agentskills.io/specification.md
 ---
-name: swift-agent-skill
+name: swift-patterns
 description: Expert guidance for Swift, SwiftUI, and iOS engineering.
 ---
 ```
@@ -154,7 +154,7 @@ See [the reference guide](references/concurrency.md) for details.
 
 1. **Citation allowlist contents**
    - What we know: COMP-02 requires citations to be limited to URLs listed in `/references/`.
-   - What's unclear: Which authoritative URLs should be added to `swift-agent-skill/references/*.md` as the allowlist.
+   - What's unclear: Which authoritative URLs should be added to `swift-patterns/references/*.md` as the allowlist.
    - Recommendation: Define and add a dedicated “Sources” section in each reference file before enforcing citations.
 
 ## Sources

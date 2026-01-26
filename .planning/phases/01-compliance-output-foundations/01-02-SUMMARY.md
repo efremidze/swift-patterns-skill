@@ -20,7 +20,7 @@ tech-stack:
 
 key-files:
   created: []
-  modified: [swift-agent-skill/SKILL.md]
+  modified: [swift-patterns/SKILL.md]
 
 key-decisions:
   - "None"
@@ -59,7 +59,7 @@ Each task was committed atomically:
 **Plan metadata:** (see docs commit)
 
 ## Files Created/Modified
-- `swift-agent-skill/SKILL.md` - Adds standardized refactor and review response templates.
+- `swift-patterns/SKILL.md` - Adds standardized refactor and review response templates.
 
 ## Decisions Made
 None - followed plan as specified.

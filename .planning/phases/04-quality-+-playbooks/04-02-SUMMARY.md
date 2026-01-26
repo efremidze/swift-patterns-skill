@@ -19,8 +19,8 @@ tech-stack:
   patterns: [Goal-based refactor playbooks aligned to invariants]
 
 key-files:
-  created: [swift-agent-skill/references/refactor-playbooks.md]
-  modified: [swift-agent-skill/references/workflows-refactor.md, swift-agent-skill/SKILL.md]
+  created: [swift-patterns/references/refactor-playbooks.md]
+  modified: [swift-patterns/references/workflows-refactor.md, swift-patterns/SKILL.md]
 
 key-decisions:
   - "None - followed plan as specified"
@@ -62,9 +62,9 @@ Each task was committed atomically:
 _Note: TDD tasks may have multiple commits (test → feat → refactor)_
 
 ## Files Created/Modified
-- `swift-agent-skill/references/refactor-playbooks.md` - Goal-based playbooks with invariants and verification checklists
-- `swift-agent-skill/references/workflows-refactor.md` - Playbook pointer added to refactor workflow
-- `swift-agent-skill/SKILL.md` - Playbooks added to quick decision guide and reference list
+- `swift-patterns/references/refactor-playbooks.md` - Goal-based playbooks with invariants and verification checklists
+- `swift-patterns/references/workflows-refactor.md` - Playbook pointer added to refactor workflow
+- `swift-patterns/SKILL.md` - Playbooks added to quick decision guide and reference list
 
 ## Decisions Made
 None - followed plan as specified.

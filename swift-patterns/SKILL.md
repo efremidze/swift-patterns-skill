@@ -1,5 +1,5 @@
 ---
-name: swift-agent-skill
+name: swift-patterns
 description: Expert guidance for modern Swift and SwiftUI development. Use when Claude needs to: (1) review SwiftUI code for issues, (2) refactor Swift/SwiftUI views safely, (3) fix state management or property wrapper problems, (4) migrate navigation to NavigationStack, (5) improve list performance or fix identity issues, (6) audit code for SwiftUI anti-patterns, or (7) extract views while preserving behavior.
 ---
 

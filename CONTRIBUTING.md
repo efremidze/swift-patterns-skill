@@ -7,7 +7,7 @@ Thank you for your interest in contributing to Swift Skills! This repository fol
 This repository contains a single comprehensive skill with multiple reference documents:
 
 ```
-swift-agent-skill/
+swift-patterns/
 ├── SKILL.md          # Main workflow, decision trees, and quick reference
 └── references/       # Detailed documentation for each topic area
     ├── concurrency.md

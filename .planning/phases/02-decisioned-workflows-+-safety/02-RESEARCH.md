@@ -43,7 +43,7 @@ The established libraries/tools for this domain:
 
 ### Recommended Project Structure
 ```
-swift-agent-skill/
+swift-patterns/
 ├── SKILL.md                 # Entry point (frontmatter + overview)
 └── references/
     ├── decisions.md         # Review vs refactor routing
@@ -57,7 +57,7 @@ swift-agent-skill/
 **When to use:** Any request that could be either a review or a refactor.
 **Example:**
 ```markdown
-// Source: swift-agent-skill/references/code-review-refactoring.md
+// Source: swift-patterns/references/code-review-refactoring.md
 Gate 1: Does the user want findings (review) or changes (refactor)?
 Gate 2: Is the request SwiftUI-specific (state, navigation, lists, performance)?
 Gate 3: Is the request safe to change without tests (risk cues)?
@@ -138,7 +138,7 @@ Verified patterns from internal references:
 
 ### State Ownership via @State and @Binding
 ```swift
-// Source: swift-agent-skill/references/state.md
+// Source: swift-patterns/references/state.md
 struct ParentView: View {
     @State private var count = 0
 
@@ -158,7 +158,7 @@ struct ChildView: View {
 
 ### NavigationStack with Route Enum
 ```swift
-// Source: swift-agent-skill/references/navigation.md
+// Source: swift-patterns/references/navigation.md
 enum Route: Hashable {
     case settings
     case profile(username: String)
@@ -189,7 +189,7 @@ struct RootView: View {
 
 ### Cancellable Async Work Pattern
 ```swift
-// Source: swift-agent-skill/references/performance.md
+// Source: swift-patterns/references/performance.md
 struct SearchView: View {
     @State private var query = ""
     @State private var results: [String] = []
@@ -241,10 +241,10 @@ struct SearchView: View {
 
 ### Secondary (MEDIUM confidence)
 - .planning/research/FEATURES.md - Phase 2 feature expectations and risk cues
-- swift-agent-skill/references/state.md - State ownership and data flow guidance
-- swift-agent-skill/references/navigation.md - NavigationStack and routing patterns
-- swift-agent-skill/references/performance.md - Cancellable async work example
-- swift-agent-skill/references/code-review-refactoring.md - Review/refactor workflow cues
+- swift-patterns/references/state.md - State ownership and data flow guidance
+- swift-patterns/references/navigation.md - NavigationStack and routing patterns
+- swift-patterns/references/performance.md - Cancellable async work example
+- swift-patterns/references/code-review-refactoring.md - Review/refactor workflow cues
 - AGENTS.md - Project constraints (stable identity, modern APIs)
 
 ### Tertiary (LOW confidence)

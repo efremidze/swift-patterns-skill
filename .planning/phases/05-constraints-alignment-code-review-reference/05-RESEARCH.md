@@ -6,11 +6,11 @@
 
 ## Summary
 
-This phase is a documentation alignment task inside the Swift skill. The code review/refactor reference currently violates the skill Constraints and is missing a constraints link. Planning must focus on making `swift-agent-skill/references/code-review-refactoring.md` comply with the single Constraints section in `swift-agent-skill/SKILL.md`, while preserving the Quick Decision Guide linkage.
+This phase is a documentation alignment task inside the Swift skill. The code review/refactor reference currently violates the skill Constraints and is missing a constraints link. Planning must focus on making `swift-patterns/references/code-review-refactoring.md` comply with the single Constraints section in `swift-patterns/SKILL.md`, while preserving the Quick Decision Guide linkage.
 
-The standard approach in this repo is a single authoritative Constraints section in `swift-agent-skill/SKILL.md`, referenced by all workflows and references. The code review/refactor reference should mirror other references by adding a required Constraints link, removing disallowed content (tool-specific steps, formatting rules, UIKit examples), and keeping scope within Swift/SwiftUI guidance. This is a gap-closure fix identified in the milestone audit.
+The standard approach in this repo is a single authoritative Constraints section in `swift-patterns/SKILL.md`, referenced by all workflows and references. The code review/refactor reference should mirror other references by adding a required Constraints link, removing disallowed content (tool-specific steps, formatting rules, UIKit examples), and keeping scope within Swift/SwiftUI guidance. This is a gap-closure fix identified in the milestone audit.
 
-**Primary recommendation:** Update `swift-agent-skill/references/code-review-refactoring.md` to include a mandatory Constraints link and remove all disallowed content to preserve the Quick Decision Guide flow.
+**Primary recommendation:** Update `swift-patterns/references/code-review-refactoring.md` to include a mandatory Constraints link and remove all disallowed content to preserve the Quick Decision Guide flow.
 
 ## Standard Stack
 
@@ -19,15 +19,15 @@ The established documentation sources for this phase:
 ### Core
 | Reference | Version | Purpose | Why Standard |
 | --- | --- | --- | --- |
-| `swift-agent-skill/SKILL.md` | repo | Single Constraints section | Authoritative constraints source used by all workflows |
-| `swift-agent-skill/references/code-review-refactoring.md` | repo | Code review/refactor reference | Target file linked from Quick Decision Guide |
+| `swift-patterns/SKILL.md` | repo | Single Constraints section | Authoritative constraints source used by all workflows |
+| `swift-patterns/references/code-review-refactoring.md` | repo | Code review/refactor reference | Target file linked from Quick Decision Guide |
 
 ### Supporting
 | Reference | Version | Purpose | When to Use |
 | --- | --- | --- | --- |
-| `swift-agent-skill/references/workflows-review.md` | repo | Constraints-linked workflow structure | Use as pattern for required Constraints link |
-| `swift-agent-skill/references/workflows-refactor.md` | repo | Constraints-linked workflow structure | Use as pattern for required Constraints link |
-| `swift-agent-skill/references/decisions.md` | repo | Routing and shared constraints note | Ensure alignment with shared constraints language |
+| `swift-patterns/references/workflows-review.md` | repo | Constraints-linked workflow structure | Use as pattern for required Constraints link |
+| `swift-patterns/references/workflows-refactor.md` | repo | Constraints-linked workflow structure | Use as pattern for required Constraints link |
+| `swift-patterns/references/decisions.md` | repo | Routing and shared constraints note | Ensure alignment with shared constraints language |
 
 ### Alternatives Considered
 | Instead of | Could Use | Tradeoff |
@@ -37,7 +37,7 @@ The established documentation sources for this phase:
 ## Architecture Patterns
 
 ### Recommended Documentation Structure
-Keep Constraints in `swift-agent-skill/SKILL.md` and link to them from references.
+Keep Constraints in `swift-patterns/SKILL.md` and link to them from references.
 
 ### Pattern 1: Required Constraints Link in References
 **What:** Each reference starts with a required Constraints link, mirroring workflow references.
@@ -56,7 +56,7 @@ Keep Constraints in `swift-agent-skill/SKILL.md` and link to them from reference
 
 | Problem | Don't Build | Use Instead | Why |
 | --- | --- | --- | --- |
-| Constraints enforcement in references | Custom constraints blocks in each reference | Link to `swift-agent-skill/SKILL.md#constraints` | Single authoritative source prevents drift |
+| Constraints enforcement in references | Custom constraints blocks in each reference | Link to `swift-patterns/SKILL.md#constraints` | Single authoritative source prevents drift |
 | Tooling guidance | Tool-specific steps (Xcode, Instruments) | Tool-agnostic guidance | Constraints forbid tool-specific steps |
 | Style enforcement | Formatting/linting rules | Quality guidance without style mandates | Constraints forbid formatting rules |
 | UIKit examples | UIKit-based sample code | Swift/SwiftUI examples only | Constraints exclude UIKit unless bridging |
@@ -118,10 +118,10 @@ Verified patterns from internal references:
 ## Sources
 
 ### Primary (HIGH confidence)
-- `swift-agent-skill/SKILL.md` - Constraints section and Quick Decision Guide linkage
-- `swift-agent-skill/references/code-review-refactoring.md` - Current reference content
-- `swift-agent-skill/references/workflows-review.md` - Required Constraints link pattern
-- `swift-agent-skill/references/workflows-refactor.md` - Required Constraints link pattern
+- `swift-patterns/SKILL.md` - Constraints section and Quick Decision Guide linkage
+- `swift-patterns/references/code-review-refactoring.md` - Current reference content
+- `swift-patterns/references/workflows-review.md` - Required Constraints link pattern
+- `swift-patterns/references/workflows-refactor.md` - Required Constraints link pattern
 - `.planning/v1.0-MILESTONE-AUDIT.md` - Gap description and required alignment
 
 ## Metadata

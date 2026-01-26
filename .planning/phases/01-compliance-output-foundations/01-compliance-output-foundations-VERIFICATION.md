@@ -18,12 +18,12 @@ score: 6/6 must-haves verified
 
 | # | Truth | Status | Evidence |
 | --- | --- | --- | --- |
-| 1 | Skill entry point exposes required metadata and instructions in SKILL.md | ✓ VERIFIED | `swift-agent-skill/SKILL.md` includes YAML frontmatter and procedural sections like Constraints and templates. |
-| 2 | A single Constraints section exists and is referenced by workflows | ✓ VERIFIED | Single `## Constraints` in `swift-agent-skill/SKILL.md` with workflow note: "All workflows below must follow the Constraints section". |
-| 3 | Citation rule restricts sources to the allowlist in references/sources.md | ✓ VERIFIED | Citation rule in `swift-agent-skill/SKILL.md` references `references/sources.md`, and allowlist exists in `swift-agent-skill/references/sources.md`. |
-| 4 | User can see a standardized refactor response template | ✓ VERIFIED | `## Refactor Response Template` in `swift-agent-skill/SKILL.md`. |
-| 5 | User can see a standardized review response template | ✓ VERIFIED | `## Review Response Template` in `swift-agent-skill/SKILL.md`. |
-| 6 | Templates explicitly require constraints and citation allowlist checks | ✓ VERIFIED | Both templates include "Constraints + citation allowlist check" referencing Constraints and `references/sources.md` in `swift-agent-skill/SKILL.md`. |
+| 1 | Skill entry point exposes required metadata and instructions in SKILL.md | ✓ VERIFIED | `swift-patterns/SKILL.md` includes YAML frontmatter and procedural sections like Constraints and templates. |
+| 2 | A single Constraints section exists and is referenced by workflows | ✓ VERIFIED | Single `## Constraints` in `swift-patterns/SKILL.md` with workflow note: "All workflows below must follow the Constraints section". |
+| 3 | Citation rule restricts sources to the allowlist in references/sources.md | ✓ VERIFIED | Citation rule in `swift-patterns/SKILL.md` references `references/sources.md`, and allowlist exists in `swift-patterns/references/sources.md`. |
+| 4 | User can see a standardized refactor response template | ✓ VERIFIED | `## Refactor Response Template` in `swift-patterns/SKILL.md`. |
+| 5 | User can see a standardized review response template | ✓ VERIFIED | `## Review Response Template` in `swift-patterns/SKILL.md`. |
+| 6 | Templates explicitly require constraints and citation allowlist checks | ✓ VERIFIED | Both templates include "Constraints + citation allowlist check" referencing Constraints and `references/sources.md` in `swift-patterns/SKILL.md`. |
 
 **Score:** 6/6 truths verified
 
@@ -31,15 +31,15 @@ score: 6/6 must-haves verified
 
 | Artifact | Expected | Status | Details |
 | --- | --- | --- | --- |
-| `swift-agent-skill/SKILL.md` | Agent Skills frontmatter and constraints entry point, plus templates | ✓ VERIFIED | Exists, substantive (189 lines), includes `name: swift-agent-skill`, `## Constraints`, and template sections. |
-| `swift-agent-skill/references/sources.md` | Citation allowlist for approved sources | ✓ VERIFIED | Exists, substantive (11 lines), includes `# Sources` and `## Allowed URLs`. |
+| `swift-patterns/SKILL.md` | Agent Skills frontmatter and constraints entry point, plus templates | ✓ VERIFIED | Exists, substantive (189 lines), includes `name: swift-patterns`, `## Constraints`, and template sections. |
+| `swift-patterns/references/sources.md` | Citation allowlist for approved sources | ✓ VERIFIED | Exists, substantive (11 lines), includes `# Sources` and `## Allowed URLs`. |
 
 ### Key Link Verification
 
 | From | To | Via | Status | Details |
 | --- | --- | --- | --- | --- |
-| `swift-agent-skill/SKILL.md` | `swift-agent-skill/references/sources.md` | Citation allowlist rule | ✓ WIRED | Multiple references to `references/sources.md` in Constraints and templates. |
-| `swift-agent-skill/SKILL.md` | Constraints section | Workflow references | ✓ WIRED | Explicit workflow note and template checks reference Constraints. |
+| `swift-patterns/SKILL.md` | `swift-patterns/references/sources.md` | Citation allowlist rule | ✓ WIRED | Multiple references to `references/sources.md` in Constraints and templates. |
+| `swift-patterns/SKILL.md` | Constraints section | Workflow references | ✓ WIRED | Explicit workflow note and template checks reference Constraints. |
 
 ### Requirements Coverage
 

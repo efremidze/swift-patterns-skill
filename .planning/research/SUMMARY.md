@@ -122,7 +122,7 @@ Phases with standard patterns (skip research-phase):
 ### Gaps to Address
 
 - **SwiftUI API currency:** verify deprecations and replacements against current Apple docs before finalizing guidance.
-- **Architecture fit to current repo:** validate that the proposed module split aligns with existing `swift-agent-skill/` content.
+- **Architecture fit to current repo:** validate that the proposed module split aligns with existing `swift-patterns/` content.
 - **Concurrency scope:** reconcile topic coverage with the “no deep concurrency patterns” constraint.
 
 ## Sources

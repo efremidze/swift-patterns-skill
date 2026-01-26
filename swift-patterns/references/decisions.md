@@ -29,4 +29,4 @@ If the request does not clearly signal review vs refactor intent, ask a direct q
 
 ## Shared Constraints
 
-All workflows must follow the Constraints section in `swift-agent-skill/SKILL.md`. This is mandatory for both review and refactor responses.
+All workflows must follow the Constraints section in `swift-patterns/SKILL.md`. This is mandatory for both review and refactor responses.

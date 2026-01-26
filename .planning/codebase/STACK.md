@@ -5,7 +5,7 @@
 ## Languages
 
 **Primary:**
-- Markdown - documentation in `README.md`, `swift-agent-skill/SKILL.md`, `swift-agent-skill/references/*.md`
+- Markdown - documentation in `README.md`, `swift-patterns/SKILL.md`, `swift-patterns/references/*.md`
 
 **Secondary:**
 - JavaScript (Node.js) - hook scripts in `.opencode/hooks/gsd-check-update.js`, `.opencode/hooks/gsd-statusline.js`, `.claude/hooks/gsd-check-update.js`, `.claude/hooks/gsd-statusline.js`

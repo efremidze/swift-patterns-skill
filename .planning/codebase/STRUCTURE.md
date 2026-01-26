@@ -6,7 +6,7 @@
 
 ```
 [project-root]/
-├── swift-agent-skill/      # Skill definition and references
+├── swift-patterns/      # Skill definition and references
 │   ├── SKILL.md             # Main workflow/decision tree
 │   └── references/          # Topic-specific guidance
 ├── .opencode/               # OpenCode automation hooks
@@ -22,10 +22,10 @@
 
 ## Directory Purposes
 
-**swift-agent-skill/**
+**swift-patterns/**
 - Purpose: Core skill content
 - Contains: `SKILL.md`, `references/*.md`
-- Key files: `swift-agent-skill/SKILL.md`, `swift-agent-skill/references/concurrency.md`
+- Key files: `swift-patterns/SKILL.md`, `swift-patterns/references/concurrency.md`
 
 **.opencode/**
 - Purpose: OpenCode automation assets
@@ -44,7 +44,7 @@
 ## Key File Locations
 
 **Entry Points:**
-- `swift-agent-skill/SKILL.md`: Skill overview and workflow
+- `swift-patterns/SKILL.md`: Skill overview and workflow
 - `README.md`: Repository usage and install instructions
 
 **Configuration:**
@@ -66,13 +66,13 @@
 - Root docs use uppercase names, e.g. `README.md`, `CONTRIBUTING.md`
 
 **Directories:**
-- Feature grouping by purpose, e.g. `swift-agent-skill/references/`
+- Feature grouping by purpose, e.g. `swift-patterns/references/`
 
 ## Where to Add New Code
 
 **New Skill Content:**
-- Primary docs: `swift-agent-skill/`
-- References: `swift-agent-skill/references/`
+- Primary docs: `swift-patterns/`
+- References: `swift-patterns/references/`
 
 **New Hooks:**
 - OpenCode hooks: `.opencode/hooks/`
