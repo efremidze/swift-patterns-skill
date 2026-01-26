@@ -335,7 +335,7 @@ struct DetailView: View {
 - None (JS-rendered docs were not fully retrievable with current tools)
 
 ### Tertiary (LOW confidence)
-- Internal SwiftUI guidance notes under `swift-expert-skill/references/` (non-authoritative, for synthesis only)
+- Internal SwiftUI guidance notes under `swift-agent-skill/references/` (non-authoritative, for synthesis only)
 
 ## Metadata
 

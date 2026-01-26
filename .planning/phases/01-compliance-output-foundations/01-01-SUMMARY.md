@@ -22,9 +22,9 @@ tech-stack:
 
 key-files:
   created:
-    - swift-expert-skill/references/sources.md
+    - swift-agent-skill/references/sources.md
   modified:
-    - swift-expert-skill/SKILL.md
+    - swift-agent-skill/SKILL.md
 
 key-decisions:
   - None - followed plan as specified
@@ -51,9 +51,9 @@ completed: 2026-01-26
 - **Files modified:** 2
 
 ## Accomplishments
-- Added a single Constraints section with citation allowlist enforcement in `swift-expert-skill/SKILL.md`.
+- Added a single Constraints section with citation allowlist enforcement in `swift-agent-skill/SKILL.md`.
 - Aligned SKILL.md scope guidance with AGENTS.md limits and tightened metadata.
-- Created the citation allowlist in `swift-expert-skill/references/sources.md`.
+- Created the citation allowlist in `swift-agent-skill/references/sources.md`.
 
 ## Task Commits
 
@@ -67,8 +67,8 @@ Each task was committed atomically:
 _Note: TDD tasks may have multiple commits (test → feat → refactor)_
 
 ## Files Created/Modified
-- `swift-expert-skill/SKILL.md` - Adds constraints entry point and removes disallowed guidance.
-- `swift-expert-skill/references/sources.md` - Defines citation allowlist URLs.
+- `swift-agent-skill/SKILL.md` - Adds constraints entry point and removes disallowed guidance.
+- `swift-agent-skill/references/sources.md` - Defines citation allowlist URLs.
 
 ## Decisions Made
 None - followed plan as specified.

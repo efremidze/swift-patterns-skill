@@ -7,7 +7,7 @@
 **Overall:** Documentation repository with lightweight Node.js hook scripts.
 
 **Key Characteristics:**
-- Skill content lives in Markdown under `swift-expert-skill/`
+- Skill content lives in Markdown under `swift-agent-skill/`
 - Tooling hooks live in `.opencode/hooks/` and `.claude/hooks/`
 - No application runtime or build pipeline present
 
@@ -15,8 +15,8 @@
 
 **Skill Content:**
 - Purpose: Primary deliverable (Swift skill guidance)
-- Location: `swift-expert-skill/`
-- Contains: `SKILL.md`, reference documents in `swift-expert-skill/references/*.md`
+- Location: `swift-agent-skill/`
+- Contains: `SKILL.md`, reference documents in `swift-agent-skill/references/*.md`
 - Depends on: None
 - Used by: Documentation consumers and agent skill tooling
 
@@ -54,18 +54,18 @@
 
 **Skill Document:**
 - Purpose: Defines the workflow and references for the Swift skill
-- Examples: `swift-expert-skill/SKILL.md`
+- Examples: `swift-agent-skill/SKILL.md`
 - Pattern: Markdown-based declarative documentation
 
 **Reference Document:**
 - Purpose: Deep-dive guidance on a specific topic
-- Examples: `swift-expert-skill/references/concurrency.md`, `swift-expert-skill/references/performance.md`
+- Examples: `swift-agent-skill/references/concurrency.md`, `swift-agent-skill/references/performance.md`
 - Pattern: Markdown guides with sectioned content
 
 ## Entry Points
 
 **Skill Overview:**
-- Location: `swift-expert-skill/SKILL.md`
+- Location: `swift-agent-skill/SKILL.md`
 - Triggers: Loaded by agent tooling that supports Agent Skills format
 - Responsibilities: Provide decision tree and references
 

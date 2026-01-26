@@ -1,5 +1,5 @@
 ---
-name: swift-expert-skill
+name: swift-agent-skill
 description: Expert guidance for modern Swift and SwiftUI review and refactor work with scoped constraints and reference-backed rules.
 ---
 

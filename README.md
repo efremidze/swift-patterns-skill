@@ -14,10 +14,10 @@ Expert guidance for Swift, SwiftUI, and iOS engineering following the [Agent Ski
 Install this skill with a single command:
 
 ```bash
-npx skills add https://github.com/efremidze/swift-skills --skill swift-expert-skill
+npx skills add https://github.com/efremidze/swift-skills --skill swift-agent-skill
 ```
 
-For more information, [visit the skills.sh platform page](https://skills.sh/efremidze/swift-skills/swift-expert-skill).
+For more information, [visit the skills.sh platform page](https://skills.sh/efremidze/swift-skills/swift-agent-skill).
 
 Then use the skill in your AI agent, for example:
 > Use the swift expert skill and review my async/await implementation
@@ -36,7 +36,7 @@ To install this Skill for your personal use in Claude Code:
 2. Install the Skill:
 
 ```bash
-/plugin install swift-expert@swift-expert-skill
+/plugin install swift-expert@swift-agent-skill
 ```
 
 #### Project Configuration
@@ -45,10 +45,10 @@ To automatically provide this Skill to everyone working in a repository, configu
 ```json
 {
   "enabledPlugins": {
-    "swift-expert@swift-expert-skill": true
+    "swift-expert@swift-agent-skill": true
   },
   "extraKnownMarketplaces": {
-    "swift-expert-skill": {
+    "swift-agent-skill": {
       "source": {
         "source": "github",
         "repo": "efremidze/swift-skills"
@@ -62,7 +62,7 @@ When team members open the project, Claude Code will prompt them to install the 
 
 ### Option C: Manual install
 1) **Clone** this repository.
-2) **Install or symlink** the `swift-expert-skill/` folder following your tool's official skills installation docs (see links below).
+2) **Install or symlink** the `swift-agent-skill/` folder following your tool's official skills installation docs (see links below).
 3) **Use your AI tool** as usual and ask it to use the "swift expert" skill for Swift tasks.
 
 #### Where to Save Skills
@@ -73,7 +73,7 @@ Follow your tool's official documentation:
 
 **How to verify**:
 
-Your agent should reference the workflow/checklists in `swift-expert-skill/SKILL.md` and jump into the relevant reference file for your task.
+Your agent should reference the workflow/checklists in `swift-agent-skill/SKILL.md` and jump into the relevant reference file for your task.
 
 ## What This Skill Offers
 
@@ -113,7 +113,7 @@ This skill gives your AI coding tool practical Swift guidance across all major a
 ## Skill Structure
 <!-- BEGIN REFERENCE STRUCTURE -->
 ```text
-swift-expert-skill/
+swift-agent-skill/
   SKILL.md                              # Main workflow and decision trees
   references/
     concurrency.md                # Async/await, Tasks, Actors, structured concurrency

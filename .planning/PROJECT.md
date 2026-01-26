@@ -12,8 +12,8 @@ AI agents can quickly apply consistent, modern Swift/SwiftUI guidance to refacto
 
 ### Validated
 
-- ✓ Existing Agent Skill content with a workflow entry point — existing (`swift-expert-skill/SKILL.md`)
-- ✓ Topic-specific reference docs covering core Swift/SwiftUI areas — existing (`swift-expert-skill/references/*.md`)
+- ✓ Existing Agent Skill content with a workflow entry point — existing (`swift-agent-skill/SKILL.md`)
+- ✓ Topic-specific reference docs covering core Swift/SwiftUI areas — existing (`swift-agent-skill/references/*.md`)
 - ✓ Repository-level usage documentation — existing (`README.md`)
 
 ### Active
@@ -31,7 +31,7 @@ AI agents can quickly apply consistent, modern Swift/SwiftUI guidance to refacto
 
 ## Context
 
-This repository already contains an Agent Skill in `swift-expert-skill/` with topic references in `swift-expert-skill/references/`, plus lightweight Node.js hooks in `.opencode/hooks/` and `.claude/hooks/`. The refactor will focus on making the skill content immediately usable by AI agents via structured workflows, decision logic, and concise guidance.
+This repository already contains an Agent Skill in `swift-agent-skill/` with topic references in `swift-agent-skill/references/`, plus lightweight Node.js hooks in `.opencode/hooks/` and `.claude/hooks/`. The refactor will focus on making the skill content immediately usable by AI agents via structured workflows, decision logic, and concise guidance.
 
 ## Constraints
 
