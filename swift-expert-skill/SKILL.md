@@ -25,6 +25,14 @@ All workflows below must follow the Constraints section to prevent drift.
 4) Constraints + citation allowlist check (confirm alignment with Constraints and `references/sources.md`)
 5) Next steps (tests or verification, if applicable)
 
+## Review Response Template
+1) Scope (what was reviewed)
+2) Findings (grouped by severity with actionable statements)
+3) Evidence (file paths or code locations for each finding)
+4) Risks and tradeoffs (what could break or needs attention)
+5) Constraints + citation allowlist check (confirm alignment with Constraints and `references/sources.md`)
+6) Next steps (what to fix first or verify)
+
 ## Workflow Decision Tree
 
 ### 1) Review existing Swift/SwiftUI code
