@@ -1,17 +1,26 @@
 ---
 name: swift-expert-skill
-description: Expert guidance for Swift, SwiftUI, and iOS engineering. Write, review, or improve Swift code following best practices for concurrency, state management, navigation, testing, performance, and code quality. Use when building new features, refactoring existing code, reviewing code quality, or adopting modern Swift patterns.
+description: Expert guidance for modern Swift and SwiftUI review and refactor work with scoped constraints and reference-backed rules.
 ---
 
 # Swift Expert Skill
 
 ## Overview
-Use this skill to build, review, or improve Swift and SwiftUI code with correct patterns for concurrency, state management, navigation, testing, performance optimization, and maintainable architecture. This skill provides practical guidance for modern Swift development following Apple's recommended patterns and iOS best practices.
+Use this skill to build, review, or improve Swift and SwiftUI code with correct patterns for state management, navigation, testing, performance optimization, and maintainable code. This skill provides practical guidance for modern Swift development following Apple's recommended patterns and iOS best practices.
+
+## Constraints
+- Swift/SwiftUI focus only; exclude server-side Swift and UIKit patterns unless bridging is required.
+- Avoid Swift concurrency patterns; use `.task` for SwiftUI async work when needed.
+- No architecture mandates (do not require MVVM/MVC/VIPER, coordinators, or specific folder structures).
+- No formatting or linting rules.
+- No tool-specific steps (Xcode, Instruments, IDE guidance, or CLI walkthroughs).
+- Citations must only reference URLs listed in `references/sources.md`.
+
+All workflows below must follow the Constraints section to prevent drift.
 
 ## Workflow Decision Tree
 
 ### 1) Review existing Swift/SwiftUI code
-- Check Swift concurrency usage (async/await, actors, structured concurrency) (see `references/swift-concurrency.md`)
 - Verify SwiftUI property wrapper usage and state management (see `references/swiftui-architecture.md`)
 - Review navigation patterns and deep linking (see `references/navigation.md`)
 - Check testing patterns and dependency injection (see `references/testing-di.md`)
@@ -19,7 +28,6 @@ Use this skill to build, review, or improve Swift and SwiftUI code with correct 
 - Review code for smells and refactoring opportunities (see `references/code-review-refactoring.md`)
 
 ### 2) Improve existing Swift/SwiftUI code
-- Replace completion handlers with async/await using continuations (see `references/swift-concurrency.md`)
 - Replace incorrect property wrappers and improve state management (see `references/swiftui-architecture.md`)
 - Modernize navigation to use NavigationStack and type-safe routing (see `references/navigation.md`)
 - Add protocol-based dependency injection for testability (see `references/testing-di.md`)
@@ -27,22 +35,13 @@ Use this skill to build, review, or improve Swift and SwiftUI code with correct 
 - Refactor code smells using established patterns (see `references/code-review-refactoring.md`)
 
 ### 3) Implement new Swift/SwiftUI feature
-- Design async operations with structured concurrency (see `references/swift-concurrency.md`)
 - Choose appropriate property wrappers for state ownership (see `references/swiftui-architecture.md`)
 - Implement navigation with centralized routing (see `references/navigation.md`)
 - Structure code with testable dependency injection (see `references/testing-di.md`)
 - Build performant views with proper optimizations (see `references/performance.md`)
-- Follow SOLID principles and maintainable patterns (see `references/code-review-refactoring.md`)
+- Apply maintainable refactoring patterns (see `references/code-review-refactoring.md`)
 
 ## Core Guidelines
-
-### Swift Concurrency
-- **Always prefer async/await over completion handlers** for new code
-- **Use structured concurrency** (async let, TaskGroup) instead of unstructured tasks
-- **Protect mutable state with actors** instead of locks or DispatchQueue
-- **Mark UI-related code with @MainActor** for thread safety
-- **Handle cancellation properly** in long-running operations
-- Never mix actors with DispatchQueue or blocking operations on MainActor
 
 ### SwiftUI State Management
 - **Choose the right property wrapper** based on ownership (@State, @Binding, @StateObject, @ObservedObject)
@@ -54,7 +53,7 @@ Use this skill to build, review, or improve Swift and SwiftUI code with correct 
 
 ### Navigation
 - **Use NavigationStack** instead of deprecated NavigationView
-- **Centralize navigation logic** in coordinators or route enums
+- **Consider centralized routing** with route enums when it improves clarity
 - **Implement type-safe navigation** with navigationDestination(for:)
 - **Handle deep links** with proper URL parsing and validation
 - **Support state restoration** for navigation paths
@@ -64,7 +63,6 @@ Use this skill to build, review, or improve Swift and SwiftUI code with correct 
 - **Write tests first** for critical business logic
 - **Use protocol-based DI** for service abstractions
 - **Create proper test doubles** (mocks, fakes, spies) - not stubs for everything
-- **Test async code** with proper cancellation and error handling
 - **Keep business logic separate** from views and UI
 - Structure code for testability from the start
 
@@ -73,25 +71,16 @@ Use this skill to build, review, or improve Swift and SwiftUI code with correct 
 - **Use lazy loading** for large lists and data sets
 - **Implement pagination** for network data
 - **Apply caching strategies** for expensive operations
-- **Profile before optimizing** with Instruments
 - Avoid premature optimization - measure first
 
 ### Code Quality
 - **Identify and refactor code smells** (god objects, long methods, duplicated code)
-- **Follow SOLID principles** (single responsibility, dependency inversion)
 - **Extract methods** to improve readability and testability
 - **Use composition over inheritance** when possible
 - **Keep functions small and focused** (single responsibility)
 - Write self-documenting code with clear naming
 
 ## When to Use Which Reference
-
-### Choose `references/swift-concurrency.md` when:
-- Implementing async operations or network calls
-- Managing concurrent tasks or parallel operations
-- Working with actors or thread-safe state
-- Converting legacy closure-based APIs
-- Handling task cancellation
 
 ### Choose `references/swiftui-architecture.md` when:
 - Choosing property wrappers for state
@@ -110,7 +99,6 @@ Use this skill to build, review, or improve Swift and SwiftUI code with correct 
 ### Choose `references/testing-di.md` when:
 - Writing unit tests for Swift code
 - Setting up dependency injection
-- Testing async operations
 - Creating test doubles (mocks/fakes/spies)
 - Structuring testable architecture
 
@@ -129,9 +117,6 @@ Use this skill to build, review, or improve Swift and SwiftUI code with correct 
 - Improving code maintainability
 
 ## Quick Decision Guide
-
-**Question: "How do I handle this async operation?"**
-→ See `references/swift-concurrency.md`
 
 **Question: "Which property wrapper should I use?"**
 → See `references/swiftui-architecture.md`
@@ -152,12 +137,11 @@ Use this skill to build, review, or improve Swift and SwiftUI code with correct 
 
 All detailed patterns, examples, and best practices are organized in the `references/` directory:
 
-- **swift-concurrency.md** - Async/await, Tasks, Actors, structured concurrency patterns
 - **swiftui-architecture.md** - State management, property wrappers, data flow, architecture
-- **navigation.md** - NavigationStack, deep linking, coordinators, state restoration
-- **testing-di.md** - Unit testing, dependency injection, test doubles, async testing
+- **navigation.md** - NavigationStack, deep linking, routing, state restoration
+- **testing-di.md** - Unit testing, dependency injection, test doubles
 - **performance.md** - SwiftUI optimization, memory management, profiling, caching
-- **code-review-refactoring.md** - Code smells, refactoring patterns, SOLID principles
+- **code-review-refactoring.md** - Code smells and refactoring patterns
 
 ## Usage Tips
 
@@ -169,22 +153,21 @@ All detailed patterns, examples, and best practices are organized in the `refere
 
 ## Example Workflows
 
-### Workflow 1: Building a new feature with async data
-1. Review `references/swift-concurrency.md` for async patterns
-2. Review `references/swiftui-architecture.md` for state management
-3. Review `references/testing-di.md` for testable structure
+### Workflow 1: Building a new feature with data loading
+1. Review `references/swiftui-architecture.md` for state management
+2. Review `references/testing-di.md` for testable structure
+3. Review `references/performance.md` for data-loading optimizations
 4. Implement feature following all three references
 
 ### Workflow 2: Optimizing a slow list
 1. Review `references/performance.md` for list optimization
 2. Review `references/swiftui-architecture.md` for state management issues
-3. Profile with Instruments to measure improvements
+3. Measure improvements with your preferred tooling if needed
 4. Apply optimizations iteratively
 
 ### Workflow 3: Refactoring legacy code
 1. Review `references/code-review-refactoring.md` to identify smells
-2. Review `references/swift-concurrency.md` to modernize async code
-3. Review `references/testing-di.md` to add testability
-4. Refactor incrementally with tests
+2. Review `references/testing-di.md` to add testability
+3. Refactor incrementally with tests
 
 This skill combines expertise across all areas of modern Swift and SwiftUI development, providing a comprehensive guide for building high-quality iOS applications.
