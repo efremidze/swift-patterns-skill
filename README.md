@@ -9,7 +9,7 @@ Includes patterns for concurrency, state management, navigation, testing, and pe
 Install with a single command:
 
 ```bash
-npx skills add https://github.com/efremidze/swift-patterns --skill swift-patterns-skill
+npx skills add https://github.com/efremidze/swift-patterns-skill --skill swift-patterns
 ```
 
 Then use it in your AI assistant:
