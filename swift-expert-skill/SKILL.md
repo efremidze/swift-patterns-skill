@@ -18,6 +18,13 @@ Use this skill to build, review, or improve Swift and SwiftUI code with correct 
 
 All workflows below must follow the Constraints section to prevent drift.
 
+## Refactor Response Template
+1) Intent + scope (what is being changed and why)
+2) Changes (bulleted list with file paths)
+3) Behavior preservation checks (what should remain unchanged)
+4) Constraints + citation allowlist check (confirm alignment with Constraints and `references/sources.md`)
+5) Next steps (tests or verification, if applicable)
+
 ## Workflow Decision Tree
 
 ### 1) Review existing Swift/SwiftUI code
