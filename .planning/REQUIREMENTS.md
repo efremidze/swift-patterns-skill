@@ -86,8 +86,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CORE-02 | Phase 2 | Pending |
 | CORE-03 | Phase 2 | Pending |
 | CORE-04 | Phase 2 | Pending |
-| CORE-05 | Phase 1 | Pending |
-| CORE-06 | Phase 1 | Pending |
+| CORE-05 | Phase 1 | Complete |
+| CORE-06 | Phase 1 | Complete |
 | CORE-07 | Phase 2 | Pending |
 | SWUI-01 | Phase 3 | Pending |
 | SWUI-02 | Phase 3 | Pending |
@@ -103,8 +103,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | MOD-01 | Phase 3 | Pending |
 | MOD-02 | Phase 3 | Pending |
 | PLAY-01 | Phase 4 | Pending |
-| COMP-01 | Phase 1 | Pending |
-| COMP-02 | Phase 1 | Pending |
+| COMP-01 | Phase 1 | Complete |
+| COMP-02 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 22 total

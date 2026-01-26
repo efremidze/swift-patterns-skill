@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-01-25)
 
 **Core value:** AI agents can quickly apply consistent, modern Swift/SwiftUI guidance to refactor and review code without ambiguity.
-**Current focus:** Phase 1 - Compliance + Output Foundations
+**Current focus:** Phase 2 - Decisioned Workflows + Safety
 
 ## Current Position
 
-Phase: 1 of 4 (Compliance + Output Foundations)
-Plan: 2 of 2 in current phase
-Status: Phase complete
-Last activity: 2026-01-26 — Completed 01-02-PLAN.md
+Phase: 2 of 4 (Decisioned Workflows + Safety)
+Plan: 0 of 2 in current phase
+Status: Ready to plan
+Last activity: 2026-01-26 — Phase 1 complete (01-01, 01-02)
 
 Progress: [██░░░░░░░░] 25%
 
