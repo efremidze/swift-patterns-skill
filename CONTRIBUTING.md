@@ -50,8 +50,8 @@ This repository follows the [Agent Skills format](https://agentskills.io/home). 
 
 ## References
 
-- [Agent Skills documentation](https://platform.claude.com/docs/en/agents-and-tools/agent-skills)
-- [Agent Skills format](https://agentskills.io/home)
+- [Agent Skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills)
+- [AgentSkills.io](https://agentskills.io/home)
 
 ## Questions?
 
