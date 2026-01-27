@@ -1,142 +1,176 @@
 ---
 name: swift-patterns
-description: Swift and SwiftUI best practices for modern iOS development. Use when writing, reviewing, or refactoring code.
+description: Review, refactor, or build SwiftUI features with correct state management, modern API usage, optimal view composition, navigation patterns, performance optimization, and testing best practices.
 ---
 
 # swift-patterns
 
-## Overview
-Use this skill to build, review, or improve Swift and SwiftUI code with correct patterns for state management, navigation, testing, performance optimization, and maintainable code. This skill provides practical guidance for modern Swift development following Apple's recommended patterns and iOS best practices.
+Review, refactor, or build SwiftUI features with correct state management, modern API usage, optimal view composition, and performance-conscious patterns. Prioritize native APIs, Apple design guidance, and testable code structure. This skill focuses on facts and best practices without enforcing specific architectural patterns.
+
+## Workflow Decision Tree
+
+### 1) Review existing SwiftUI code
+→ Read `references/workflows-review.md` for review methodology
+- Check state management against property wrapper selection (see `references/state.md`)
+- Verify view composition and extraction patterns (see `references/view-composition.md`)
+- Audit list performance and identity stability (see `references/lists-collections.md`)
+- Validate modern API usage (see `references/modern-swiftui-apis.md`)
+- Check async work patterns with .task (see `references/concurrency.md`)
+- Verify navigation implementation (see `references/navigation.md`)
+- Use Review Response Template (below)
+
+### 2) Refactor existing SwiftUI code
+→ Read `references/workflows-refactor.md` for refactor methodology
+- Extract complex views using playbooks (see `references/refactor-playbooks.md`)
+- Migrate deprecated APIs to modern equivalents (see `references/modern-swiftui-apis.md`)
+- Optimize performance hot paths (see `references/performance.md`)
+- Restructure state ownership (see `references/state.md`)
+- Apply common patterns (see `references/patterns.md`)
+- Use Refactor Response Template (below)
+
+### 3) Implement new SwiftUI features
+- Design data flow first: identify owned vs injected state (see `references/state.md`)
+- Structure views for optimal composition (see `references/view-composition.md`)
+- Use modern APIs only (see `references/modern-swiftui-apis.md`)
+- Handle async work with .task modifier (see `references/concurrency.md`)
+- Apply performance patterns early (see `references/performance.md`)
+- Implement navigation flows (see `references/navigation.md`)
+
+### 4) Answer best practice questions
+- Load relevant reference file(s) based on topic (see Reference Files below)
+- Provide direct guidance with examples
+
+**If intent unclear, ask:** "Do you want findings only (review), or should I change the code (refactor)?"
+
+## Response Templates
+
+**Review Response:**
+1. **Scope** - What was reviewed
+2. **Findings** - Grouped by severity with actionable statements
+3. **Evidence** - File paths or code locations
+4. **Risks and tradeoffs** - What could break or needs attention
+5. **Next steps** - What to fix first or verify
+
+**Refactor Response:**
+1. **Intent + scope** - What is being changed and why
+2. **Changes** - Bulleted list with file paths
+3. **Behavior preservation** - What should remain unchanged
+4. **Next steps** - Tests or verification needed
+
+## Quick Reference: Property Wrapper Selection
+
+| Wrapper | Use When | Ownership |
+|---------|----------|-----------|
+| `@State` | Internal view state (value type or `@Observable` class) | View owns |
+| `@Binding` | Child needs to modify parent's state | Parent owns |
+| `@Bindable` | Injected `@Observable` object needing bindings | Injected |
+| `let` | Read-only value from parent | Injected |
+| `var` + `.onChange()` | Read-only value needing reactive updates | Injected |
+
+**Key rules:**
+- Always mark `@State` as `private` (makes ownership explicit)
+- Never use `@State` for passed values (accepts initial value only)
+- Use `@State` with `@Observable` classes (not `@StateObject`)
+
+See `references/state.md` for detailed guidance and tradeoffs.
+
+## Quick Reference: Modern API Replacements
+
+| Deprecated | Modern Alternative | Notes |
+|------------|-------------------|-------|
+| `foregroundColor()` | `foregroundStyle()` | Supports dynamic type |
+| `cornerRadius()` | `.clipShape(.rect(cornerRadius:))` | More flexible |
+| `NavigationView` | `NavigationStack` | Type-safe navigation |
+| `tabItem()` | `Tab` API | iOS 18+ |
+| `onTapGesture()` | `Button` | Unless need location/count |
+| `onChange(of:) { value in }` | `onChange(of:) { old, new in }` or `onChange(of:) { }` | Two or zero parameters |
+| `UIScreen.main.bounds` | `GeometryReader` or layout APIs | Avoid hard-coded sizes |
+
+See `references/modern-swiftui-apis.md` for complete migration guide.
+
+## Review Checklist
+
+Use this when reviewing SwiftUI code:
+
+### State Management
+- [ ] `@State` properties marked `private`
+- [ ] Passed values NOT declared as `@State` or `@StateObject`
+- [ ] `@Binding` only where child modifies parent state
+- [ ] Property wrapper selection follows ownership rules
+- [ ] State ownership clear and intentional
+
+### Modern APIs
+- [ ] No deprecated modifiers (foregroundColor, cornerRadius, etc.)
+- [ ] Using `NavigationStack` instead of `NavigationView`
+- [ ] Using `Button` instead of `onTapGesture` when appropriate
+- [ ] Using two-parameter or no-parameter `onChange()`
+
+### View Composition
+- [ ] Using modifiers over conditionals for state changes (maintains identity)
+- [ ] Complex views extracted to separate subviews
+- [ ] Views kept small and focused
+- [ ] View `body` simple and pure (no side effects)
+
+### Navigation & Sheets
+- [ ] Using `navigationDestination(for:)` for type-safe navigation
+- [ ] Using `.sheet(item:)` for model-based sheets
+- [ ] Sheets own their dismiss actions
+
+### Lists & Collections
+- [ ] `ForEach` uses stable identity (never `.indices` for dynamic data)
+- [ ] Constant number of views per `ForEach` element
+- [ ] No inline filtering in `ForEach` (prefilter and cache)
+- [ ] No `AnyView` in list rows
+
+### Performance
+- [ ] Passing only needed values to views (not large config objects)
+- [ ] Eliminating unnecessary dependencies
+- [ ] Checking value changes before state assignment in hot paths
+- [ ] Using `LazyVStack`/`LazyHStack` for large lists
+- [ ] No object creation in view `body`
+
+### Async Work
+- [ ] Using `.task` for automatic cancellation
+- [ ] Using `.task(id:)` for value-dependent tasks
+- [ ] Not mixing `.onAppear` with async work
+
+See reference files for detailed explanations of each item.
 
 ## Constraints
-- Swift/SwiftUI focus only; exclude server-side Swift and UIKit patterns unless bridging is required.
-- Avoid Swift concurrency patterns; use `.task` for SwiftUI async work when needed.
-- No architecture mandates (do not require MVVM/MVC/VIPER, coordinators, or specific folder structures).
-- No formatting or linting rules.
-- No tool-specific steps (Xcode, Instruments, IDE guidance, or CLI walkthroughs).
-- Citations allowed: `developer.apple.com/documentation/swiftui/`, `developer.apple.com/documentation/swift/`, `developer.apple.com/documentation/swift/concurrency`.
 
-All workflows below must follow the Constraints section to prevent drift.
+- **Swift/SwiftUI focus only** - Exclude server-side Swift and UIKit unless bridging required
+- **No Swift concurrency patterns** - Use `.task` for SwiftUI async work
+- **No architecture mandates** - Don't require MVVM/MVC/VIPER or specific structures
+- **No formatting/linting rules** - Focus on correctness and patterns
+- **No tool-specific guidance** - No Xcode, Instruments, or IDE instructions
+- **Citations allowed:** `developer.apple.com/documentation/swiftui/`, `developer.apple.com/documentation/swift/`
 
-## Refactor Response Template
-1) Intent + scope (what is being changed and why)
-2) Changes (bulleted list with file paths)
-3) Behavior preservation checks (what should remain unchanged)
-4) Constraints check (confirm alignment)
-5) Next steps (tests or verification, if applicable)
+All workflows must follow these constraints.
 
-## Review Response Template
-1) Scope (what was reviewed)
-2) Findings (grouped by severity with actionable statements)
-3) Evidence (file paths or code locations for each finding)
-4) Risks and tradeoffs (what could break or needs attention)
-5) Constraints check (confirm alignment)
-6) Next steps (what to fix first or verify)
+## Philosophy
 
-## Workflow Routing
-
-Route requests based on intent cues:
-
-| Signal | Route |
-| --- | --- |
-| "review", "find issues", "audit", "assess" | [workflows-review.md](references/workflows-review.md) |
-| "refactor", "change", "implement", "improve" | [workflows-refactor.md](references/workflows-refactor.md) |
-| "no tests", "legacy", "migration" | Refactor with extra caution |
-
-If unclear, ask: "Do you want findings only (review), or should I change the code (refactor)?"
-
-## When to Use Which Reference
-
-### Choose `references/state.md` when:
-- Choosing property wrappers for state
-- Designing data flow in views
-- Structuring app architecture
-- Managing view models and dependencies
-- Building reusable view components
-
-### Choose `references/navigation.md` when:
-- Implementing navigation flows
-- Handling deep links or universal links
-- Managing navigation state
-- Supporting state restoration
-- Working with sheets, tabs, or navigation stacks
-
-### Choose `references/testing-di.md` when:
-- Writing unit tests for Swift code
-- Setting up dependency injection
-- Creating test doubles (mocks/fakes/spies)
-- Structuring testable architecture
-
-### Choose `references/performance.md` when:
-- Optimizing SwiftUI view performance
-- Improving list scrolling performance
-- Managing memory efficiently
-- Implementing caching strategies
-- Profiling and measuring performance
-
-### Choose `references/code-review-refactoring.md` when:
-- Reviewing code for quality issues
-- Identifying code smells
-- Planning refactoring work
-- Applying design patterns
-- Improving code maintainability
-
-### Choose `references/view-composition.md` when:
-- Extracting views into smaller components
-- Deciding where state should live
-- Fixing parent/child data flow issues
-- Applying layout patterns
-
-### Choose `references/lists-collections.md` when:
-- Building lists with stable identity
-- Using ForEach with dynamic data
-- Choosing between List and LazyVStack
-- Fixing selection or state loss in lists
-
-### Choose `references/scrolling.md` when:
-- Implementing pagination or infinite scroll
-- Handling scroll position and anchoring
-- Loading more content on scroll
-- Fixing scroll-related performance issues
-
-### Choose `references/concurrency.md` when:
-- Running async work in SwiftUI views
-- Choosing between .task, .onAppear, and .onChange
-- Handling cancellation and lifecycle
-- Updating UI from async contexts
-
-### Choose `references/modern-swiftui-apis.md` when:
-- Replacing deprecated SwiftUI APIs
-- Migrating from NavigationView to NavigationStack
-- Updating to modern property wrappers
-- Finding current replacements for legacy patterns
-
-### Choose `references/refactor-playbooks.md` when:
-- Extracting views while preserving behavior
-- Migrating navigation to NavigationStack
-- Hoisting state without breaking bindings
-- Following step-by-step refactor guides
-
-### Choose `references/patterns.md` when:
-- Building container views for loading/error states
-- Creating reusable ViewModifiers for styling
-- Setting up environment-based dependency injection
-- Using PreferenceKeys for child-to-parent communication
+This skill focuses on **facts and best practices** from Apple's documentation:
+- Modern APIs over deprecated ones
+- Clear state ownership patterns
+- Performance-conscious view composition
+- Testable code structure
+- No architectural mandates (MVVM/VIPER not required)
+- Apple Human Interface Guidelines adherence
 
 ## Reference Files
 
-- **workflows-review.md** - Review checklist, findings taxonomy, risk cues
-- **workflows-refactor.md** - Refactor checklist, invariants, risk cues
-- **refactor-playbooks.md** - Step-by-step playbooks for view extraction, navigation migration, state hoisting
-- **state.md** - Property wrapper selection, ownership rules, tradeoffs
-- **navigation.md** - NavigationStack, sheets, deep linking, state restoration
-- **view-composition.md** - View extraction, parent/child data flow, layout
-- **lists-collections.md** - Stable identity, ForEach, List vs LazyVStack
-- **scrolling.md** - Pagination triggers, scroll position, lazy loading
-- **concurrency.md** - .task, .onChange, cancellation, @MainActor
-- **performance.md** - View optimization, identity stability, lazy containers
-- **testing-di.md** - Protocol-based DI, test doubles, testable structure
-- **patterns.md** - Container views, ViewModifiers, PreferenceKeys, Environment DI
-- **modern-swiftui-apis.md** - Legacy API replacement catalog
-- **code-review-refactoring.md** - Code smells, anti-patterns, quality checks
-
+All references in `references/`:
+- `workflows-review.md` - Review methodology and findings taxonomy
+- `workflows-refactor.md` - Refactor methodology and invariants
+- `refactor-playbooks.md` - Step-by-step refactor guides
+- `state.md` - Property wrappers and ownership patterns
+- `navigation.md` - Navigation implementation patterns
+- `view-composition.md` - View structure and extraction
+- `lists-collections.md` - Identity and ForEach patterns
+- `scrolling.md` - Scroll handling and pagination
+- `concurrency.md` - Async work with .task
+- `performance.md` - Optimization strategies
+- `testing-di.md` - Testing and dependency injection
+- `patterns.md` - Common SwiftUI patterns
+- `modern-swiftui-apis.md` - Legacy API migration
+- `code-review-refactoring.md` - Code quality checks
