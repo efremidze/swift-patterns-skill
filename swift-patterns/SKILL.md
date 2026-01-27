@@ -37,7 +37,7 @@ Review, refactor, or build SwiftUI features with correct state management, moder
 - Implement navigation flows (see `references/navigation.md`)
 
 ### 4) Answer best practice questions
-- Load relevant reference file(s) based on topic (see Quick Reference Guide below)
+- Load relevant reference file(s) based on topic (see Reference Files below)
 - Provide direct guidance with examples
 
 **If intent unclear, ask:** "Do you want findings only (review), or should I change the code (refactor)?"
@@ -136,71 +136,6 @@ Use this when reviewing SwiftUI code:
 
 See reference files for detailed explanations of each item.
 
-## Quick Reference Guide
-
-Load these references based on specific needs:
-
-**State management questions** → `references/state.md`
-- Property wrapper selection (@State, @Binding, @Observable)
-- Data flow between views
-- View model patterns
-
-**Navigation questions** → `references/navigation.md`
-- NavigationStack implementation
-- Deep links and universal links
-- Sheets, tabs, navigation state
-
-**View structure questions** → `references/view-composition.md`
-- Extracting views into components
-- Parent/child data flow
-- Container patterns
-
-**List/collection questions** → `references/lists-collections.md`
-- Stable identity with ForEach
-- List vs LazyVStack
-- Dynamic data patterns
-
-**Scrolling questions** → `references/scrolling.md`
-- Pagination and infinite scroll
-- Scroll position and anchoring
-- Loading content on scroll
-
-**Async work questions** → `references/concurrency.md`
-- When to use .task vs .onAppear vs .onChange
-- Cancellation and lifecycle
-- Updating UI from async contexts
-
-**Performance questions** → `references/performance.md`
-- View optimization strategies
-- List scrolling optimization
-- Memory management
-
-**Testing questions** → `references/testing-di.md`
-- Unit testing patterns
-- Dependency injection
-- Test doubles
-
-**Refactoring tasks** → `references/refactor-playbooks.md`
-- Step-by-step refactor guides
-- View extraction playbooks
-- Navigation migration
-- State hoisting patterns
-
-**Common patterns** → `references/patterns.md`
-- Container views (loading/error states)
-- Reusable ViewModifiers
-- Environment-based DI
-- PreferenceKeys
-
-**Legacy migration** → `references/modern-swiftui-apis.md`
-- Deprecated API replacements
-- NavigationView → NavigationStack
-- Property wrapper updates
-
-**Code quality** → `references/code-review-refactoring.md`
-- Code smells and anti-patterns
-- Quality improvement checklist
-
 ## Core Constraints
 
 - **Swift/SwiftUI focus only** - Exclude server-side Swift and UIKit unless bridging required
@@ -211,28 +146,6 @@ Load these references based on specific needs:
 - **Citations allowed:** `developer.apple.com/documentation/swiftui/`, `developer.apple.com/documentation/swift/`
 
 All workflows must follow these constraints.
-
-## Examples
-
-**Example 1: State management question**
-User: "Should I use @State or @Binding for this counter?"
-→ Check Quick Reference table, consult `references/state.md` if needed, answer directly
-
-**Example 2: Review request**
-User: "Review this view for issues"
-→ Read `references/workflows-review.md`, apply Review Checklist, use Review Response Template
-
-**Example 3: Refactor request**
-User: "Extract this view into smaller components"
-→ Read `references/workflows-refactor.md` and `references/refactor-playbooks.md`, follow extraction guide
-
-**Example 4: Performance issue**
-User: "My list scrolls slowly"
-→ Read `references/performance.md` and `references/lists-collections.md`, diagnose and fix
-
-**Example 5: Legacy migration**
-User: "Update my NavigationView code"
-→ Read `references/modern-swiftui-apis.md` and `references/refactor-playbooks.md`, migrate step-by-step
 
 ## Philosophy
 
