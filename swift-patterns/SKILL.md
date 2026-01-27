@@ -136,7 +136,7 @@ Use this when reviewing SwiftUI code:
 
 See reference files for detailed explanations of each item.
 
-## Core Constraints
+## Constraints
 
 - **Swift/SwiftUI focus only** - Exclude server-side Swift and UIKit unless bridging required
 - **No Swift concurrency patterns** - Use `.task` for SwiftUI async work
