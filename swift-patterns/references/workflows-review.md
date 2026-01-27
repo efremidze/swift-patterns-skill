@@ -27,15 +27,7 @@ Classify findings consistently so review output is stable and comparable:
 
 ## Review Checklist
 
-- Confirm the request is a review (findings only, no code changes)
-- List the files and requirements used for the review
-- Check stable identity in `List`/`ForEach` (no `.indices` for dynamic data)
-- Verify state ownership mapping (`@State` local, `@Binding` parent-owned, `@Observable` shared)
-- Confirm unidirectional data flow (data down, events up)
-- Ensure navigation has a single source of truth (one root/path)
-- Confirm async work is tied to view lifecycle (`.task` or explicit cancellation)
-- Flag deprecated API usage when modern replacements are required
-- Call out performance risks when work is heavy in view body or lists lack stable identity
+See the detailed Review Checklist in [SKILL.md](../SKILL.md#review-checklist).
 
 ## Risk Cues (Ask for Tests or Split Work)
 
