@@ -206,8 +206,8 @@ RoundedRectangle(cornerRadii: .init(topLeading: 20, bottomTrailing: 20))
 
 // Combined fill and stroke
 Circle()
-    .fill(.blue)
     .stroke(.red, lineWidth: 2)
+    .fill(.blue)
 ```
 
 ---
@@ -289,12 +289,10 @@ struct CardStack<Content: View>: View {
     @ViewBuilder var content: Content
 
     var body: some View {
-        Group(subviewsOf: content) { subviews in
-            ForEach(subviews) { subview in
-                subview
-                    .padding()
-                    .background(.ultraThinMaterial)
-            }
+        ForEach(subviews: content) { subview in
+            subview
+                .padding()
+                .background(.ultraThinMaterial)
         }
     }
 }
