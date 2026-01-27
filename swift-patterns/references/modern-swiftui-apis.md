@@ -6,7 +6,7 @@ Prefer modern APIs when the deployment target allows. This catalog covers legacy
 
 ### Legacy → Modern Migration Tables
 - [Navigation (iOS 16+)](#navigation-ios-16)
-- [Appearance (iOS 15+)](#appearance-ios-15)
+- [Appearance](#appearance)
 - [State & Data (iOS 17+)](#state--data-ios-17)
 - [Events & Lifecycle](#events--lifecycle)
 - [Lists & Collections](#lists--collections)
@@ -34,7 +34,7 @@ Prefer modern APIs when the deployment target allows. This catalog covers legacy
 | `navigationBarHidden(_:)` | `toolbar(.hidden, for: .navigationBar)` | iOS 16+ |
 | `.isDetailLink(false)` | Not needed | NavigationStack handles automatically |
 
-## Appearance (iOS 15+)
+## Appearance
 
 | Legacy | Modern | Notes |
 |--------|--------|-------|
@@ -177,9 +177,11 @@ NavigationStack {
 Button("Tap") { }
     .sensoryFeedback(.impact, trigger: tapCount)
 
-// Or programmatically
-@Environment(\.sensoryFeedback) var feedback
-feedback.play(.success)
+// Conditional feedback
+Button("Submit") { }
+    .sensoryFeedback(.success, trigger: submitCount) { old, new in
+        new > old  // Only when count increases
+    }
 ```
 
 ### Container Relative Frame
@@ -287,10 +289,12 @@ struct CardStack<Content: View>: View {
     @ViewBuilder var content: Content
 
     var body: some View {
-        ForEach(subviewOf: content) { subview in
-            subview
-                .padding()
-                .background(.ultraThinMaterial)
+        Group(subviewsOf: content) { subviews in
+            ForEach(subviews) { subview in
+                subview
+                    .padding()
+                    .background(.ultraThinMaterial)
+            }
         }
     }
 }
@@ -345,7 +349,7 @@ struct RichTextEditor: View {
         TextEditor(text: $text)
             .toolbar {
                 Button("Bold") {
-                    text.font = .boldSystemFont(ofSize: 16)
+                    text.font = .body.bold()
                 }
             }
     }
