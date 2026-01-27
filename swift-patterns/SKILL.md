@@ -1,11 +1,11 @@
 ---
 name: swift-patterns
-description: Swift and SwiftUI best practices for modern iOS development. Use when writing, reviewing, or refactoring code.
+description: Review, refactor, or build SwiftUI features with correct state management, modern API usage, optimal view composition, navigation patterns, performance optimization, and testing best practices.
 ---
 
 # swift-patterns
 
-Build, review, and improve Swift and SwiftUI code using Apple's recommended patterns and iOS best practices.
+Review, refactor, or build SwiftUI features with correct state management, modern API usage, optimal view composition, and performance-conscious patterns. Prioritize native APIs, Apple design guidance, and testable code structure. This skill focuses on facts and best practices without enforcing specific architectural patterns.
 
 ## Workflow Decision Tree
 
