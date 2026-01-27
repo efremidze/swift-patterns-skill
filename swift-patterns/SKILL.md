@@ -14,7 +14,7 @@ Use this skill to build, review, or improve Swift and SwiftUI code with correct 
 - No architecture mandates (do not require MVVM/MVC/VIPER, coordinators, or specific folder structures).
 - No formatting or linting rules.
 - No tool-specific steps (Xcode, Instruments, IDE guidance, or CLI walkthroughs).
-- Citations must only reference URLs listed in `references/sources.md`.
+- Citations allowed: `developer.apple.com/documentation/swiftui/`, `developer.apple.com/documentation/swift/`, `developer.apple.com/documentation/swift/concurrency`.
 
 All workflows below must follow the Constraints section to prevent drift.
 
@@ -22,7 +22,7 @@ All workflows below must follow the Constraints section to prevent drift.
 1) Intent + scope (what is being changed and why)
 2) Changes (bulleted list with file paths)
 3) Behavior preservation checks (what should remain unchanged)
-4) Constraints + citation allowlist check (confirm alignment with Constraints and `references/sources.md`)
+4) Constraints check (confirm alignment)
 5) Next steps (tests or verification, if applicable)
 
 ## Review Response Template
@@ -30,57 +30,20 @@ All workflows below must follow the Constraints section to prevent drift.
 2) Findings (grouped by severity with actionable statements)
 3) Evidence (file paths or code locations for each finding)
 4) Risks and tradeoffs (what could break or needs attention)
-5) Constraints + citation allowlist check (confirm alignment with Constraints and `references/sources.md`)
+5) Constraints check (confirm alignment)
 6) Next steps (what to fix first or verify)
 
 ## Workflow Routing
 
-Use [references/decisions.md](references/decisions.md) as the authoritative routing guide for selecting review vs refactor workflows based on explicit intent cues. This routing gate avoids duplicating rules and keeps workflow selection consistent.
+Route requests based on intent cues:
 
-After routing, use the workflow checklists:
-- [references/workflows-review.md](references/workflows-review.md)
-- [references/workflows-refactor.md](references/workflows-refactor.md)
+| Signal | Route |
+| --- | --- |
+| "review", "find issues", "audit", "assess" | [workflows-review.md](references/workflows-review.md) |
+| "refactor", "change", "implement", "improve" | [workflows-refactor.md](references/workflows-refactor.md) |
+| "no tests", "legacy", "migration" | Refactor with extra caution |
 
-All workflows must follow the Constraints section above.
-
-## Core Guidelines
-
-### SwiftUI State Management
-- **Choose the right property wrapper** based on ownership (@State, @Binding, @Environment, @Observable)
-- **Prefer @Observable over ObservableObject** for iOS 17+; use ObservableObject for earlier OS support
-- **Follow unidirectional data flow** (data down, events up)
-- **Keep views simple and declarative** (no logic in body, no side effects)
-- **Use .task for async work** and .onChange for reactions
-- Inject dependencies through initializers for testability
-
-### Navigation
-- **Use NavigationStack** instead of deprecated NavigationView
-- **Consider centralized routing** with route enums when it improves clarity
-- **Implement type-safe navigation** with navigationDestination(for:)
-- **Handle deep links** with proper URL parsing and validation
-- **Support state restoration** for navigation paths
-- Keep navigation state in a single source of truth
-
-### Testing & Dependency Injection
-- **Write tests first** for critical business logic
-- **Use protocol-based DI** for service abstractions
-- **Create proper test doubles** (mocks, fakes, spies) - not stubs for everything
-- **Keep business logic separate** from views and UI
-- Structure code for testability from the start
-
-### Performance
-- **Optimize SwiftUI views** with proper state management and view identity
-- **Use lazy loading** for large lists and data sets
-- **Implement pagination** for network data
-- **Apply caching strategies** for expensive operations
-- Avoid premature optimization - measure first
-
-### Code Quality
-- **Identify and refactor code smells** (god objects, long methods, duplicated code)
-- **Extract methods** to improve readability and testability
-- **Use composition over inheritance** when possible
-- **Keep functions small and focused** (single responsibility)
-- Write self-documenting code with clear naming
+If unclear, ask: "Do you want findings only (review), or should I change the code (refactor)?"
 
 ## When to Use Which Reference
 
@@ -160,106 +123,20 @@ All workflows must follow the Constraints section above.
 - Setting up environment-based dependency injection
 - Using PreferenceKeys for child-to-parent communication
 
-### Choose `references/invariants.md` when:
-- Checking refactor correctness requirements
-- Verifying behavior preservation after changes
-- Ensuring stable identity, state ownership, or navigation rules hold
-
-### Choose `references/sources.md` when:
-- Adding citations to responses
-- Verifying allowed documentation URLs
-
-## Quick Decision Guide
-
-**Question: "Which property wrapper should I use?"**
-→ See `references/state.md`
-
-**Question: "How do I implement navigation to this screen?"**
-→ See `references/navigation.md`
-
-**Question: "How do I build lists with stable identity?"**
-→ See `references/lists-collections.md`
-
-**Question: "How do I paginate or handle scrolling safely?"**
-→ See `references/scrolling.md`
-
-**Question: "How do I split this view into smaller pieces?"**
-→ See `references/view-composition.md`
-
-**Question: "How do I refactor safely (view extraction, navigation migration, state hoisting)?"**
-→ See `references/refactor-playbooks.md`
-
-**Question: "What replaces this legacy SwiftUI API?"**
-→ See `references/modern-swiftui-apis.md`
-
-**Question: "How do I make this testable?"**
-→ See `references/testing-di.md`
-
-**Question: "Why is this view/list so slow?"**
-→ See `references/performance.md`
-
-**Question: "How do I run async work in SwiftUI safely?"**
-→ See `references/concurrency.md`
-
-**Question: "Is this code well-structured?"**
-→ See `references/code-review-refactoring.md`
-
-**Question: "How do I build a reusable loading/error container?"**
-→ See `references/patterns.md`
-
-**Question: "What invariants must hold after this refactor?"**
-→ See `references/invariants.md`
-
-**Question: "Which URLs can I cite?"**
-→ See `references/sources.md`
-
 ## Reference Files
 
-All detailed patterns, examples, and best practices are organized in the `references/` directory:
+- **workflows-review.md** - Review checklist, findings taxonomy, risk cues
+- **workflows-refactor.md** - Refactor checklist, invariants, risk cues
+- **refactor-playbooks.md** - Step-by-step playbooks for view extraction, navigation migration, state hoisting
+- **state.md** - Property wrapper selection, ownership rules, tradeoffs
+- **navigation.md** - NavigationStack, sheets, deep linking, state restoration
+- **view-composition.md** - View extraction, parent/child data flow, layout
+- **lists-collections.md** - Stable identity, ForEach, List vs LazyVStack
+- **scrolling.md** - Pagination triggers, scroll position, lazy loading
+- **concurrency.md** - .task, .onChange, cancellation, @MainActor
+- **performance.md** - View optimization, identity stability, lazy containers
+- **testing-di.md** - Protocol-based DI, test doubles, testable structure
+- **patterns.md** - Container views, ViewModifiers, PreferenceKeys, Environment DI
+- **modern-swiftui-apis.md** - Legacy API replacement catalog
+- **code-review-refactoring.md** - Code smells, anti-patterns, quality checks
 
-- **decisions.md** - Review vs refactor routing gates and intent cues
-- **workflows-review.md** - Review checklist, findings taxonomy, and risk cues
-- **workflows-refactor.md** - Behavior-preserving refactor checklist and risk cues
-- **refactor-playbooks.md** - Goal-based refactor playbooks for common migrations
-- **state.md** - State management, property wrappers, ownership guidance
-- **view-composition.md** - View extraction, data flow, and invariants
-- **navigation.md** - NavigationStack, deep linking, routing, state restoration
-- **lists-collections.md** - Stable identity, lazy containers, list composition
-- **scrolling.md** - ScrollView, pagination triggers, safe loading
-- **modern-swiftui-apis.md** - Replacement catalog for legacy SwiftUI APIs
-- **concurrency.md** - SwiftUI lifecycle-aware async work and @MainActor updates
-- **testing-di.md** - Unit testing, dependency injection, test doubles
-- **performance.md** - SwiftUI optimization, memory management, profiling, caching
-- **code-review-refactoring.md** - Code smells and refactoring patterns
-- **patterns.md** - Reusable SwiftUI patterns (containers, ViewModifiers, PreferenceKeys, Environment DI)
-- **invariants.md** - Mandatory refactor invariants for behavior preservation
-- **sources.md** - Citation allowlist for documentation URLs
-
-## Usage Tips
-
-- Start with Workflow Routing to select review vs refactor intent
-- Use the Quick Decision Guide to find the right reference quickly
-- Reference documents contain detailed guidelines, tradeoffs, code examples, and anti-patterns
-- Each reference is self-contained but cross-references related topics
-- Apply multiple references together for comprehensive solutions
-
-## Example Workflows
-
-### Workflow 1: Building a new feature with data loading
-1. Review `references/state.md` for state management
-2. Review `references/testing-di.md` for testable structure
-3. Review `references/performance.md` for data-loading optimizations
-4. Implement feature following all three references
-
-### Workflow 2: Optimizing a slow list
-1. Review `references/performance.md` for list optimization
-2. Review `references/state.md` for state management issues
-3. Measure improvements with your preferred tooling if needed
-4. Apply optimizations iteratively
-
-### Workflow 3: Refactoring legacy code
-1. Review `references/code-review-refactoring.md` to identify smells
-2. Review `references/testing-di.md` to add testability
-3. Refactor incrementally with tests
-
-This skill combines expertise across all areas of modern Swift and SwiftUI development, providing a comprehensive guide for building high-quality iOS applications.

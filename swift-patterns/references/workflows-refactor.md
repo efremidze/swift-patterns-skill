@@ -2,9 +2,17 @@
 
 Use this workflow when the user asks to change code while preserving existing behavior.
 
-**Required references:**
-- **Constraints (mandatory):** See [SKILL.md Constraints](../SKILL.md#constraints).
-- **Invariants (mandatory):** See [Invariants reference](invariants.md).
+**Constraints:** See [SKILL.md Constraints](../SKILL.md#constraints).
+
+## Invariants
+
+These must hold when refactoring:
+
+- **Stable identity:** Use stable IDs for `List`/`ForEach`. No `.indices` for dynamic data.
+- **State ownership:** `@State` = view-local, `@Binding` = parent-owned, `@Observable` = shared.
+- **Single navigation source:** One `NavigationStack` root, one path source of truth.
+- **Cancellable async:** Tie async work to view lifecycle with `.task`.
+- **Unidirectional flow:** Data down, events up. No child mutation of parent state.
 
 ## Playbooks
 
@@ -23,7 +31,7 @@ See [Refactor playbooks](refactor-playbooks.md).
 - Confirm the request is a refactor (code changes, behavior preserved)
 - Capture the current behavior that must remain unchanged
 - Identify the files and views in scope
-- Review the [Invariants reference](invariants.md) and map them to the code
+- Map the Invariants above to the code being changed
 
 ### Changes
 
