@@ -4,7 +4,7 @@ We'd love your help making this skill better! Whether you're fixing outdated pat
 
 ## About Agent Skills
 
-This repository follows the [Agent Skills format](https://agentskills.io/home). See the [documentation](https://docs.anthropic.com/en/docs/claude-code/agent-skills) for details on structure and format.
+This repository follows the [Agent Skills format](https://agentskills.io/home). See the [documentation](https://platform.claude.com/docs/en/agents-and-tools/agent-skills) for details on structure and format.
 
 ## Ways to Contribute
 
@@ -50,7 +50,7 @@ This repository follows the [Agent Skills format](https://agentskills.io/home). 
 
 ## References
 
-- [Agent Skills documentation](https://docs.anthropic.com/en/docs/claude-code/agent-skills)
+- [Agent Skills documentation](https://platform.claude.com/docs/en/agents-and-tools/agent-skills)
 - [Agent Skills format](https://agentskills.io/home)
 
 ## Questions?
