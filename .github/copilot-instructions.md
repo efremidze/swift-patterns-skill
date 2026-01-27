@@ -32,7 +32,6 @@ Review changes as an **Agent Skills expert**, focusing on the **Agent Skills ope
 - **No formatting/linting rules**: avoid code organization mandates, property ordering, or naming conventions.
 - **Modern SwiftUI APIs**: prefer modern, non-deprecated APIs where correctness is impacted (e.g., `NavigationStack`, `foregroundStyle()`).
 - **Performance guidance is optional**: performance optimizations should be phrased as "consider" unless it's a correctness issue.
-- **Citations must reference `references/sources.md`**: only cite URLs listed in the sources allowlist.
 
 ## Review Focus Areas
 
@@ -66,7 +65,6 @@ Review changes as an **Agent Skills expert**, focusing on the **Agent Skills ope
 - **Architecture prescriptions** or project-structure mandates.
 - **Tooling walkthroughs** (IDE-specific or step-by-step tool usage).
 - **Deep concurrency dives** (actors, Sendable internals) unrelated to SwiftUI usage.
-- **Citations to URLs not in `references/sources.md`**.
 
 ## Resources
 - Agent Skills overview: https://agentskills.io/home
