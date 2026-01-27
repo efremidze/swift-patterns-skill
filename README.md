@@ -42,7 +42,7 @@ Install for personal use:
 
 ```bash
 /plugin marketplace add efremidze/swift-patterns-skill
-/plugin install swift-expert@swift-patterns
+/plugin install efremidze@swift-patterns
 ```
 
 Or configure for your team in `.claude/settings.json`:
@@ -50,7 +50,7 @@ Or configure for your team in `.claude/settings.json`:
 ```json
 {
   "enabledPlugins": {
-    "swift-expert@swift-patterns": true
+    "efremidze@swift-patterns": true
   },
   "extraKnownMarketplaces": {
     "swift-patterns": {

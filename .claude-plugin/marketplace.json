@@ -11,7 +11,7 @@
   },
   "plugins": [
     {
-      "name": "swift-expert",
+      "name": "swift-patterns",
       "description": "Expert Swift and SwiftUI guidance for state management, navigation, testing, dependency injection, performance optimization, and code quality patterns.",
       "repository": "https://github.com/efremidze/swift-patterns-skill",
       "version": "1.0.0",
