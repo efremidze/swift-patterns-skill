@@ -5,14 +5,14 @@ Prefer modern APIs when the deployment target allows. This catalog covers legacy
 ## Contents
 
 ### Legacy → Modern Migration Tables
-- [Navigation (iOS 16+)](#navigation-ios-16)
+- [Navigation](#navigation)
 - [Appearance](#appearance)
-- [State & Data (iOS 17+)](#state--data-ios-17)
+- [State & Data](#state--data)
 - [Events & Lifecycle](#events--lifecycle)
 - [Lists & Collections](#lists--collections)
 - [Tabs (iOS 18+)](#tabs-ios-18)
 - [Layout & Sizing](#layout--sizing)
-- [Sheets & Presentation (iOS 16+)](#sheets--presentation-ios-16)
+- [Sheets & Presentation](#sheets--presentation)
 
 ### New APIs by Version
 - [iOS 17 New APIs](#ios-17-new-apis) - @Observable, ScrollView, Animation, Inspector, Sensory Feedback, Container Relative Frame, onChange initial, Shape Improvements
@@ -23,7 +23,7 @@ Prefer modern APIs when the deployment target allows. This catalog covers legacy
 - [Migration Priority](#migration-priority)
 - [Availability Patterns](#availability-patterns)
 
-## Navigation (iOS 16+)
+## Navigation
 
 | Legacy | Modern | Notes |
 |--------|--------|-------|
@@ -44,7 +44,7 @@ Prefer modern APIs when the deployment target allows. This catalog covers legacy
 | `background(Color.x)` | `background { }` or `.background(.x, in:)` | Shape-aware backgrounds |
 | `overlay(Circle())` | `overlay { Circle() }` | ViewBuilder syntax |
 
-## State & Data (iOS 17+)
+## State & Data
 
 | Legacy | Modern | Notes |
 |--------|--------|-------|
@@ -86,7 +86,7 @@ Prefer modern APIs when the deployment target allows. This catalog covers legacy
 | `GeometryReader` for sizing | `containerRelativeFrame()` | iOS 17+, cleaner |
 | `frame(width:height:)` fixed | `frame(minWidth:maxWidth:)` | Flexible sizing |
 
-## Sheets & Presentation (iOS 16+)
+## Sheets & Presentation
 
 | Legacy | Modern | Notes |
 |--------|--------|-------|
