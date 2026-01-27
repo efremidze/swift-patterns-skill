@@ -22,7 +22,7 @@ All workflows below must follow the Constraints section to prevent drift.
 1) Intent + scope (what is being changed and why)
 2) Changes (bulleted list with file paths)
 3) Behavior preservation checks (what should remain unchanged)
-4) Constraints + citation allowlist check (confirm alignment with Constraints and `references/sources.md`)
+4) Constraints check (confirm alignment)
 5) Next steps (tests or verification, if applicable)
 
 ## Review Response Template
@@ -30,7 +30,7 @@ All workflows below must follow the Constraints section to prevent drift.
 2) Findings (grouped by severity with actionable statements)
 3) Evidence (file paths or code locations for each finding)
 4) Risks and tradeoffs (what could break or needs attention)
-5) Constraints + citation allowlist check (confirm alignment with Constraints and `references/sources.md`)
+5) Constraints check (confirm alignment)
 6) Next steps (what to fix first or verify)
 
 ## Workflow Routing
@@ -123,58 +123,20 @@ If unclear, ask: "Do you want findings only (review), or should I change the cod
 - Setting up environment-based dependency injection
 - Using PreferenceKeys for child-to-parent communication
 
-### Choose `references/invariants.md` when:
-- Checking refactor correctness requirements
-- Verifying behavior preservation after changes
-- Ensuring stable identity, state ownership, or navigation rules hold
-
 ## Reference Files
 
-All detailed patterns, examples, and best practices are organized in the `references/` directory:
+- **workflows-review.md** - Review checklist, findings taxonomy, risk cues
+- **workflows-refactor.md** - Refactor checklist, invariants, risk cues
+- **refactor-playbooks.md** - Step-by-step playbooks for view extraction, navigation migration, state hoisting
+- **state.md** - Property wrapper selection, ownership rules, tradeoffs
+- **navigation.md** - NavigationStack, sheets, deep linking, state restoration
+- **view-composition.md** - View extraction, parent/child data flow, layout
+- **lists-collections.md** - Stable identity, ForEach, List vs LazyVStack
+- **scrolling.md** - Pagination triggers, scroll position, lazy loading
+- **concurrency.md** - .task, .onChange, cancellation, @MainActor
+- **performance.md** - View optimization, identity stability, lazy containers
+- **testing-di.md** - Protocol-based DI, test doubles, testable structure
+- **patterns.md** - Container views, ViewModifiers, PreferenceKeys, Environment DI
+- **modern-swiftui-apis.md** - Legacy API replacement catalog
+- **code-review-refactoring.md** - Code smells, anti-patterns, quality checks
 
-- **decisions.md** - Review vs refactor routing gates and intent cues
-- **workflows-review.md** - Review checklist, findings taxonomy, and risk cues
-- **workflows-refactor.md** - Behavior-preserving refactor checklist and risk cues
-- **refactor-playbooks.md** - Goal-based refactor playbooks for common migrations
-- **state.md** - State management, property wrappers, ownership guidance
-- **view-composition.md** - View extraction, data flow, and invariants
-- **navigation.md** - NavigationStack, deep linking, routing, state restoration
-- **lists-collections.md** - Stable identity, lazy containers, list composition
-- **scrolling.md** - ScrollView, pagination triggers, safe loading
-- **modern-swiftui-apis.md** - Replacement catalog for legacy SwiftUI APIs
-- **concurrency.md** - SwiftUI lifecycle-aware async work and @MainActor updates
-- **testing-di.md** - Unit testing, dependency injection, test doubles
-- **performance.md** - SwiftUI optimization, memory management, profiling, caching
-- **code-review-refactoring.md** - Code smells and refactoring patterns
-- **patterns.md** - Reusable SwiftUI patterns (containers, ViewModifiers, PreferenceKeys, Environment DI)
-- **invariants.md** - Mandatory refactor invariants for behavior preservation
-- **sources.md** - Citation allowlist for documentation URLs
-
-## Usage Tips
-
-- Start with Workflow Routing to select review vs refactor intent
-- Use the Quick Decision Guide to find the right reference quickly
-- Reference documents contain detailed guidelines, tradeoffs, code examples, and anti-patterns
-- Each reference is self-contained but cross-references related topics
-- Apply multiple references together for comprehensive solutions
-
-## Example Workflows
-
-### Workflow 1: Building a new feature with data loading
-1. Review `references/state.md` for state management
-2. Review `references/testing-di.md` for testable structure
-3. Review `references/performance.md` for data-loading optimizations
-4. Implement feature following all three references
-
-### Workflow 2: Optimizing a slow list
-1. Review `references/performance.md` for list optimization
-2. Review `references/state.md` for state management issues
-3. Measure improvements with your preferred tooling if needed
-4. Apply optimizations iteratively
-
-### Workflow 3: Refactoring legacy code
-1. Review `references/code-review-refactoring.md` to identify smells
-2. Review `references/testing-di.md` to add testability
-3. Refactor incrementally with tests
-
-This skill combines expertise across all areas of modern Swift and SwiftUI development, providing a comprehensive guide for building high-quality iOS applications.
