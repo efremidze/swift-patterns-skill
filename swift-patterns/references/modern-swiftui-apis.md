@@ -347,7 +347,7 @@ struct RichTextEditor: View {
         TextEditor(text: $text)
             .toolbar {
                 Button("Bold") {
-                    text.font = .body.bold()
+                    text.font = .boldSystemFont(ofSize: 17)
                 }
             }
     }
@@ -382,7 +382,7 @@ TabView {
         }
     }
 }
-.tabBarMinimizeBehavior(.onScroll)
+.tabBarMinimizeBehavior(.automatic)
 ```
 
 ### Navigation Subtitles
@@ -436,7 +436,7 @@ Chart3D {
 @Environment(\.openURL) var openURL
 
 Button("Open Link") {
-    openURL(url, inApp: true)  // Opens in-app browser
+    openURL(url, prefersInApp: true)  // Opens in-app browser
 }
 ```
 
