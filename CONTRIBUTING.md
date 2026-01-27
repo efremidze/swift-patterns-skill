@@ -46,7 +46,6 @@ This repository follows the [Agent Skills format](https://agentskills.io/home). 
 2. Make focused changes to one area
 3. Ensure `SKILL.md` and references stay consistent
 4. Open a PR with a clear description of changes
-5. Be responsive to feedback
 
 ## References
 
