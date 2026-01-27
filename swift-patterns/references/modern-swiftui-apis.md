@@ -3,12 +3,25 @@
 Prefer modern APIs when the deployment target allows. This catalog covers legacy patterns and their replacements, plus new APIs by iOS version.
 
 ## Contents
-- [Legacy Replacements](#navigation-ios-16) - Navigation, Appearance, State, Events, Lists, Tabs, Layout, Sheets
-- [iOS 17 New APIs](#ios-17-new-apis) - @Observable, ScrollView, Animation, Inspector, Sensory Feedback
-- [iOS 18 New APIs](#ios-18-new-apis) - @Entry, Tab API, Mesh Gradients, Zoom Transitions, Controls
-- [iOS 26 New APIs](#ios-26-new-apis) - Liquid Glass, WebView, Rich Text, 3D Charts, Drag Container
-- [Migration Priority](#migration-priority) - What to update first
-- [Availability Patterns](#availability-patterns) - Version checking
+
+### Legacy → Modern Migration Tables
+- [Navigation (iOS 16+)](#navigation-ios-16)
+- [Appearance (iOS 15+)](#appearance-ios-15)
+- [State & Data (iOS 17+)](#state--data-ios-17)
+- [Events & Lifecycle](#events--lifecycle)
+- [Lists & Collections](#lists--collections)
+- [Tabs (iOS 18+)](#tabs-ios-18)
+- [Layout & Sizing](#layout--sizing)
+- [Sheets & Presentation (iOS 16+)](#sheets--presentation-ios-16)
+
+### New APIs by Version
+- [iOS 17 New APIs](#ios-17-new-apis) - @Observable, ScrollView, Animation, Inspector, Sensory Feedback, Container Relative Frame, onChange initial, Shape Improvements
+- [iOS 18 New APIs](#ios-18-new-apis) - @Entry, @Previewable, Tab API, Mesh Gradients, Zoom Transitions, SF Symbol Animations, Custom Container Views, Controls
+- [iOS 26 New APIs](#ios-26-new-apis) - Liquid Glass, WebView, Rich Text, Glass Button, Toolbar Spacer, TabView Minimize, Navigation Subtitles, Label Icon Width, Scene Padding, @Animatable, 3D Charts, openURL In-App, Drag Container
+
+### Guidelines
+- [Migration Priority](#migration-priority)
+- [Availability Patterns](#availability-patterns)
 
 ## Navigation (iOS 16+)
 
