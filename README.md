@@ -21,8 +21,8 @@ Then use it in your AI assistant:
 
 This skill teaches your AI assistant about:
 
-- **Swift Concurrency** – async/await patterns, actors, structured concurrency, and cancellation
 - **SwiftUI Architecture** – state management, property wrappers, data flow, and view composition  
+- **Swift Concurrency** – async/await patterns, actors, structured concurrency, and cancellation
 - **Navigation** – NavigationStack, deep linking, and coordinators
 - **Testing & DI** – unit testing, dependency injection, and test doubles
 - **Performance** – view optimization, memory management, and profiling
