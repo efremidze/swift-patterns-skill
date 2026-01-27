@@ -35,52 +35,15 @@ All workflows below must follow the Constraints section to prevent drift.
 
 ## Workflow Routing
 
-Use [references/decisions.md](references/decisions.md) as the authoritative routing guide for selecting review vs refactor workflows based on explicit intent cues. This routing gate avoids duplicating rules and keeps workflow selection consistent.
+Route requests based on intent cues:
 
-After routing, use the workflow checklists:
-- [references/workflows-review.md](references/workflows-review.md)
-- [references/workflows-refactor.md](references/workflows-refactor.md)
+| Signal | Route |
+| --- | --- |
+| "review", "find issues", "audit", "assess" | [workflows-review.md](references/workflows-review.md) |
+| "refactor", "change", "implement", "improve" | [workflows-refactor.md](references/workflows-refactor.md) |
+| "no tests", "legacy", "migration" | Refactor with extra caution |
 
-All workflows must follow the Constraints section above.
-
-## Core Guidelines
-
-### SwiftUI State Management
-- **Choose the right property wrapper** based on ownership (@State, @Binding, @Environment, @Observable)
-- **Prefer @Observable over ObservableObject** for iOS 17+; use ObservableObject for earlier OS support
-- **Follow unidirectional data flow** (data down, events up)
-- **Keep views simple and declarative** (no logic in body, no side effects)
-- **Use .task for async work** and .onChange for reactions
-- Inject dependencies through initializers for testability
-
-### Navigation
-- **Use NavigationStack** instead of deprecated NavigationView
-- **Consider centralized routing** with route enums when it improves clarity
-- **Implement type-safe navigation** with navigationDestination(for:)
-- **Handle deep links** with proper URL parsing and validation
-- **Support state restoration** for navigation paths
-- Keep navigation state in a single source of truth
-
-### Testing & Dependency Injection
-- **Write tests first** for critical business logic
-- **Use protocol-based DI** for service abstractions
-- **Create proper test doubles** (mocks, fakes, spies) - not stubs for everything
-- **Keep business logic separate** from views and UI
-- Structure code for testability from the start
-
-### Performance
-- **Optimize SwiftUI views** with proper state management and view identity
-- **Use lazy loading** for large lists and data sets
-- **Implement pagination** for network data
-- **Apply caching strategies** for expensive operations
-- Avoid premature optimization - measure first
-
-### Code Quality
-- **Identify and refactor code smells** (god objects, long methods, duplicated code)
-- **Extract methods** to improve readability and testability
-- **Use composition over inheritance** when possible
-- **Keep functions small and focused** (single responsibility)
-- Write self-documenting code with clear naming
+If unclear, ask: "Do you want findings only (review), or should I change the code (refactor)?"
 
 ## When to Use Which Reference
 
