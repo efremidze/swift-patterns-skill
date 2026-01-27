@@ -94,7 +94,7 @@ These are about using current, non-deprecated APIs, not optimization.
 - Architectural patterns and mandates
 - Tool usage instructions (Instruments, debuggers)
 - File organization requirements
-- Testing frameworks and patterns
+- Testing framework setup (XCTest configuration, CI pipelines)
 - Build system configuration
 - Project structure mandates
 

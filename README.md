@@ -1,8 +1,8 @@
 # Swift Patterns Skill
 
-A comprehensive Swift and SwiftUI knowledge base for AI coding tools, following the [Agent Skills standard](https://agentskills.io/home).
+A comprehensive Swift/SwiftUI knowledge base for AI coding tools, following the [Agent Skills standard](https://agentskills.io/home).
 
-Includes patterns for concurrency, state management, navigation, testing, and performance to improve AI-generated code quality.
+Includes patterns for state management, navigation, view composition, performance, and modern API usage to improve AI-generated SwiftUI code.
 
 ## Quick Start
 
@@ -13,7 +13,7 @@ npx skills add https://github.com/efremidze/swift-patterns-skill --skill swift-p
 ```
 
 Then use it in your AI assistant:
-> Use the Swift expert skill to review my async/await implementation
+> Review my SwiftUI view for state management issues
 
 [View on skills.sh →](https://skills.sh/efremidze/swift-patterns-skill/swift-patterns)
 
@@ -21,12 +21,14 @@ Then use it in your AI assistant:
 
 This skill teaches your AI assistant about:
 
-- **SwiftUI Architecture** – state management, property wrappers, data flow, and view composition  
-- **Swift Concurrency** – async/await patterns, actors, structured concurrency, and cancellation
-- **Navigation** – NavigationStack, deep linking, and coordinators
-- **Testing & DI** – unit testing, dependency injection, and test doubles
-- **Performance** – view optimization, memory management, and profiling
-- **Code Quality** – identifying code smells, refactoring patterns, and SOLID principles
+- **Modern APIs** – iOS 17/18/26 replacements for deprecated APIs, migration guides
+- **State Management** – Property wrapper selection (@State, @Binding, @Observable), ownership rules, data flow
+- **Navigation** – NavigationStack, deep linking, sheets, type-safe routing
+- **View Composition** – Extraction patterns, parent/child data flow, identity stability
+- **Lists & Scrolling** – Stable identity, pagination, lazy containers
+- **Performance** – View optimization, avoiding recomputation, memory management
+- **Testing & DI** – Protocol-based dependency injection, test doubles
+- **Refactoring** – Step-by-step playbooks for safe refactors
 
 ## Installation Options
 
@@ -74,26 +76,34 @@ Or configure for your team in `.claude/settings.json`:
 
 ## What Makes This Different
 
-**Comprehensive** – Covers all major aspects of Swift and SwiftUI in one unified skill, not scattered across multiple repositories.
+**Practical** – Includes actionable checklists, decision trees, and code examples rather than abstract theory.
 
-**Practical** – Includes real-world examples, tradeoffs, and decision trees rather than abstract theory.
+**Modern** – Comprehensive coverage of iOS 17, 18, and 26 APIs with migration guides.
 
-**Modern** – Focuses on current Swift concurrency, SwiftUI patterns, and iOS best practices.
+**Flexible** – Provides guidance without enforcing specific architectures (no MVVM/VIPER mandates).
 
-**Flexible** – Provides guidance without enforcing specific architectures or project structures.
+**Focused** – SwiftUI patterns only. No server-side Swift, UIKit (unless bridging), or tool-specific guidance.
 
 ## Structure
 
 ```
 swift-patterns/
-  SKILL.md                        # Main workflow and decision trees
+  SKILL.md                        # Workflow routing, quick references, review checklist
   references/
-    concurrency.md                # Async/await, tasks, actors
-    state.md                      # State management and data flow
-    navigation.md                 # Navigation patterns
-    testing-di.md                 # Testing and dependency injection
-    performance.md                # Performance optimization
-    code-review-refactoring.md    # Code quality and refactoring
+    state.md                      # Property wrappers, ownership, @Observable
+    navigation.md                 # NavigationStack, sheets, deep linking
+    view-composition.md           # View extraction, data flow patterns
+    lists-collections.md          # ForEach identity, List vs LazyVStack
+    scrolling.md                  # Pagination, scroll position
+    concurrency.md                # .task modifier, async lifecycle
+    performance.md                # View optimization, lazy loading
+    testing-di.md                 # Dependency injection, test doubles
+    patterns.md                   # Container views, ViewModifiers, PreferenceKeys
+    modern-swiftui-apis.md        # iOS 17/18/26 API replacements
+    refactor-playbooks.md         # Step-by-step refactor guides
+    workflows-review.md           # Review methodology
+    workflows-refactor.md         # Refactor methodology, invariants
+    code-review-refactoring.md    # Code smells, anti-patterns
 ```
 
 ## Contributing
