@@ -2,9 +2,9 @@
 
 Use this workflow when the user asks for findings, risks, or assessment without code changes.
 
-**Required references:**
-- **Constraints (mandatory):** See [SKILL.md Constraints](../SKILL.md#constraints).
-- **Invariants (mandatory):** See [Invariants reference](invariants.md).
+**Constraints:** See [SKILL.md Constraints](../SKILL.md#constraints).
+
+For refactor invariants, see [workflows-refactor.md](workflows-refactor.md#invariants).
 
 ## Scope and Inputs
 

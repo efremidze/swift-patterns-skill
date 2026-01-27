@@ -2,7 +2,7 @@
 
 Goal-based playbooks for behavior-preserving refactors. Each playbook starts from a baseline, preserves refactor invariants, and ends with verification against the original behavior.
 
-**Required invariants:** See [Refactor invariants](invariants.md). Use them as the non-negotiables for every step.
+**Invariants:** See [workflows-refactor.md](workflows-refactor.md#invariants). These are non-negotiables for every step.
 
 ## Playbook: View extraction
 
@@ -13,7 +13,7 @@ Extract a view to improve readability while preserving state ownership, stable i
 - Capture the current behavior baseline (visual output, interactions, state changes).
 - Identify state owners vs editors using [State ownership](state.md).
 - Map data-flow paths using [View composition](view-composition.md).
-- Confirm any list content uses stable identity per [Invariants](invariants.md).
+- Confirm any list content uses stable identity per Invariants.
 
 **Steps**
 1) Mark the source of truth for each value (owner vs editor). Keep ownership in the current owner.
@@ -25,7 +25,7 @@ Extract a view to improve readability while preserving state ownership, stable i
 
 **Verify**
 - Behavior baseline still matches (same visuals, same interactions).
-- [Invariants](invariants.md) remain true (identity, ownership, navigation, async).
+- Invariants remain true (identity, ownership, navigation, async).
 - Data flow is still down, events up (no child mutation of parent state).
 
 **Risk cues**
@@ -41,7 +41,7 @@ Migrate legacy navigation APIs to `NavigationStack` while keeping a single navig
 **Pre-checks**
 - Capture navigation baseline (start screen, push/pop behavior, deep-link entry if present).
 - Identify the current navigation owner (root view or shared model).
-- Review [NavigationStack guidance](navigation.md) and [Invariants](invariants.md).
+- Review [NavigationStack guidance](navigation.md) and Invariants.
 
 **Steps**
 1) Define a route enum or path model that represents current destinations.
@@ -53,7 +53,7 @@ Migrate legacy navigation APIs to `NavigationStack` while keeping a single navig
 
 **Verify**
 - Navigation baseline unchanged (push, back, restore, modal presentation).
-- [Invariants](invariants.md) hold for navigation source and data flow.
+- Invariants hold for navigation source and data flow.
 - State updates still drive navigation correctly (no duplicated path state).
 
 **Risk cues**
@@ -80,7 +80,7 @@ Move state up the hierarchy without breaking bindings, updates, or async work.
 
 **Verify**
 - Behavior baseline unchanged (updates propagate, UI stays in sync).
-- [Invariants](invariants.md) hold for ownership and data flow.
+- Invariants hold for ownership and data flow.
 - Async work still cancels and restarts correctly when inputs change.
 
 **Risk cues**
@@ -90,7 +90,7 @@ Move state up the hierarchy without breaking bindings, updates, or async work.
 
 ## Related references
 
-- `invariants.md` for non-negotiable refactor invariants.
+- `workflows-refactor.md` for invariants and refactor checklist.
 - `state.md` for ownership and wrapper selection.
 - `navigation.md` for NavigationStack patterns and migration details.
 - `view-composition.md` for extraction and data flow patterns.
