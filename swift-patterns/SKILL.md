@@ -14,7 +14,7 @@ Use this skill to build, review, or improve Swift and SwiftUI code with correct 
 - No architecture mandates (do not require MVVM/MVC/VIPER, coordinators, or specific folder structures).
 - No formatting or linting rules.
 - No tool-specific steps (Xcode, Instruments, IDE guidance, or CLI walkthroughs).
-- Citations must only reference URLs listed in `references/sources.md`.
+- Citations allowed: `developer.apple.com/documentation/swiftui/`, `developer.apple.com/documentation/swift/`, `developer.apple.com/documentation/swift/concurrency`.
 
 All workflows below must follow the Constraints section to prevent drift.
 
