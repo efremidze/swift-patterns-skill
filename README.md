@@ -4,6 +4,16 @@ A comprehensive Swift/SwiftUI knowledge base for AI coding tools, following the 
 
 Includes patterns for state management, navigation, view composition, performance, and modern API usage to improve AI-generated SwiftUI code.
 
+## Want Dynamic Fetching?
+
+If you need **runtime search, retrieval, and dynamic access** to Swift best practices, check out:
+
+**[swift-patterns-mcp](https://github.com/efremidze/swift-patterns-mcp)**: An MCP server with intelligent search, persistent memory, and optional premium integrations.
+
+**Key difference:**
+- **swift-patterns-skill** (this repo) = Static guidance (portable, no runtime)
+- **swift-patterns-mcp** = Dynamic tooling (search, retrieval, premium features)
+
 ## Quick Start
 
 Install with a single command:
