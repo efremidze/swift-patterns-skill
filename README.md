@@ -1,4 +1,4 @@
-# Swift Patterns Skill
+# swift-patterns-skill
 
 A comprehensive Swift/SwiftUI knowledge base for AI coding tools, following the [Agent Skills standard](https://agentskills.io/home).
 
