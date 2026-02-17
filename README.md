@@ -88,13 +88,6 @@ Or configure for your team in `.claude/settings.json`:
 2. Install or symlink `swift-patterns/` to your tool's skills directory.
 3. Use your AI tool and ask it to use `swift-patterns`.
 
-## What Makes This Different
-
-**Practical** – Includes actionable checklists, decision trees, and code examples rather than abstract theory.
-**Modern** – Comprehensive coverage of iOS 17, 18, and 26 APIs with migration guides.
-**Flexible** – Provides guidance without enforcing specific architectures (no MVVM/VIPER mandates).
-**Focused** – SwiftUI patterns only. No server-side Swift, UIKit (unless bridging), or tool-specific guidance.
-
 ## Skill Structure
 
 ```
