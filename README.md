@@ -61,7 +61,7 @@ For personal usage in Claude Code:
 2. Install the skill:
 
 ```bash
-/plugin install efremidze@swift-patterns
+/plugin install swift-patterns@swift-patterns-skill
 ```
 
 Or configure for your team in `.claude/settings.json`:
@@ -69,7 +69,7 @@ Or configure for your team in `.claude/settings.json`:
 ```json
 {
   "enabledPlugins": {
-    "efremidze@swift-patterns": true
+    "swift-patterns@swift-patterns-skill": true
   },
   "extraKnownMarketplaces": {
     "swift-patterns": {
