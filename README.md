@@ -40,20 +40,27 @@ This skill teaches your AI assistant about:
 - **Testing & DI** – Protocol-based dependency injection, test doubles
 - **Refactoring** – Step-by-step playbooks for safe refactors
 
-## Installation Options
+## How to Install
 
-### Using skills.sh (Recommended)
+### Option A: Using `skills.sh` (recommended)
 
 ```bash
 npx skills add https://github.com/efremidze/swift-patterns-skill --skill swift-patterns
 ```
 
-### Claude Code Plugin
+### Option B: Claude Code Plugin
 
-Install for personal use:
+For personal usage in Claude Code:
+
+1. Add the marketplace:
 
 ```bash
 /plugin marketplace add efremidze/swift-patterns-skill
+```
+
+2. Install the skill:
+
+```bash
 /plugin install efremidze@swift-patterns
 ```
 
@@ -75,26 +82,20 @@ Or configure for your team in `.claude/settings.json`:
 }
 ```
 
-### Manual Installation
+### Option C: Manual Install
 
-1. Clone this repository
-2. Copy or symlink the `swift-patterns/` folder to your AI tool's skills directory
-3. Refer to your tool's documentation:
-   - [Cursor](https://cursor.com/docs/context/skills#enabling-skills)
-   - [Claude](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview#using-skills)
-   - [GitHub Copilot](https://docs.github.com/copilot)
+1. Clone this repository.
+2. Install or symlink `swift-patterns/` to your tool's skills directory.
+3. Use your AI tool and ask it to use `swift-patterns`.
 
 ## What Makes This Different
 
 **Practical** – Includes actionable checklists, decision trees, and code examples rather than abstract theory.
-
 **Modern** – Comprehensive coverage of iOS 17, 18, and 26 APIs with migration guides.
-
 **Flexible** – Provides guidance without enforcing specific architectures (no MVVM/VIPER mandates).
-
 **Focused** – SwiftUI patterns only. No server-side Swift, UIKit (unless bridging), or tool-specific guidance.
 
-## Structure
+## Skill Structure
 
 ```
 swift-patterns/
@@ -116,9 +117,13 @@ swift-patterns/
     code-review-refactoring.md    # Code smells, anti-patterns
 ```
 
+## Other Skills
+
+- [swift-architecture-skill](https://github.com/efremidze/swift-architecture-skill)
+
 ## Contributing
 
-Contributions welcome! This repository follows the [Agent Skills open format](https://agentskills.io/home).
+Contributions are welcome! This repository follows the [Agent Skills open format](https://agentskills.io/home), which has specific structural requirements.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on improving the skill content and reference files.
 
