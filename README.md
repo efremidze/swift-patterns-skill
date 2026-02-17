@@ -72,7 +72,7 @@ Or configure for your team in `.claude/settings.json`:
     "swift-patterns@swift-patterns-skill": true
   },
   "extraKnownMarketplaces": {
-    "swift-patterns": {
+    "swift-patterns-skill": {
       "source": {
         "source": "github",
         "repo": "efremidze/swift-patterns-skill"
