@@ -1,6 +1,6 @@
 # Swift Patterns Skill
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/efremidze/swift-patterns-skill/releases)
 [![Agent Skills](https://img.shields.io/badge/Agent_Skills-Compatible-purple)](https://agentskills.io/home)
 
 A comprehensive Swift/SwiftUI knowledge base for AI coding tools, following the [Agent Skills standard](https://agentskills.io/home).
