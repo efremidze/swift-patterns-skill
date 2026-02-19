@@ -131,14 +131,7 @@ swift-patterns/
 
 Contributions are welcome! This repository follows the [Agent Skills open format](https://agentskills.io/home).
 
-**Ways to help:**
-- Fix incorrect Swift/SwiftUI guidance
-- Add modern API patterns or flag deprecations
-- Improve clarity in workflows and decision trees
-- Expand reference files with practical examples
-- Update documentation
-
-See **[CONTRIBUTING.md](CONTRIBUTING.md)** for detailed guidelines on structure, content focus, and pull request process.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on improving the skill content and reference files.
 
 ## License
 
