@@ -8,19 +8,6 @@ A comprehensive Swift/SwiftUI knowledge base for AI coding tools, following the 
 
 Provides expert guidance on state management, navigation, view composition, performance optimization, and modern SwiftUI API usage to help AI assistants generate better SwiftUI code.
 
-## Quick Start
-
-Install with a single command:
-
-```bash
-npx skills add https://github.com/efremidze/swift-patterns-skill --skill swift-patterns
-```
-
-Then use it in your AI assistant:
-> Review my SwiftUI view for state management issues
-
-[View on skills.sh →](https://skills.sh/efremidze/swift-patterns-skill/swift-patterns)
-
 ## What This Skill Provides
 
 Comprehensive SwiftUI expertise across:
@@ -38,6 +25,19 @@ Comprehensive SwiftUI expertise across:
 - **Code Quality** – Refactoring playbooks, code smell detection, anti-pattern identification
 
 All guidance is based on Apple's official documentation and focuses on **facts over opinions** – no architectural mandates.
+
+## Quick Start
+
+Install with a single command:
+
+```bash
+npx skills add https://github.com/efremidze/swift-patterns-skill --skill swift-patterns
+```
+
+Then use it in your AI assistant:
+> Review my SwiftUI view for state management issues
+
+[View on skills.sh →](https://skills.sh/efremidze/swift-patterns-skill/swift-patterns)
 
 ## Installation
 
