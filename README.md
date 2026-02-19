@@ -1,18 +1,12 @@
 # Swift Patterns Skill
 
+![Release](https://img.shields.io/github/v/release/efremidze/swift-patterns-skill)
+[![Validate Skill](https://github.com/efremidze/swift-patterns-skill/actions/workflows/validate-skill.yml/badge.svg)](https://github.com/efremidze/swift-patterns-skill/actions/workflows/validate-skill.yml)
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-purple.svg)](https://agentskills.io/home)
+
 A comprehensive Swift/SwiftUI knowledge base for AI coding tools, following the [Agent Skills standard](https://agentskills.io/home).
 
-Includes patterns for state management, navigation, view composition, performance, and modern API usage to improve AI-generated SwiftUI code.
-
-## Want Dynamic Fetching?
-
-If you need **runtime search, retrieval, and dynamic access** to Swift best practices, check out:
-
-**[swift-patterns-mcp](https://github.com/efremidze/swift-patterns-mcp)**: An MCP server with intelligent search, persistent memory, and optional premium integrations.
-
-**Key difference:**
-- **swift-patterns-skill** (this repo) = Static guidance (portable, no runtime)
-- **swift-patterns-mcp** = Dynamic tooling (search, retrieval, premium features)
+Provides expert guidance on state management, navigation, view composition, performance optimization, and modern SwiftUI API usage to help AI assistants generate better SwiftUI code.
 
 ## Quick Start
 
@@ -27,42 +21,49 @@ Then use it in your AI assistant:
 
 [View on skills.sh →](https://skills.sh/efremidze/swift-patterns-skill/swift-patterns)
 
-## What You Get
+## What This Skill Provides
 
-This skill teaches your AI assistant about:
+Comprehensive SwiftUI expertise across:
 
-- **Modern APIs** – iOS 17/18/26 replacements for deprecated APIs, migration guides
-- **State Management** – Property wrapper selection (@State, @Binding, @Observable), ownership rules, data flow
-- **Navigation** – NavigationStack, deep linking, sheets, type-safe routing
-- **View Composition** – Extraction patterns, parent/child data flow, identity stability
-- **Lists & Scrolling** – Stable identity, pagination, lazy containers
-- **Performance** – View optimization, avoiding recomputation, memory management
-- **Testing & DI** – Protocol-based dependency injection, test doubles
-- **Refactoring** – Step-by-step playbooks for safe refactors
+### Core Topics
+- **State Management** – Property wrapper selection (`@State`, `@Binding`, `@Observable`), ownership rules, data flow patterns
+- **Modern APIs** – iOS 17/18/26 replacements for deprecated APIs, complete migration guides
+- **View Composition** – Extraction patterns, parent/child data flow, view identity and performance
+- **Navigation** – `NavigationStack`, sheets, deep linking, type-safe routing patterns
 
-## How to Install
+### Advanced Areas
+- **Lists & Collections** – Stable identity with `ForEach`, pagination, lazy containers
+- **Performance Optimization** – View optimization strategies, avoiding recomputation, memory management
+- **Testing & Dependency Injection** – Protocol-based patterns, test doubles, testable architecture
+- **Code Quality** – Refactoring playbooks, code smell detection, anti-pattern identification
 
-### Option A: Using `skills.sh` (recommended)
+All guidance is based on Apple's official documentation and focuses on **facts over opinions** – no architectural mandates.
+
+## Installation
+
+### Recommended: Using skills.sh CLI
+
+The easiest way to install:
 
 ```bash
 npx skills add https://github.com/efremidze/swift-patterns-skill --skill swift-patterns
 ```
 
-### Option B: Claude Code Plugin
+This installs the skill and makes it available to your AI assistant.
 
-For personal usage in Claude Code:
+### Alternative: Claude Code Plugin
+
+For Claude Code users, add via the marketplace:
 
 1. Add the marketplace:
-
-```bash
-/plugin marketplace add efremidze/swift-patterns-skill
-```
+   ```bash
+   /plugin marketplace add efremidze/swift-patterns-skill
+   ```
 
 2. Install the skill:
-
-```bash
-/plugin install swift-patterns@swift-patterns-skill
-```
+   ```bash
+   /plugin install swift-patterns@swift-patterns-skill
+   ```
 
 Or configure for your team in `.claude/settings.json`:
 
@@ -82,41 +83,53 @@ Or configure for your team in `.claude/settings.json`:
 }
 ```
 
-### Option C: Manual Install
+### Manual Installation
 
-1. Clone this repository.
-2. Install or symlink `swift-patterns/` to your tool's skills directory.
-3. Use your AI tool and ask it to use `swift-patterns`.
+If you prefer manual setup:
+
+1. Clone this repository
+2. Install or symlink `swift-patterns/` to your tool's skills directory
+3. Configure your AI tool to use `swift-patterns`
 
 ## Skill Structure
 
+The skill follows a progressive disclosure model—core workflows in `SKILL.md`, detailed guidance in `references/`:
+
 ```
 swift-patterns/
-  SKILL.md                        # Workflow routing, quick references, review checklist
+  SKILL.md                          # Entry point: workflow routing, quick refs, review checklist
   references/
-    state.md                      # Property wrappers, ownership, @Observable
-    navigation.md                 # NavigationStack, sheets, deep linking
-    view-composition.md           # View extraction, data flow patterns
-    lists-collections.md          # ForEach identity, List vs LazyVStack
-    scrolling.md                  # Pagination, scroll position
-    concurrency.md                # .task modifier, async lifecycle
-    performance.md                # View optimization, lazy loading
-    testing-di.md                 # Dependency injection, test doubles
-    patterns.md                   # Container views, ViewModifiers, PreferenceKeys
-    modern-swiftui-apis.md        # iOS 17/18/26 API replacements
-    refactor-playbooks.md         # Step-by-step refactor guides
-    workflows-review.md           # Review methodology
-    workflows-refactor.md         # Refactor methodology, invariants
-    code-review-refactoring.md    # Code smells, anti-patterns
+    state.md                        # Property wrappers, ownership, @Observable patterns
+    navigation.md                   # NavigationStack, sheets, deep linking
+    view-composition.md             # View extraction, data flow patterns
+    lists-collections.md            # ForEach identity, List vs LazyVStack
+    scrolling.md                    # Pagination, scroll position management
+    concurrency.md                  # .task modifier, async lifecycle
+    performance.md                  # View optimization, lazy loading strategies
+    testing-di.md                   # Dependency injection, test doubles
+    patterns.md                     # Container views, ViewModifiers, PreferenceKeys
+    modern-swiftui-apis.md          # iOS 17/18/26 API replacements and migration
+    refactor-playbooks.md           # Step-by-step refactoring guides
+    workflows-review.md             # Review methodology and standards
+    workflows-refactor.md           # Refactoring methodology, invariants
+    code-review-refactoring.md      # Code smells, anti-patterns, quality checks
 ```
 
-## Other Skills
+## Related Projects
 
-- [swift-architecture-skill](https://github.com/efremidze/swift-architecture-skill)
+### Other Skills
+- **[swift-architecture-skill](https://github.com/efremidze/swift-architecture-skill)** – Architectural patterns and project structure guidance (complements this skill's focus on SwiftUI patterns)
+
+### Dynamic Runtime Tools
+- **[swift-patterns-mcp](https://github.com/efremidze/swift-patterns-mcp)** – MCP server with intelligent search, retrieval, and persistent memory
+
+**Key difference:**
+- **swift-patterns-skill** (this repo) = Static guidance, portable, no runtime dependencies
+- **swift-patterns-mcp** = Dynamic tooling with search, retrieval, and premium integrations
 
 ## Contributing
 
-Contributions are welcome! This repository follows the [Agent Skills open format](https://agentskills.io/home), which has specific structural requirements.
+Contributions are welcome! This repository follows the [Agent Skills open format](https://agentskills.io/home).
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on improving the skill content and reference files.
 
