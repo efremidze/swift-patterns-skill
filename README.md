@@ -1,6 +1,6 @@
 # Swift Patterns Skill
 
-![Release](https://img.shields.io/github/v/release/efremidze/swift-patterns-skill)
+[![Release](https://img.shields.io/github/v/release/efremidze/swift-patterns-skill?sort=semver)](https://github.com/efremidze/swift-patterns-skill/releases)
 [![Validate Skill](https://github.com/efremidze/swift-patterns-skill/actions/workflows/validate-skill.yml/badge.svg)](https://github.com/efremidze/swift-patterns-skill/actions/workflows/validate-skill.yml)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-purple.svg)](https://agentskills.io/home)
 
