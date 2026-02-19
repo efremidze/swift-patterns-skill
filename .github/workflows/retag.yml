@@ -1,0 +1,50 @@
+name: Retag Release to v-prefix
+
+on:
+  workflow_dispatch:
+    inputs:
+      old_tag:
+        description: 'Existing tag without v-prefix (e.g. 1.0.0)'
+        required: true
+        default: '1.0.0'
+
+jobs:
+  retag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Create v-prefixed tag and release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          OLD_TAG="${{ github.event.inputs.old_tag }}"
+          NEW_TAG="v${OLD_TAG}"
+
+          # Get the commit SHA the old tag points to
+          OLD_SHA=$(git rev-list -n 1 "${OLD_TAG}")
+          echo "Re-tagging ${OLD_TAG} (${OLD_SHA}) → ${NEW_TAG}"
+
+          # Fetch old release notes before deleting
+          RELEASE_BODY=$(gh release view "${OLD_TAG}" --json body --jq '.body')
+
+          # Create new v-prefixed tag on same commit
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag "${NEW_TAG}" "${OLD_SHA}"
+          git push origin "${NEW_TAG}"
+
+          # Create new release under the v-prefixed tag
+          gh release create "${NEW_TAG}" \
+            --title "${OLD_TAG}" \
+            --notes "${RELEASE_BODY}"
+
+          # Delete old release, then old tag
+          gh release delete "${OLD_TAG}" --yes
+          git push origin --delete "${OLD_TAG}"
